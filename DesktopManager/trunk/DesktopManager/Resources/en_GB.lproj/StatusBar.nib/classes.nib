@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                showDesktopPager = id; 
+                showPreferences = id; 
+                showStatusPager = id; 
+                switchToNextWorkspace = id; 
+                switchToPreviousWorkspace = id; 
+                switchToWorkspace = id; 
+                switchWorkspaceDown = id; 
+                switchWorkspaceLeft = id; 
+                switchWorkspaceRight = id; 
+                switchWorkspaceUp = id; 
+            }; 
+            CLASS = DMAppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_pagerView" = DMPager; 
+                "_pagerWindow" = NSWindow; 
+                "_prefsController" = DMPreferencesController; 
+                "_statusMenu" = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = DMApplication; LANGUAGE = ObjC; SUPERCLASS = NSApplication; }, 
+        {
+            ACTIONS = {orderFrontStandardAboutPanel = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

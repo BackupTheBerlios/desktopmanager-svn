@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            CLASS = DMAppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_pagerView" = NSMatrix; "_pagerWindow" = NSWindow; "_statusMenu" = NSMenu; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = DMPager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_appController" = DMAppController; }; 
+            SUPERCLASS = NSMatrix; 
+        }, 
+        {CLASS = DMPagerCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

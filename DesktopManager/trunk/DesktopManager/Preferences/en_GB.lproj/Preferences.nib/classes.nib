@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            CLASS = DMAppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_pagerView" = DMPager; 
+                "_pagerWindow" = NSWindow; 
+                "_prefsController" = DMPreferencesController; 
+                "_statusMenu" = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showPreferences = id; }; 
+            CLASS = DMPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {prefsWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

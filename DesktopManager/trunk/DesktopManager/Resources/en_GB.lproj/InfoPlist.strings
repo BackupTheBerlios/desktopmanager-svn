@@ -1,0 +1,4 @@
+/* Localised strings */
+
+CFBundleName = "Desktop Manager";
+NSHumanReadableCopyright = "Copyright 2003, 2004, 2005, Rich Wareham";
