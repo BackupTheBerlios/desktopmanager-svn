@@ -4,10 +4,11 @@ $pages = array(
   'about' => array( 'About', 'About Desktop Manager', 'index.php' ),
   'blog' => array( 'Rich\'s Blog', 'Blog', 'http://livejournal.com/users/filecoreinuse/' ),
   'news' => array( 'News', 'Project News', 'news.php' ),
-  'download' => array( 'Download', 'Project Downloads', 'download.php' ),
+  'download' => array( 'Download', '', 'http://developer.berlios.de/project/filelist.php?group_id=3463' ),
   'screenshots' => array( 'Screenshots', 'Screenshots', 'screenshots.php' ),
   'faq' => array( 'FAQ', 'Frequently Asked Questions', 'faq.php' ),
-  'project' => array( 'Project Page', '', 'http://sf.net/projects/wsmanager/' ),
+  'source' => array( 'Browse Source', '', 'http://svn.berlios.de/viewcvs/desktopmanager' ),
+  'project' => array( 'Project Page', '', 'http://developer.berlios.de/projects/desktopmanager/' ),
 );
 
 function startPage($id) {

@@ -2,6 +2,8 @@
 global $newsItems;
 
 $newsItems = array(
+  array( 'date' => '8-Apr-05', 'title' => 'Moved to BerliOS.de',
+          'contents' => '<p>The Desktop Manager site and project has moved to <a href="http://developer.berlios.de/">BerliOS</a></p>'),
   array( 'date' => '16-Nov-04', 'title' => 'DM Review',
 	  'contents' => '<p>A <a href="http://apple-x.net/modules.php?op=modload&name=News&file=article&sid=1181&mode=thread&order=0&thold=0">review</a> of Desktop Manager has been posted to <a href="http://apple-x.net/">apple-x.net</a> and pretty sweet it is too. I\'ve been working hard on splitting DM into smaller sub-components and documenting them so be on the lookout for <em>WorkspaceKit</em> - a framework which will allow you to write your own (better?) DM clone.</p>'),
   array( 'date' => '20-Jul-04', 'title' => 'DM ebuild',
