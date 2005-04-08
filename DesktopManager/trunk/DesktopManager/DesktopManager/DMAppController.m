@@ -275,7 +275,7 @@ static DMAppController *_defaultDMAppController = nil;
 		NSNib *pagerNib = [[[NSNib alloc] initWithNibNamed:@"Pager" bundle:[NSBundle mainBundle]] autorelease];
 		[pagerNib instantiateNibWithOwner:self topLevelObjects:nil];
 		
-		[_pagerWindow setBackgroundColor: [NSColor colorWithCalibratedWhite:0.0 alpha:0.3]];
+		[_pagerWindow setBackgroundColor: [NSColor colorWithCalibratedWhite:0.0 alpha:0.5]];
 		[_pagerWindow setOpaque: NO];
 		[_pagerWindow setLevel: NSFloatingWindowLevel];
 		[_pagerWindow setHidesOnDeactivate: NO];

@@ -403,6 +403,23 @@
 			A4D5C551080745A80087D1D3 = A4D5C551080745A80087D1D3;
 			A4D5C552080745AC0087D1D3 = A4D5C552080745AC0087D1D3;
 			A4D5C553080745C40087D1D3 = A4D5C553080745C40087D1D3;
+			A4D5C554080745E00087D1D3 = A4D5C554080745E00087D1D3;
+			A4D5C555080749AE0087D1D3 = A4D5C555080749AE0087D1D3;
+			A4D5C556080749AE0087D1D3 = A4D5C556080749AE0087D1D3;
+			A4D5C557080749AE0087D1D3 = A4D5C557080749AE0087D1D3;
+			A4D5C558080749AE0087D1D3 = A4D5C558080749AE0087D1D3;
+			A4D5C559080749AE0087D1D3 = A4D5C559080749AE0087D1D3;
+			A4D5C55A080749F10087D1D3 = A4D5C55A080749F10087D1D3;
+			A4D5C55B080749F10087D1D3 = A4D5C55B080749F10087D1D3;
+			A4D5C55C080749F10087D1D3 = A4D5C55C080749F10087D1D3;
+			A4D5C55D080749F10087D1D3 = A4D5C55D080749F10087D1D3;
+			A4D5C55E080749F90087D1D3 = A4D5C55E080749F90087D1D3;
+			A4D5C55F08074A170087D1D3 = A4D5C55F08074A170087D1D3;
+			A4D5C56008074A170087D1D3 = A4D5C56008074A170087D1D3;
+			A4D5C56108074A170087D1D3 = A4D5C56108074A170087D1D3;
+			A4D5C56208074A170087D1D3 = A4D5C56208074A170087D1D3;
+			A4D5C56308074A2E0087D1D3 = A4D5C56308074A2E0087D1D3;
+			A4D5C56408074A370087D1D3 = A4D5C56408074A370087D1D3;
 			A4EEA2A407FE18F3003AABB3 = A4EEA2A407FE18F3003AABB3;
 			A4EEA2C707FE1B76003AABB3 = A4EEA2C707FE1B76003AABB3;
 			A4EEA2CB07FE1B76003AABB3 = A4EEA2CB07FE1B76003AABB3;
@@ -607,7 +624,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {511, 1147}}";
 			sepNavSelRange = "{1324, 0}";
-			sepNavVisRect = "{{0, 330}, {511, 454}}";
+			sepNavVisRect = "{{0, 322}, {511, 454}}";
 		};
 	};
 	A45700650800243F0061B98C = {
@@ -782,7 +799,7 @@
 		isa = PBXTextBookmark;
 		name = "DMDesktopsPreferences.m: 66";
 		rLen = 0;
-		rLoc = 1942;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 644;
 		vrLoc = 1943;
@@ -962,9 +979,9 @@
 	};
 	A457FE6007FF5CC70061B98C = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 2043}}";
-			sepNavSelRange = "{1942, 0}";
-			sepNavVisRect = "{{0, 924}, {511, 454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {511, 1973}}";
+			sepNavSelRange = "{1213, 0}";
+			sepNavVisRect = "{{0, 364}, {511, 454}}";
 		};
 	};
 	A457FE6907FF60A60061B98C = {
@@ -1024,7 +1041,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 49";
 		rLen = 0;
-		rLoc = 1391;
+		rLoc = 1605;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 1102;
@@ -1861,7 +1878,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 65";
 		rLen = 0;
-		rLoc = 1832;
+		rLoc = 2046;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 1542;
@@ -1871,7 +1888,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 63";
 		rLen = 0;
-		rLoc = 1714;
+		rLoc = 1928;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 1542;
@@ -1881,7 +1898,7 @@
 		isa = PBXTextBookmark;
 		name = NSColor;
 		rLen = 7;
-		rLoc = 1686;
+		rLoc = 1900;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 1542;
@@ -1891,7 +1908,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 65";
 		rLen = 0;
-		rLoc = 1824;
+		rLoc = 2038;
 		rType = 0;
 		vrLen = 942;
 		vrLoc = 1390;
@@ -1901,7 +1918,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 93";
 		rLen = 0;
-		rLoc = 2721;
+		rLoc = 3062;
 		rType = 0;
 		vrLen = 989;
 		vrLoc = 1984;
@@ -1911,7 +1928,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 93";
 		rLen = 0;
-		rLoc = 2721;
+		rLoc = 3062;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 1984;
@@ -1921,7 +1938,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 93";
 		rLen = 0;
-		rLoc = 2721;
+		rLoc = 3062;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 1984;
@@ -1931,7 +1948,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 98";
 		rLen = 0;
-		rLoc = 2732;
+		rLoc = 3062;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 1984;
@@ -1941,7 +1958,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 90";
 		rLen = 0;
-		rLoc = 2622;
+		rLoc = 2722;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 1984;
@@ -1951,7 +1968,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 90";
 		rLen = 0;
-		rLoc = 2622;
+		rLoc = 2722;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 2146;
@@ -1961,7 +1978,7 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 90";
 		rLen = 0;
-		rLoc = 2622;
+		rLoc = 2722;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 2146;
@@ -1971,10 +1988,180 @@
 		isa = PBXTextBookmark;
 		name = "DMPagerCell.m: 84";
 		rLen = 0;
-		rLoc = 2490;
+		rLoc = 2590;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 2146;
+	};
+	A4D5C554080745E00087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 84";
+		rLen = 0;
+		rLoc = 2590;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 2146;
+	};
+	A4D5C555080749AE0087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 108";
+		rLen = 0;
+		rLoc = 3038;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 1800;
+	};
+	A4D5C556080749AE0087D1D3 = {
+		fRef = A4570061080024080061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKeyPreferences.m: 30";
+		rLen = 0;
+		rLoc = 1324;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 962;
+	};
+	A4D5C557080749AE0087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 108";
+		rLen = 0;
+		rLoc = 3038;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 1800;
+	};
+	A4D5C558080749AE0087D1D3 = {
+		fRef = A4570061080024080061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKeyPreferences.m: 30";
+		rLen = 0;
+		rLoc = 1324;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 962;
+	};
+	A4D5C559080749AE0087D1D3 = {
+		fRef = A457FE6007FF5CC70061B98C;
+		isa = PBXTextBookmark;
+		name = "DMDesktopsPreferences.m: 38";
+		rLen = 0;
+		rLoc = 1213;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 1044;
+	};
+	A4D5C55A080749F10087D1D3 = {
+		fRef = A457FE6007FF5CC70061B98C;
+		isa = PBXTextBookmark;
+		name = "DMDesktopsPreferences.m: 38";
+		rLen = 0;
+		rLoc = 1213;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 1044;
+	};
+	A4D5C55B080749F10087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 250";
+		rLen = 0;
+		rLoc = 8647;
+		rType = 0;
+		vrLen = 817;
+		vrLoc = 8031;
+	};
+	A4D5C55C080749F10087D1D3 = {
+		fRef = A457FE6007FF5CC70061B98C;
+		isa = PBXTextBookmark;
+		name = "DMDesktopsPreferences.m: 38";
+		rLen = 0;
+		rLoc = 1213;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 1044;
+	};
+	A4D5C55D080749F10087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9468;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 8878;
+	};
+	A4D5C55E080749F90087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9468;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 8878;
+	};
+	A4D5C55F08074A170087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9468;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 8878;
+	};
+	A4D5C56008074A170087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 108";
+		rLen = 0;
+		rLoc = 3038;
+		rType = 0;
+		vrLen = 1093;
+		vrLoc = 1800;
+	};
+	A4D5C56108074A170087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9468;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 8878;
+	};
+	A4D5C56208074A170087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 107";
+		rLen = 0;
+		rLoc = 2931;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 2143;
+	};
+	A4D5C56308074A2E0087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 961;
+		vrLoc = 2143;
+	};
+	A4D5C56408074A370087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 961;
+		vrLoc = 2143;
 	};
 	A4EEA29B07FE18AB003AABB3 = {
 		uiCtxt = {
@@ -1986,8 +2173,8 @@
 	A4EEA29C07FE18AB003AABB3 = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {511, 9757}}";
-			sepNavSelRange = "{8647, 0}";
-			sepNavVisRect = "{{0, 3518}, {511, 454}}";
+			sepNavSelRange = "{9468, 0}";
+			sepNavVisRect = "{{0, 4013}, {511, 454}}";
 		};
 	};
 	A4EEA2A407FE18F3003AABB3 = {
@@ -2117,9 +2304,9 @@
 	};
 	A4EEA59707FEDA2C003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 1875}}";
-			sepNavSelRange = "{2490, 0}";
-			sepNavVisRect = "{{0, 1068}, {511, 454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {511, 1987}}";
+			sepNavSelRange = "{2779, 0}";
+			sepNavVisRect = "{{0, 1156}, {511, 454}}";
 		};
 	};
 	A4EEA59F07FEDAD1003AABB3 = {

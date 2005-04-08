@@ -31,14 +31,9 @@
 
 @implementation DMDesktopsPrefsPagerCell
 
-- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+- (BOOL) shouldHighlight
 {
-	[super drawInteriorWithFrame:cellFrame inView:controlView];
-	if([self state] == NSOnState)
-	{
-		[[[NSColor selectedControlColor] colorWithAlphaComponent:0.5] set];
-		NSRectFillUsingOperation(cellFrame,NSCompositeSourceOver);
-	}
+	return ([self state] == NSOnState);
 }
 
 @end

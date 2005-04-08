@@ -37,6 +37,19 @@
 	return mySelf;
 }
 
+- (BOOL) shouldHighlight
+{
+	CGWorkspace *ws = nil;
+	if([[self representedObject] isKindOfClass: [CGWorkspace class]])
+	{
+		ws = [self representedObject];
+	}
+	
+	if(!ws)
+		return;
+	return [ws isCurrentWorkspace];
+}
+
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
 	[NSGraphicsContext saveGraphicsState];
@@ -58,12 +71,8 @@
 		screenFrame = NSUnionRect(screenFrame, [screen frame]);
 	}
 	
-	if([ws isCurrentWorkspace])
-	{
-		[[[NSColor selectedControlColor] colorWithAlphaComponent:0.5] set];
-	} else {
-		[[[NSColor controlShadowColor] colorWithAlphaComponent:0.5] set];
-	}
+	
+	[[[NSColor controlShadowColor] colorWithAlphaComponent:0.5] set];
 	NSRectFillUsingOperation(cellFrame, NSCompositeSourceOver);
 	
 	NSEnumerator *windowEnum = [[ws cachedWindowList] objectEnumerator];
@@ -87,19 +96,18 @@
 		
 		frame = NSIntegralRect(frame);
 		
-		[[[NSColor lightGrayColor] colorWithAlphaComponent:0.75] set];
+		[[NSColor lightGrayColor] set];
 		NSRectFill(frame);
-		[[[NSColor darkGrayColor] colorWithAlphaComponent: 0.75] set];
+		[[NSColor darkGrayColor] set];
 		NSFrameRect(frame);
 	}
 		
-	if([ws isCurrentWorkspace])
+	if([self shouldHighlight])
 	{
-		[[NSColor darkGrayColor] set];
-	} else {
-		[[NSColor blackColor] set];
+		[[[NSColor selectedControlColor] colorWithAlphaComponent: 0.33] set];
+		NSRectFillUsingOperation(cellFrame, NSCompositeSourceOver);
 	}
-	
+	[[NSColor blackColor] set];
 	NSFrameRect(cellFrame);
 	[NSGraphicsContext restoreGraphicsState];
 }
