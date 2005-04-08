@@ -60,9 +60,9 @@
 	
 	if([ws isCurrentWorkspace])
 	{
-		[[NSColor colorWithCalibratedWhite:0.5 alpha:0.5] set];
+		[[[NSColor selectedControlColor] colorWithAlphaComponent:0.5] set];
 	} else {
-		[[NSColor colorWithCalibratedWhite:0.75 alpha:0.5] set];
+		[[[NSColor controlShadowColor] colorWithAlphaComponent:0.5] set];
 	}
 	NSRectFillUsingOperation(cellFrame, NSCompositeSourceOver);
 	
@@ -87,9 +87,9 @@
 		
 		frame = NSIntegralRect(frame);
 		
-		[[NSColor lightGrayColor] set];
+		[[[NSColor lightGrayColor] colorWithAlphaComponent:0.75] set];
 		NSRectFill(frame);
-		[[NSColor darkGrayColor] set];
+		[[[NSColor darkGrayColor] colorWithAlphaComponent: 0.75] set];
 		NSFrameRect(frame);
 	}
 		

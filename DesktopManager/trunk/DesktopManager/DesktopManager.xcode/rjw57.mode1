@@ -252,7 +252,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
+									<integer>25</integer>
+									<integer>23</integer>
 									<integer>19</integer>
 									<integer>0</integer>
 								</array>
@@ -289,7 +290,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMAppController.m</string>
+								<string>DMPagerCell.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -297,9 +298,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMAppController.m</string>
+										<string>DMPagerCell.m</string>
 										<key>bookmark</key>
-										<string>A4D5C53F0807437A0087D1D3</string>
+										<string>A4D5C553080745C40087D1D3</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -332,10 +333,8 @@
 											<string>A457FE6B07FF60A60061B98C</string>
 											<string>A457FE6C07FF60A60061B98C</string>
 											<string>A457FF6107FF7E1B0061B98C</string>
-											<string>A457FF7C07FF7FCF0061B98C</string>
 											<string>A457FFA807FF83030061B98C</string>
 											<string>A457FFBC07FF87270061B98C</string>
-											<string>A457FFF007FF8B450061B98C</string>
 											<string>A457000107FF8D450061B98C</string>
 											<string>A457002807FF8FC60061B98C</string>
 											<string>A457004E07FF9C9D0061B98C</string>
@@ -353,7 +352,9 @@
 											<string>A45702E1080062D70061B98C</string>
 											<string>A42881110800A1E600C68D25</string>
 											<string>A4D5C52E08073EB60087D1D3</string>
-											<string>A4D5C52308073CED0087D1D3</string>
+											<string>A4D5C543080743E10087D1D3</string>
+											<string>A4D5C544080743E10087D1D3</string>
+											<string>A4D5C54A080744B30087D1D3</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -412,6 +413,8 @@
 											<string>A42881120800A1E600C68D25</string>
 											<string>A4D5C52508073CED0087D1D3</string>
 											<string>A4D5C52F08073EB60087D1D3</string>
+											<string>A4D5C545080743E10087D1D3</string>
+											<string>A4D5C546080743E10087D1D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
