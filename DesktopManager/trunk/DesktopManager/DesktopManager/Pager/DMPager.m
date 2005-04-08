@@ -46,10 +46,7 @@
 	
 	if(_appController)
 	{
-		[_appController removeObserver:self forKeyPath:@"rows"];
-		[_appController removeObserver:self forKeyPath:@"columns"];
-		[_appController removeObserver:self forKeyPath:@"currentWorkspace"];
-		[_appController release];
+		[self setAppController: nil];
 	}
 	[super dealloc];
 }
@@ -63,11 +60,28 @@
 {
 	if(_appController)
 	{
-		[_appController addObserver:self forKeyPath:@"rows" options:NSKeyValueObservingOptionNew context:nil];
-		[_appController addObserver:self forKeyPath:@"columns" options:NSKeyValueObservingOptionNew context:nil];
-		[_appController addObserver:self forKeyPath:@"currentWorkspace" options:NSKeyValueObservingOptionNew context:nil];
-		
-		[self synchroniseWithController];
+		/* Nasty, horrible hack */
+		DMAppController *actemp = _appController;
+		_appController = nil;
+		[self setAppController: actemp];
+	}
+}
+
+- (void) workspaceInfoUpdated: (NSNotification*) notification
+{
+	CGWorkspace *ws = [[notification userInfo] objectForKey:DMWorkspaceWithChangedInformationKey];
+	if(!ws)
+		return;
+	
+	NSEnumerator *cellEnum = [[self cells] objectEnumerator];
+	DMPagerCell *cell;
+	while(cell = [cellEnum nextObject])
+	{
+		if([[cell representedObject] isEqualTo:ws])
+		{
+			NSString *name = [[_appController associatedInfoForWorkspace:ws] objectForKey:@"name"];
+			[self setToolTip:name forCell:cell];
+		}
 	}
 }
 
@@ -94,6 +108,8 @@
 	{
 		[_appController removeObserver:self forKeyPath:@"rows"];
 		[_appController removeObserver:self forKeyPath:@"columns"];
+		[_appController removeObserver:self forKeyPath:@"currentWorkspace"];
+		[[NSNotificationCenter defaultCenter] removeObserver: self];
 		[_appController release];
 	}
 	
@@ -101,6 +117,8 @@
 	[_appController addObserver:self forKeyPath:@"rows" options:NSKeyValueObservingOptionNew context:nil];
 	[_appController addObserver:self forKeyPath:@"columns" options:NSKeyValueObservingOptionNew context:nil];
 	[_appController addObserver:self forKeyPath:@"currentWorkspace" options:NSKeyValueObservingOptionNew context:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(workspaceInfoUpdated:) name:DMAssociatedInformationChangedNotification object:_appController];
 	
 	[self synchroniseWithController];
 }
