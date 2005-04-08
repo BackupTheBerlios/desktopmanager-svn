@@ -203,6 +203,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -242,6 +244,7 @@
 								<string>A457FE0507FF414F0061B98C</string>
 								<string>A457FE0E07FF422A0061B98C</string>
 								<string>A457FE8E07FF60BF0061B98C</string>
+								<string>A457FFB407FF83160061B98C</string>
 								<string>A457006F0800245C0061B98C</string>
 								<string>A48FA7E107FE182000C4EDC5</string>
 								<string>A457008D0800284D0061B98C</string>
@@ -254,9 +257,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>33</integer>
-									<integer>32</integer>
-									<integer>31</integer>
+									<integer>13</integer>
+									<integer>12</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -301,8 +304,6 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>HotKeyDescriptions.strings</string>
-										<key>bookmark</key>
-										<string>A4D5C57908074B9E0087D1D3</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -357,7 +358,6 @@
 											<string>A4D5C56708074AD10087D1D3</string>
 											<string>A4D5C56F08074AEA0087D1D3</string>
 											<string>A4D5C57508074B800087D1D3</string>
-											<string>A45702E1080062D70061B98C</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -414,19 +414,6 @@
 											<string>A457026A0800531A0061B98C</string>
 											<string>A45702B008005ED30061B98C</string>
 											<string>A42881120800A1E600C68D25</string>
-											<string>A4D5C52508073CED0087D1D3</string>
-											<string>A4D5C52F08073EB60087D1D3</string>
-											<string>A4D5C545080743E10087D1D3</string>
-											<string>A4D5C546080743E10087D1D3</string>
-											<string>A4D5C557080749AE0087D1D3</string>
-											<string>A4D5C558080749AE0087D1D3</string>
-											<string>A4D5C55C080749F10087D1D3</string>
-											<string>A4D5C56108074A170087D1D3</string>
-											<string>A4D5C56908074AD10087D1D3</string>
-											<string>A4D5C56A08074AD10087D1D3</string>
-											<string>A4D5C57108074AEA0087D1D3</string>
-											<string>A4D5C57208074AEA0087D1D3</string>
-											<string>A4D5C57608074B800087D1D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -484,9 +471,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A4D5C51D08073B9A0087D1D3</string>
+				<string>A4D5C58308074C140087D1D3</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A4D5C51E08073B9A0087D1D3</string>
+				<string>A4D5C58408074C140087D1D3</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -514,9 +501,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>104 199 767 712 0 0 1280 1002 </string>
@@ -548,7 +534,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4D5C57A08074B9E0087D1D3</string>
+										<string>A4D5C58008074C110087D1D3</string>
 										<key>history</key>
 										<array>
 											<string>A4D5C56C08074AD10087D1D3</string>
@@ -979,9 +965,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>A4D5C51F08073B9A0087D1D3</string>
+				<string>A4D5C58508074C140087D1D3</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>A4D5C52008073B9A0087D1D3</string>
+				<string>A4D5C58608074C140087D1D3</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
