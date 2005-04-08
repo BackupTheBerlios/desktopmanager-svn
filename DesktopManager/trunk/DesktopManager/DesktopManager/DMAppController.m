@@ -31,14 +31,12 @@
 #import "Preferences/DMPagerPreferences.h"
 #import "Preferences/DMHotKeyPreferences.h"
 
+NSString *DMAssociatedInformationChangedNotification = @"DMAssociatedInformationChangedNotification";
+NSString *DMWorkspaceWithChangedInformationKey = @"DMWorkspaceWithChangedInformationKey";
+
 /*
- The workspace 'array' is actually a dictionary relating co-ordinate pairs
- as strings (e.g. '0,3') to CGWorkspace objects. The rationale behind this is
- that the size, nature, etc of this array can be quite fluid with rows and
- columns being added. Ideally we want the same workspace to be added for
- 'x,y' even if this has subsequently been deleted and reinserted. Consequently
- we only read in rows x columns workspaces at the start but write out
- all the configuration and use it whenever possible when filling the array.
+ The workspace 'array' is actually a one-dimensional 
+ array of objects in row-major order.
  */
 
 static DMAppController *_defaultDMAppController = nil;
@@ -63,10 +61,12 @@ static DMAppController *_defaultDMAppController = nil;
 		{
 			_defaultDMAppController = mySelf;
 		}
-		_workspaces = nil;
+		_workspaceArray = nil;
 		_currentWorkspaceRefreshTimer = nil;
 		_workspaceRefreshTimer = nil;
 		_statusMenuItem = nil;
+		_rows = 0;
+		_columns = 0;
 	}
 	return mySelf;
 }
@@ -83,8 +83,8 @@ static DMAppController *_defaultDMAppController = nil;
 		[_currentWorkspaceRefreshTimer invalidate];
 	if(_workspaceRefreshTimer)
 		[_workspaceRefreshTimer invalidate];
-	if(_workspaces)
-		[_workspaces release];
+	if(_workspaceArray)
+		[_workspaceArray release];
 	
 	[super dealloc];
 }
@@ -139,11 +139,9 @@ static DMAppController *_defaultDMAppController = nil;
 	}
 	
 	/* Our actual data storage. */
-	/* The actual CGWorkspaces will be created 'on demand'. */	
-	_workspaces = [[NSMutableDictionary dictionary] retain];
-	
-	/* Make sure we give 0,0 workspace 1 */
-	[_workspaces setObject:[[[CGWorkspace alloc] initRepresentingWorkspace:1] autorelease] forKey:@"0,0"];
+	/* The actual CGWorkspaces will be created by updateWorkspaceArray. */	
+	_workspaceArray = [[NSMutableArray array] retain];
+
 	
 	/* Make sure we're informed of any workspace selection changes */
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(workspaceWillChange:) name:CGWorkspaceWillChangeNotification object:nil];
@@ -398,51 +396,21 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (CGWorkspace*) workspaceAtRow: (int) row column: (int) column
 {
+	/* Sanity check */
+	if([_workspaceArray count] != [self rows] * [self columns])
+	{
+		NSLog(@"Error: Somehow our workspace array has got out of kilter.");
+		return nil;
+	}
+	
+	
 	if((row < 0) || (row >= [self rows]))
 		return nil;
 	if((column < 0) || (column >= [self columns]))
 		return nil;
 	
-	/* Do we have an existing workspace? */
-	NSString *key = [NSString stringWithFormat:@"%i,%i", row, column];
-	CGWorkspace *workspace = [_workspaces objectForKey: key];
-	if(workspace)
-		return workspace;
 	
-	/* Nothing already huh? Let's see if we have one in the preferences */
-	NSDictionary *workspaceDescription = [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%@",key]];
-	if(workspaceDescription)
-	{
-		/* Yup, we've got one */
-		workspace = [[[CGWorkspace alloc] initRepresentingWorkspace: [[workspaceDescription objectForKey:@"number"] intValue]] autorelease];
-		/* Little sanity check. */
-		while([[_workspaces allKeysForObject:workspace] count])
-		{
-			[workspace setWorkspaceNumber: [workspace workspaceNumber]+1];
-		}
-		/* Save in user defaults */
-		[[NSUserDefaults standardUserDefaults] setValue:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:[workspace workspaceNumber]] forKey:@"number"] forKey:[NSString stringWithFormat:@"Workspace%@", key]];
-		[_workspaces setObject:workspace forKey:key];
-		return workspace;
-	}
-	
-	/* Nope nothing. Keep trying workspaces until we
-	   come across an unused one. I don't like this method much but
-	   it is quick to code up. */
-	workspace = [[[CGWorkspace alloc] initRepresentingWorkspace: 1] autorelease];
-	while([[_workspaces allKeysForObject:workspace] count])
-	{
-		[workspace setWorkspaceNumber: [workspace workspaceNumber]+1];
-	}
-	[_workspaces setObject:workspace forKey:key];
-	
-	/* Save in user defaults */
-	[[NSUserDefaults standardUserDefaults] setValue:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:[workspace workspaceNumber]] forKey:@"number"] forKey:[NSString stringWithFormat:@"Workspace%@", key]];
-	
-	/* Make sure we save it */
-	[[NSUserDefaults standardUserDefaults] synchronize];
-	
-	return workspace;
+	return [_workspaceArray objectAtIndex:column + row*[self columns]];
 }
 
 - (BOOL) getCurrentWorkspaceRow: (int*) row column: (int*) column
@@ -452,24 +420,21 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (BOOL) getWorkspace: (CGWorkspace*) ws row: (int*) row column: (int*) column
 {
-	NSArray *keyArray = [_workspaces allKeysForObject: ws];
-	if([keyArray count] < 1)
+	if(![_workspaceArray containsObject:ws])
+	{
+		NSLog(@"Error: Request for location of unknown workspace %i.", [ws workspaceNumber]);
 		return NO;
+	}
 	
-	if([keyArray count] > 1)
-		NSLog(@"Err... oddness");
-	
-	NSString *key = [keyArray objectAtIndex: 0];
-	NSArray *coords = [key componentsSeparatedByString: @","];
-	if([coords count] != 2)
-		return NO;
-	
+	int index = [_workspaceArray indexOfObject: ws];
+
 	if(row)
-		*row = [[coords objectAtIndex: 0] intValue];
+		*row = index / [self columns];
+	if(column)
+		*column = index % [self columns];
 	
-	if(*column)
-		*column = [[coords objectAtIndex: 1] intValue];
-	
+	NSLog(@"Workspace %i at (%i,%i)", [ws workspaceNumber], index - (index % [self columns]), index % [self columns]);
+
 	return YES;
 }
 
@@ -477,7 +442,7 @@ static DMAppController *_defaultDMAppController = nil;
 {
 	/* For neatness' sake actually return the object we store representing
 	 * the current workspace. */
-	NSEnumerator *wsEnum = [_workspaces objectEnumerator];
+	NSEnumerator *wsEnum = [_workspaceArray objectEnumerator];
 	CGWorkspace *ws;
 	while(ws = [wsEnum nextObject])
 	{
@@ -516,6 +481,17 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void) pagerResized
 {
+	if((_rows == 0) || (_columns == 0))
+		return;
+	
+	/* Synchronise workspace array */
+	[_workspaceArray removeAllObjects];
+	int i;
+	for(i=1; i<=_rows*_columns; i++)
+	{
+		[_workspaceArray addObject:[[[CGWorkspace alloc] autorelease] initRepresentingWorkspace:i]];
+	}
+	
 	if(_statusPagerItem)
 	{
 		[(DMPager*)[_statusPagerItem view] makeIdealSizeForHeight: 22];
@@ -537,12 +513,11 @@ static DMAppController *_defaultDMAppController = nil;
 {
 	[self willChangeValueForKey:@"rows"];
 	_rows = rows;
+	[self pagerResized];
 	[self didChangeValueForKey:@"rows"];
 	
 	[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:rows] forKey:@"PagerRows"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
-	
-	[self pagerResized];
 }
 
 - (int) columns
@@ -554,54 +529,30 @@ static DMAppController *_defaultDMAppController = nil;
 {
 	[self willChangeValueForKey:@"columns"];
 	_columns = columns;
+	[self pagerResized];
 	[self didChangeValueForKey:@"columns"];
 	
 	[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:columns] forKey:@"PagerColumns"];
 	[[NSUserDefaults standardUserDefaults] synchronize];	
-	
-	[self pagerResized];
 }
 
 - (NSDictionary*) associatedInfoForWorkspace: (CGWorkspace*) ws
 {
-	if(![[_workspaces allValues] containsObject: ws])
+	if(![_workspaceArray containsObject: ws])
 		return nil;
 	
-	NSString *key = [[_workspaces allKeysForObject:ws] objectAtIndex: 0];
-	if(!key)
-		return nil;
-	
-	NSDictionary *workspaceDescription = [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%@",key]];
-	if(!workspaceDescription)
-		return nil;
-	
-	return [workspaceDescription objectForKey:@"attributes"];
+	return [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%iInfo",[ws workspaceNumber]]];
 }
 
 - (void) setAssociatedInfo: (NSDictionary*) info forWorkspace: (CGWorkspace*) ws
 {
-	if(![[_workspaces allValues] containsObject: ws])
+	if(![_workspaceArray containsObject: ws])
 		return;
-	
-	NSString *key = [[_workspaces allKeysForObject:ws] objectAtIndex: 0];
-	if(!key)
-		return;
-	
-	NSDictionary *workspaceDescription = [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%@",key]];
-	if(!workspaceDescription)
-		return;
-	
-	NSMutableDictionary *newInfo = [NSMutableDictionary dictionary];
-	if([workspaceDescription objectForKey:@"atributes"])
-	{
-		[newInfo addEntriesFromDictionary: [workspaceDescription objectForKey:@"atributes"]];
-	}
-	[newInfo addEntriesFromDictionary:info];
-	
-	NSMutableDictionary *newDescription = [NSMutableDictionary dictionaryWithDictionary: workspaceDescription];
-	[newDescription setObject:newInfo forKey:@"attributes"];
-	[[NSUserDefaults standardUserDefaults] setObject:newDescription forKey:[NSString stringWithFormat:@"Workspace%@",key]];
+
+	[[NSUserDefaults standardUserDefaults] setObject:info forKey:[NSString stringWithFormat:@"Workspace%iInfo",[ws workspaceNumber]]];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:DMAssociatedInformationChangedNotification object:self userInfo:[NSDictionary dictionaryWithObject:ws forKey:DMWorkspaceWithChangedInformationKey]];
 }
 
 @end
@@ -615,7 +566,7 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void) updateWorkspaces: (NSTimer*) timer
 {
-	NSEnumerator *wsEnum = [_workspaces objectEnumerator];
+	NSEnumerator *wsEnum = [_workspaceArray objectEnumerator];
 	CGWorkspace *ws;
 	while(ws = [wsEnum nextObject])
 	{

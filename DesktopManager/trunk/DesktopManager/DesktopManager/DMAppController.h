@@ -24,6 +24,12 @@
 @class DMPager;
 @class DMPreferencesController;
 
+/* Notification sent when information associated with a particular
+ * workspace changes. */
+extern NSString *DMAssociatedInformationChangedNotification;
+
+extern NSString *DMWorkspaceWithChangedInformationKey;
+
 @interface DMApplication : NSApplication {
 }
 @end
@@ -35,7 +41,7 @@
 	IBOutlet DMPreferencesController *_prefsController;
 	
 	/* See comment in DMAppController for data model */
-	NSMutableDictionary *_workspaces;
+	NSMutableArray *_workspaceArray;
 	int _rows, _columns;
 	NSTimer *_currentWorkspaceRefreshTimer;
 	NSTimer *_workspaceRefreshTimer;
