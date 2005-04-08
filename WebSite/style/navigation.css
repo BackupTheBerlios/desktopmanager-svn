@@ -1,0 +1,69 @@
+/* CSS for navigation bar at top of all pages */
+/* (C) 2004 Rich Wareham */
+
+div#navigationBar {
+  text-align: center;
+  padding: 10px 0 0 0;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: white;
+  z-index: 20;
+}
+
+#navigationBar table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-spacing: 0px;
+}
+
+#navigationBar table td {
+  background-image: url(../images/bar_active_middle.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+#navigationBar table td.placeholder {
+  width: 50%;
+  background-color: white;
+  background-image: url(../images/tabbar_bottom.png);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+#navigationBar table td a {
+  display: block;
+  height: 32px;
+  background-image: url(../images/inactive_left.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 0 0 0 9px;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+#navigationBar table td {
+  background-image: url(../images/inactive_right.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 0 9px 0 0;
+  margin: 0;
+}
+
+#navigationBar table td#activeTab a {
+  background-image: url(../images/active_left.png);
+}
+
+#navigationBar table td#activeTab {
+  background-image: url(../images/active_right.png);
+}
+

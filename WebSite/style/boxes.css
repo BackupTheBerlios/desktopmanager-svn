@@ -1,0 +1,73 @@
+/* CSS for boxes on pages */
+/* (C) Copyright 2004 Rich Wareham */
+
+div.box {
+  background: white;
+  width: 700px; 
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid black;
+  text-align: justify;
+}
+
+div.box h1 {
+  margin: -5px -10px 5px -10px;
+  background-color: black;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.box#news ul {
+  margin: 0;
+  padding: 0;
+  list-style: square inside;
+  font-weight: bold;
+}
+
+/* Special boxes */
+
+div#mainPage {
+  /* background-color: red; */
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  right: 50%;
+  margin: 0 -350px 0 -350px;
+  padding: 0.5em 1em;	  
+  z-index: 10;
+}
+
+div#rightBox {
+  float:right;
+}
+
+#news span.date {
+  color: #777777;
+}
+
+div#about, div#warning {
+  width: 420px;
+}
+
+#donate, #news, #license {
+  width: 200px;
+}
+
+div.warning {
+  border: 3px solid black;
+  margin: 1em 1em;
+  padding: 0.5em 10px;
+  background-color: #cccccc;
+  text-transform: uppercase;
+  background-image: url(../images/warning.png);
+  background-repeat: no-repeat;
+  background-position: 7px 5px;
+  padding-left: 47px;
+}
+
+#donate p, #license p {
+  font-size: 90%;
+  margin-bottom: 10px;
+}
