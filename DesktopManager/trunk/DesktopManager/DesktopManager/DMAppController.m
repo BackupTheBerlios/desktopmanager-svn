@@ -44,6 +44,8 @@ static DMAppController *_defaultDMAppController = nil;
 @interface DMAppController (Private)
 - (void) updateCurrentWorkspace: (NSTimer*) timer;
 - (void) updateWorkspaces: (NSTimer*) timer;
+- (void) syncModelToRowOrColumnChange;
+- (void) pagerResized;
 @end
 
 @implementation DMAppController
@@ -209,8 +211,8 @@ static DMAppController *_defaultDMAppController = nil;
 	DMPager *statusPagerView = [[[DMPager alloc] autorelease] initWithFrame: NSMakeRect(0,0, 88, 22)]; 
 	[statusPagerView setAppController: self];
 	[statusPagerView setAutosizesCells: YES];
-	[statusPagerView makeIdealSizeForHeight:22];
 	[_statusPagerItem setView: statusPagerView];
+	[self pagerResized];
 }
 
 - (IBAction) switchToWorkspace: (CGWorkspace*) ws
@@ -218,9 +220,38 @@ static DMAppController *_defaultDMAppController = nil;
 	if(!ws || ![ws isKindOfClass:[CGWorkspace class]])
 		return;
 	
-	NSLog(@"Switch to %i", [ws workspaceNumber]);
+	/* Fall back if we have no idea */
+	int option = CGSLeft;
 	
-	[ws makeCurrentWithTransition:[[NSUserDefaults standardUserDefaults] integerForKey:@"SwitchTransition"] option:CGSRight time:[[NSUserDefaults standardUserDefaults] floatForKey:@"SwitchDuration"]];
+	int fromRow, fromCol;
+	[self getCurrentWorkspaceRow:&fromRow column:&fromCol];
+	
+	int toRow, toCol;
+	[self getWorkspace:ws row:&toRow column:&toCol];
+	
+	/* The orientations seem reversed here since the option directions
+     * refer to the movement of the transition itself */
+	if(toRow > fromRow)
+	{
+		/* Moving down */
+		option = CGSUp;
+	} else if(toRow < fromRow)
+	{
+		/* Moving up */
+		option = CGSDown;
+	} else if(toCol > fromCol)
+	{
+		/* Moving right */
+		option = CGSLeft;
+	} else if(toCol < fromCol)
+	{
+		/* Moving left */
+		option = CGSRight;
+	}
+	
+	NSLog(@"Direction: %i", option);
+	
+	[ws makeCurrentWithTransition:[[NSUserDefaults standardUserDefaults] integerForKey:@"SwitchTransition"] option:option time:[[NSUserDefaults standardUserDefaults] floatForKey:@"SwitchDuration"]];
 }
 
 - (BOOL) desktopPagerVisible
@@ -252,6 +283,8 @@ static DMAppController *_defaultDMAppController = nil;
 		[_pagerWindow setHidesOnDeactivate: NO];
 		
 		[_pagerView setAutosizesCells: YES];
+		
+		[self pagerResized];
 	}
 	
 	/* Finally show the window */
@@ -433,7 +466,7 @@ static DMAppController *_defaultDMAppController = nil;
 	if(column)
 		*column = index % [self columns];
 	
-	NSLog(@"Workspace %i at (%i,%i)", [ws workspaceNumber], index - (index % [self columns]), index % [self columns]);
+	//NSLog(@"Workspace %i at (%i,%i)", [ws workspaceNumber], index - (index % [self columns]), index % [self columns]);
 
 	return YES;
 }
@@ -479,42 +512,13 @@ static DMAppController *_defaultDMAppController = nil;
 	return _rows;
 }
 
-- (void) pagerResized
-{
-	if((_rows == 0) || (_columns == 0))
-		return;
-	
-	/* Synchronise workspace array */
-	[_workspaceArray removeAllObjects];
-	int i;
-	for(i=1; i<=_rows*_columns; i++)
-	{
-		[_workspaceArray addObject:[[[CGWorkspace alloc] autorelease] initRepresentingWorkspace:i]];
-	}
-	
-	if(_statusPagerItem)
-	{
-		[(DMPager*)[_statusPagerItem view] makeIdealSizeForHeight: 22];
-	}
-	
-	if(_pagerWindow && _pagerView)
-	{
-		NSSize pagerSize = [[_pagerWindow contentView] bounds].size;
-		pagerSize.height = [_pagerView idealHeightForWidth: pagerSize.width];
-		[_pagerWindow setContentSize: pagerSize];
-		[_pagerWindow setContentAspectRatio: pagerSize];
-	}
-	
-	[self updateWorkspaces:nil];
-	[self updateCurrentWorkspace:nil];
-}
-
 - (void) setRows: (int) rows
 {
 	[self willChangeValueForKey:@"rows"];
 	_rows = rows;
-	[self pagerResized];
+	[self syncModelToRowOrColumnChange];
 	[self didChangeValueForKey:@"rows"];
+	[self pagerResized];
 	
 	[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:rows] forKey:@"PagerRows"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
@@ -529,8 +533,9 @@ static DMAppController *_defaultDMAppController = nil;
 {
 	[self willChangeValueForKey:@"columns"];
 	_columns = columns;
-	[self pagerResized];
+	[self syncModelToRowOrColumnChange];
 	[self didChangeValueForKey:@"columns"];
+	[self pagerResized];
 	
 	[[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:columns] forKey:@"PagerColumns"];
 	[[NSUserDefaults standardUserDefaults] synchronize];	
@@ -573,6 +578,45 @@ static DMAppController *_defaultDMAppController = nil;
 		if(![ws isCurrentWorkspace])
 			[ws refreshCachedWindowList];
 	}
+}
+
+- (void) syncModelToRowOrColumnChange
+{
+	if((_rows == 0) || (_columns == 0))
+		return;
+	
+	/* Synchronise workspace array */
+	[_workspaceArray removeAllObjects];
+	int i;
+	for(i=1; i<=_rows*_columns; i++)
+	{
+		[_workspaceArray addObject:[[[CGWorkspace alloc] autorelease] initRepresentingWorkspace:i]];
+	}
+}
+
+- (void) pagerResized
+{
+	if((_rows == 0) || (_columns == 0))
+		return;
+	
+	if(_statusPagerItem)
+	{
+		[(DMPager*)[_statusPagerItem view] makeIdealSizeForHeight: 22];
+	}
+	
+	if(_pagerWindow && _pagerView)
+	{
+		/* This is a bit of a hack to make the pager window
+		* track the pager size. */
+		NSSize pagerSize = [[_pagerWindow contentView] frame].size;
+		
+		pagerSize.height = [_pagerView idealHeightForWidth:pagerSize.width];
+		[_pagerWindow setContentSize:pagerSize];
+		[_pagerWindow setContentAspectRatio:pagerSize];
+	}
+	
+	[self updateWorkspaces:nil];
+	[self updateCurrentWorkspace:nil];
 }
 
 @end
