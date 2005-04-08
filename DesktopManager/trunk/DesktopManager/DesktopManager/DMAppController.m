@@ -249,8 +249,6 @@ static DMAppController *_defaultDMAppController = nil;
 		option = CGSRight;
 	}
 	
-	NSLog(@"Direction: %i", option);
-	
 	[ws makeCurrentWithTransition:[[NSUserDefaults standardUserDefaults] integerForKey:@"SwitchTransition"] option:option time:[[NSUserDefaults standardUserDefaults] floatForKey:@"SwitchDuration"]];
 }
 
