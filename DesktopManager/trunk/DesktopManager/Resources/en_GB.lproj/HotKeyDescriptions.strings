@@ -1,9 +1,10 @@
 /* Localised descriptions of hot key events */
 
-show_prefs = "Show Preferences Window";
+show_prefs = "Show Preferences";
 move_to_left_ws = "Switch one desktop left";
 move_to_right_ws = "Switch one desktop right";
 move_to_upper_ws = "Switch one desktop up";
 move_to_lower_ws = "Switch one desktop down";
 move_to_next_ws = "Switch to next desktop";
 move_to_prev_ws = "Switch to previous desktop";
+show_desktop_pager = "Show pager window";

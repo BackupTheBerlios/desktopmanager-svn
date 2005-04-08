@@ -120,6 +120,8 @@ static DMAppController *_defaultDMAppController = nil;
 	DEFAULT_HOTKEY(126, NSCommandKeyMask | NSAlternateKeyMask, switchWorkspaceUp:, move_to_upper_ws);
 	DEFAULT_HOTKEY(35, NSCommandKeyMask | NSAlternateKeyMask, showPreferences:, show_prefs);
 	[hk setEnabled: NO];
+	DEFAULT_HOTKEY(32, NSCommandKeyMask | NSAlternateKeyMask, showDesktopPager:, show_desktop_pager);
+	[hk setEnabled: NO];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

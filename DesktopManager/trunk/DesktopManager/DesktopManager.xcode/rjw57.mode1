@@ -246,20 +246,22 @@
 								<string>A48FA7E107FE182000C4EDC5</string>
 								<string>A457008D0800284D0061B98C</string>
 								<string>A4EEA53807FED3F0003AABB3</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>A4570261080052A50061B98C</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
-									<integer>23</integer>
-									<integer>19</integer>
+									<integer>33</integer>
+									<integer>32</integer>
+									<integer>31</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 11}, {186, 652}}</string>
+							<string>{{0, 147}, {186, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -290,7 +292,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMPagerCell.m</string>
+								<string>HotKeyDescriptions.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -298,9 +300,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMPagerCell.m</string>
+										<string>HotKeyDescriptions.strings</string>
 										<key>bookmark</key>
-										<string>A4D5C56408074A370087D1D3</string>
+										<string>A4D5C57908074B9E0087D1D3</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -347,14 +349,15 @@
 											<string>A457023608004FC70061B98C</string>
 											<string>A45702670800531A0061B98C</string>
 											<string>A45702AE08005ED30061B98C</string>
-											<string>A45702E1080062D70061B98C</string>
 											<string>A42881110800A1E600C68D25</string>
 											<string>A4D5C52E08073EB60087D1D3</string>
 											<string>A4D5C544080743E10087D1D3</string>
 											<string>A4D5C556080749AE0087D1D3</string>
 											<string>A4D5C55A080749F10087D1D3</string>
-											<string>A4D5C55F08074A170087D1D3</string>
-											<string>A4D5C56008074A170087D1D3</string>
+											<string>A4D5C56708074AD10087D1D3</string>
+											<string>A4D5C56F08074AEA0087D1D3</string>
+											<string>A4D5C57508074B800087D1D3</string>
+											<string>A45702E1080062D70061B98C</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -419,6 +422,11 @@
 											<string>A4D5C558080749AE0087D1D3</string>
 											<string>A4D5C55C080749F10087D1D3</string>
 											<string>A4D5C56108074A170087D1D3</string>
+											<string>A4D5C56908074AD10087D1D3</string>
+											<string>A4D5C56A08074AD10087D1D3</string>
+											<string>A4D5C57108074AEA0087D1D3</string>
+											<string>A4D5C57208074AEA0087D1D3</string>
+											<string>A4D5C57608074B800087D1D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -506,8 +514,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>A48FA75D07FE14DD00C4EDC5</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
 	<string>104 199 767 712 0 0 1280 1002 </string>
@@ -529,7 +538,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMHotKey.m</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -537,7 +546,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CD052900623707200166675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMHotKey.m</string>
+										<string>DMAppController.m</string>
+										<key>bookmark</key>
+										<string>A4D5C57A08074B9E0087D1D3</string>
+										<key>history</key>
+										<array>
+											<string>A4D5C56C08074AD10087D1D3</string>
+										</array>
 									</dict>
 									<key>SplitCount</key>
 									<string>1</string>
@@ -558,8 +573,6 @@
 							<string>215pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -599,7 +612,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A48FA75D07FE14DD00C4EDC5</string>
-				<string>A4D5C5050807392E0087D1D3</string>
+				<string>A4D5C56E08074AD10087D1D3</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

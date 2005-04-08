@@ -420,6 +420,27 @@
 			A4D5C56208074A170087D1D3 = A4D5C56208074A170087D1D3;
 			A4D5C56308074A2E0087D1D3 = A4D5C56308074A2E0087D1D3;
 			A4D5C56408074A370087D1D3 = A4D5C56408074A370087D1D3;
+			A4D5C56508074A670087D1D3 = A4D5C56508074A670087D1D3;
+			A4D5C56608074A6C0087D1D3 = A4D5C56608074A6C0087D1D3;
+			A4D5C56708074AD10087D1D3 = A4D5C56708074AD10087D1D3;
+			A4D5C56808074AD10087D1D3 = A4D5C56808074AD10087D1D3;
+			A4D5C56908074AD10087D1D3 = A4D5C56908074AD10087D1D3;
+			A4D5C56A08074AD10087D1D3 = A4D5C56A08074AD10087D1D3;
+			A4D5C56B08074AD10087D1D3 = A4D5C56B08074AD10087D1D3;
+			A4D5C56C08074AD10087D1D3 = A4D5C56C08074AD10087D1D3;
+			A4D5C56D08074AD10087D1D3 = A4D5C56D08074AD10087D1D3;
+			A4D5C56F08074AEA0087D1D3 = A4D5C56F08074AEA0087D1D3;
+			A4D5C57008074AEA0087D1D3 = A4D5C57008074AEA0087D1D3;
+			A4D5C57108074AEA0087D1D3 = A4D5C57108074AEA0087D1D3;
+			A4D5C57208074AEA0087D1D3 = A4D5C57208074AEA0087D1D3;
+			A4D5C57308074AEA0087D1D3 = A4D5C57308074AEA0087D1D3;
+			A4D5C57408074AEA0087D1D3 = A4D5C57408074AEA0087D1D3;
+			A4D5C57508074B800087D1D3 = A4D5C57508074B800087D1D3;
+			A4D5C57608074B800087D1D3 = A4D5C57608074B800087D1D3;
+			A4D5C57708074B800087D1D3 = A4D5C57708074B800087D1D3;
+			A4D5C57808074B800087D1D3 = A4D5C57808074B800087D1D3;
+			A4D5C57908074B9E0087D1D3 = A4D5C57908074B9E0087D1D3;
+			A4D5C57A08074B9E0087D1D3 = A4D5C57A08074B9E0087D1D3;
 			A4EEA2A407FE18F3003AABB3 = A4EEA2A407FE18F3003AABB3;
 			A4EEA2C707FE1B76003AABB3 = A4EEA2C707FE1B76003AABB3;
 			A4EEA2CB07FE1B76003AABB3 = A4EEA2CB07FE1B76003AABB3;
@@ -502,7 +523,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: desktopPagerVisible";
 		rLen = 0;
-		rLoc = 9019;
+		rLoc = 9051;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 8267;
@@ -520,7 +541,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: desktopPagerVisible";
 		rLen = 0;
-		rLoc = 9019;
+		rLoc = 9051;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 8267;
@@ -550,7 +571,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 436";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2480;
@@ -714,7 +735,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 327";
 		rLen = 0;
-		rLoc = 14017;
+		rLoc = 14049;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 11724;
@@ -760,7 +781,7 @@
 	A4570262080052A50061B98C = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {511, 454}}";
-			sepNavSelRange = "{30, 0}";
+			sepNavSelRange = "{78, 0}";
 			sepNavVisRect = "{{0, 0}, {511, 454}}";
 		};
 	};
@@ -779,7 +800,7 @@
 		isa = PBXTextBookmark;
 		name = "en_GB: 1";
 		rLen = 0;
-		rLoc = 361;
+		rLoc = 396;
 		rType = 0;
 		vrLen = 47;
 		vrLoc = 0;
@@ -1438,7 +1459,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 436";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2480;
@@ -1448,7 +1469,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 436";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2480;
@@ -1458,7 +1479,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 436";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2480;
@@ -1468,7 +1489,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 436";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2480;
@@ -1478,7 +1499,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 474";
 		rLen = 0;
-		rLoc = 14679;
+		rLoc = 14711;
 		rType = 0;
 		vrLen = 930;
 		vrLoc = 2229;
@@ -1648,7 +1669,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 503";
 		rLen = 0;
-		rLoc = 14724;
+		rLoc = 14756;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 14397;
@@ -1658,7 +1679,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 504";
 		rLen = 0;
-		rLoc = 14724;
+		rLoc = 14756;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 14481;
@@ -1668,7 +1689,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 504";
 		rLen = 0;
-		rLoc = 14724;
+		rLoc = 14756;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 14370;
@@ -1678,7 +1699,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 507";
 		rLen = 0;
-		rLoc = 14724;
+		rLoc = 14756;
 		rType = 0;
 		vrLen = 914;
 		vrLoc = 14481;
@@ -1688,7 +1709,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 263";
 		rLen = 0;
-		rLoc = 9399;
+		rLoc = 9431;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 8417;
@@ -1698,7 +1719,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 513";
 		rLen = 0;
-		rLoc = 15348;
+		rLoc = 15380;
 		rType = 0;
 		vrLen = 799;
 		vrLoc = 14714;
@@ -1708,7 +1729,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 258";
 		rLen = 0;
-		rLoc = 9613;
+		rLoc = 9645;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 8615;
@@ -1718,7 +1739,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 258";
 		rLen = 0;
-		rLoc = 9613;
+		rLoc = 9645;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 8615;
@@ -1728,7 +1749,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 237";
 		rLen = 0;
-		rLoc = 8374;
+		rLoc = 8406;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 8031;
@@ -1738,7 +1759,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 246";
 		rLen = 0;
-		rLoc = 8594;
+		rLoc = 8626;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 8115;
@@ -1748,7 +1769,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 233";
 		rLen = 0;
-		rLoc = 8289;
+		rLoc = 8321;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 8115;
@@ -1758,7 +1779,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 240";
 		rLen = 0;
-		rLoc = 8392;
+		rLoc = 8424;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 8031;
@@ -1768,7 +1789,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 240";
 		rLen = 0;
-		rLoc = 8402;
+		rLoc = 8434;
 		rType = 0;
 		vrLen = 708;
 		vrLoc = 8031;
@@ -1778,7 +1799,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 247";
 		rLen = 0;
-		rLoc = 8644;
+		rLoc = 8676;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 8031;
@@ -1788,7 +1809,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 234";
 		rLen = 0;
-		rLoc = 8388;
+		rLoc = 8420;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 8031;
@@ -1798,7 +1819,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -1808,7 +1829,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -1818,7 +1839,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -1828,7 +1849,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -1838,7 +1859,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -1858,7 +1879,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -2068,7 +2089,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 250";
 		rLen = 0;
-		rLoc = 8647;
+		rLoc = 8679;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 8031;
@@ -2088,7 +2109,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 278";
 		rLen = 0;
-		rLoc = 9468;
+		rLoc = 9590;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 8878;
@@ -2098,7 +2119,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 278";
 		rLen = 0;
-		rLoc = 9468;
+		rLoc = 9590;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 8878;
@@ -2108,7 +2129,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 278";
 		rLen = 0;
-		rLoc = 9468;
+		rLoc = 9590;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 8878;
@@ -2128,7 +2149,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 278";
 		rLen = 0;
-		rLoc = 9468;
+		rLoc = 9590;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 8878;
@@ -2163,18 +2184,225 @@
 		vrLen = 961;
 		vrLoc = 2143;
 	};
+	A4D5C56508074A670087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 961;
+		vrLoc = 2143;
+	};
+	A4D5C56608074A6C0087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 961;
+		vrLoc = 2143;
+	};
+	A4D5C56708074AD10087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 820;
+		vrLoc = 2432;
+	};
+	A4D5C56808074AD10087D1D3 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = ": (CGWorkspace*) ws;\n\n- (IBAction) switchWorkspaceLeft: (id) sender;\n- (IBAction) switchWorkspaceRight";
+		rLen = 102;
+		rLoc = 1873;
+		rType = 0;
+		vrLen = 928;
+		vrLoc = 1303;
+	};
+	A4D5C56908074AD10087D1D3 = {
+		fRef = A4EEA59707FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.m: 101";
+		rLen = 0;
+		rLoc = 2779;
+		rType = 0;
+		vrLen = 820;
+		vrLoc = 2432;
+	};
+	A4D5C56A08074AD10087D1D3 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = ": (CGWorkspace*) ws;\n\n- (IBAction) switchWorkspaceLeft: (id) sender;\n- (IBAction) switchWorkspaceRight";
+		rLen = 102;
+		rLoc = 1873;
+		rType = 0;
+		vrLen = 928;
+		vrLoc = 1303;
+	};
+	A4D5C56B08074AD10087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = DesktopPa;
+		rLen = 9;
+		rLoc = 9163;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 8745;
+	};
+	A4D5C56C08074AD10087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		rLen = 1;
+		rLoc = 122;
+		rType = 1;
+	};
+	A4D5C56D08074AD10087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 122";
+		rLen = 0;
+		rLoc = 4049;
+		rType = 0;
+		vrLen = 661;
+		vrLoc = 3670;
+	};
+	A4D5C56F08074AEA0087D1D3 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = ": (CGWorkspace*) ws;\n\n- (IBAction) switchWorkspaceLeft: (id) sender;\n- (IBAction) switchWorkspaceRight";
+		rLen = 102;
+		rLoc = 1873;
+		rType = 0;
+		vrLen = 928;
+		vrLoc = 1303;
+	};
+	A4D5C57008074AEA0087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 260";
+		rLen = 0;
+		rLoc = 9066;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 8531;
+	};
+	A4D5C57108074AEA0087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 260";
+		rLen = 0;
+		rLoc = 9066;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 8531;
+	};
+	A4D5C57208074AEA0087D1D3 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = ": (CGWorkspace*) ws;\n\n- (IBAction) switchWorkspaceLeft: (id) sender;\n- (IBAction) switchWorkspaceRight";
+		rLen = 102;
+		rLoc = 1873;
+		rType = 0;
+		vrLen = 928;
+		vrLoc = 1303;
+	};
+	A4D5C57308074AEA0087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 254";
+		rLen = 0;
+		rLoc = 8968;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 8531;
+	};
+	A4D5C57408074AEA0087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 645";
+		rLen = 0;
+		rLoc = 18649;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 3670;
+	};
+	A4D5C57508074B800087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 124";
+		rLen = 0;
+		rLoc = 4144;
+		rType = 0;
+		vrLen = 1196;
+		vrLoc = 3189;
+	};
+	A4D5C57608074B800087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 124";
+		rLen = 0;
+		rLoc = 4144;
+		rType = 0;
+		vrLen = 1196;
+		vrLoc = 3189;
+	};
+	A4D5C57708074B800087D1D3 = {
+		fRef = A4570262080052A50061B98C;
+		isa = PBXTextBookmark;
+		name = "en_GB: 3";
+		rLen = 0;
+		rLoc = 78;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 0;
+	};
+	A4D5C57808074B800087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 646";
+		rLen = 0;
+		rLoc = 18649;
+		rType = 0;
+		vrLen = 620;
+		vrLoc = 3670;
+	};
+	A4D5C57908074B9E0087D1D3 = {
+		fRef = A4570262080052A50061B98C;
+		isa = PBXTextBookmark;
+		name = "en_GB: 3";
+		rLen = 0;
+		rLoc = 78;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 0;
+	};
+	A4D5C57A08074B9E0087D1D3 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 646";
+		rLen = 0;
+		rLoc = 18649;
+		rType = 0;
+		vrLen = 620;
+		vrLoc = 3670;
+	};
 	A4EEA29B07FE18AB003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 1246}}";
+			sepNavIntBoundsRect = "{{0, 0}, {511, 1330}}";
 			sepNavSelRange = "{1873, 102}";
 			sepNavVisRect = "{{0, 554}, {511, 454}}";
 		};
 	};
 	A4EEA29C07FE18AB003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 9757}}";
-			sepNavSelRange = "{9468, 0}";
-			sepNavVisRect = "{{0, 4013}, {511, 454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {453, 10233}}";
+			sepNavSelRange = "{18649, 0}";
+			sepNavVisRect = "{{0, 1861}, {453, 198}}";
 		};
 	};
 	A4EEA2A407FE18F3003AABB3 = {
@@ -2306,7 +2534,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {511, 1987}}";
 			sepNavSelRange = "{2779, 0}";
-			sepNavVisRect = "{{0, 1156}, {511, 454}}";
+			sepNavVisRect = "{{0, 1268}, {511, 454}}";
 		};
 	};
 	A4EEA59F07FEDAD1003AABB3 = {
