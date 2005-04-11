@@ -269,6 +269,28 @@
 			A42881110800A1E600C68D25 = A42881110800A1E600C68D25;
 			A42881120800A1E600C68D25 = A42881120800A1E600C68D25;
 			A4445461080A9537005FCD80 = A4445461080A9537005FCD80;
+			A4445469080A95A9005FCD80 = A4445469080A95A9005FCD80;
+			A444546A080A95A9005FCD80 = A444546A080A95A9005FCD80;
+			A444546B080A95A9005FCD80 = A444546B080A95A9005FCD80;
+			A444546C080A982A005FCD80 = A444546C080A982A005FCD80;
+			A444546D080A982A005FCD80 = A444546D080A982A005FCD80;
+			A444546E080A982A005FCD80 = A444546E080A982A005FCD80;
+			A444546F080A9925005FCD80 = A444546F080A9925005FCD80;
+			A4445470080A9959005FCD80 = A4445470080A9959005FCD80;
+			A4445471080A9959005FCD80 = A4445471080A9959005FCD80;
+			A4445472080A9959005FCD80 = A4445472080A9959005FCD80;
+			A4445474080A99A6005FCD80 = A4445474080A99A6005FCD80;
+			A4445475080A99A6005FCD80 = A4445475080A99A6005FCD80;
+			A4445476080A99B0005FCD80 = A4445476080A99B0005FCD80;
+			A4445477080A99B0005FCD80 = A4445477080A99B0005FCD80;
+			A4445478080A99CE005FCD80 = A4445478080A99CE005FCD80;
+			A4445479080A99CE005FCD80 = A4445479080A99CE005FCD80;
+			A444547A080A9A38005FCD80 = A444547A080A9A38005FCD80;
+			A444547B080A9A38005FCD80 = A444547B080A9A38005FCD80;
+			A444547C080A9A6D005FCD80 = A444547C080A9A6D005FCD80;
+			A444547D080A9A6D005FCD80 = A444547D080A9A6D005FCD80;
+			A444547E080A9A77005FCD80 = A444547E080A9A77005FCD80;
+			A444547F080A9A77005FCD80 = A444547F080A9A77005FCD80;
 			A44B0AD208099472006855DC = A44B0AD208099472006855DC;
 			A44B0AD308099472006855DC = A44B0AD308099472006855DC;
 			A44B0AD608099472006855DC = A44B0AD608099472006855DC;
@@ -431,6 +453,223 @@
 		rType = 0;
 		vrLen = 1381;
 		vrLoc = 4073;
+	};
+	A4445469080A95A9005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 141";
+		rLen = 0;
+		rLoc = 4527;
+		rType = 0;
+		vrLen = 1381;
+		vrLoc = 4073;
+	};
+	A444546A080A95A9005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 141";
+		rLen = 0;
+		rLoc = 4527;
+		rType = 0;
+		vrLen = 1381;
+		vrLoc = 4073;
+	};
+	A444546B080A95A9005FCD80 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.h: insertObject:inHotKeysAtIndex:";
+		rLen = 0;
+		rLoc = 2864;
+		rType = 0;
+		vrLen = 932;
+		vrLoc = 2083;
+	};
+	A444546C080A982A005FCD80 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.h: insertObject:inHotKeysAtIndex:";
+		rLen = 0;
+		rLoc = 2864;
+		rType = 0;
+		vrLen = 932;
+		vrLoc = 2083;
+	};
+	A444546D080A982A005FCD80 = {
+		fRef = A4EEA29B07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.h: insertObject:inHotKeysAtIndex:";
+		rLen = 0;
+		rLoc = 2864;
+		rType = 0;
+		vrLen = 932;
+		vrLoc = 2083;
+	};
+	A444546E080A982A005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 391";
+		rLen = 0;
+		rLoc = 13455;
+		rType = 0;
+		vrLen = 796;
+		vrLoc = 12885;
+	};
+	A444546F080A9925005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 198";
+		rLen = 0;
+		rLoc = 7095;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 6318;
+	};
+	A4445470080A9959005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 198";
+		rLen = 0;
+		rLoc = 7095;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 6318;
+	};
+	A4445471080A9959005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		rLen = 1;
+		rLoc = 280;
+		rType = 1;
+	};
+	A4445472080A9959005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 10084;
+	};
+	A4445474080A99A6005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 198";
+		rLen = 0;
+		rLoc = 7095;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 6318;
+	};
+	A4445475080A99A6005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 10084;
+	};
+	A4445476080A99B0005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 198";
+		rLen = 0;
+		rLoc = 7095;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 6318;
+	};
+	A4445477080A99B0005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 10084;
+	};
+	A4445478080A99CE005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 198";
+		rLen = 0;
+		rLoc = 7095;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 6318;
+	};
+	A4445479080A99CE005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 10084;
+	};
+	A444547A080A9A38005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10346;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 9979;
+	};
+	A444547B080A9A38005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 10128;
+	};
+	A444547C080A9A6D005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10346;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 9979;
+	};
+	A444547D080A9A6D005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 10128;
+	};
+	A444547E080A9A77005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10346;
+		rType = 0;
+		vrLen = 751;
+		vrLoc = 9979;
+	};
+	A444547F080A9A77005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 289";
+		rLen = 0;
+		rLoc = 10360;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 10128;
 	};
 	A44B0AD0080993D0006855DC = {
 		isa = PBXFileReference;
@@ -688,7 +927,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 327";
 		rLen = 0;
-		rLoc = 15555;
+		rLoc = 16914;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 11724;
@@ -1386,9 +1625,9 @@
 	};
 	A4EEA29C07FE18AB003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 10807}}";
-			sepNavSelRange = "{4527, 0}";
-			sepNavVisRect = "{{0, 1960}, {511, 454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {453, 12109}}";
+			sepNavSelRange = "{10360, 0}";
+			sepNavVisRect = "{{0, 4705}, {453, 198}}";
 		};
 	};
 	A4EEA2A407FE18F3003AABB3 = {

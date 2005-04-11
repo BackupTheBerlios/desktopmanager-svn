@@ -199,6 +199,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[NSNumber numberWithBool:YES], @"DisplayDesktopPagerOnLaunch",
 		[NSNumber numberWithFloat: 0.2], @"SwitchDuration",
 		[NSNumber numberWithInt: CGSNone], @"SwitchTransition",
+		[NSNumber numberWithBool:NO], @"WrapDesktops",
 		nil]];
 
 	_pagerWindow = nil;
@@ -273,7 +274,24 @@ static DMAppController *_defaultDMAppController = nil;
 	
 	/* The orientations seem reversed here since the option directions
      * refer to the movement of the transition itself */
-	if(toRow > fromRow)
+	if(([self rows] > 2) && (toCol == fromCol) && (toRow == 0) && (fromRow == [self rows] - 1))
+	{
+		/* Wrapping rows */
+		option = CGSUp;
+	} else if(([self columns] > 2) && (toRow == fromRow) && (toCol == 0) && (fromCol == [self columns] - 1))
+	{
+		/* Wrapping cols */
+		option = CGSLeft;
+	} else if(([self rows] > 2) && (toCol == fromCol) && (fromRow == 0) && (toRow == [self rows] - 1))
+	{
+		/* Wrapping rows */
+		option = CGSDown;
+	} else if(([self columns] > 2) && (toRow == fromRow) && (fromCol == 0) && (toCol == [self columns] - 1))
+	{
+		/* Wrapping cols */
+		option = CGSRight;
+		
+	} else if(toRow > fromRow)
 	{
 		/* Moving down */
 		option = CGSUp;
@@ -371,6 +389,8 @@ static DMAppController *_defaultDMAppController = nil;
 		return;
 	
 	column ++;
+	if([[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+		column %= [self columns];
 	if(column < [self columns])
 	{
 		[self switchToWorkspace: [self workspaceAtRow:row column:column]];
@@ -384,6 +404,11 @@ static DMAppController *_defaultDMAppController = nil;
 		return;
 
 	column --;
+	if([[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+	{
+		column += [self columns];
+		column %= [self columns];
+	}
 	if(column >= 0)
 	{
 		[self switchToWorkspace: [self workspaceAtRow:row column:column]];
@@ -397,6 +422,8 @@ static DMAppController *_defaultDMAppController = nil;
 		return;
 	
 	row ++;
+	if([[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+		row %= [self rows];
 	if(row < [self rows])
 	{
 		[self switchToWorkspace: [self workspaceAtRow:row column:column]];
@@ -410,6 +437,11 @@ static DMAppController *_defaultDMAppController = nil;
 		return;
 	
 	row --;
+	if([[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+	{
+		row += [self rows];
+		row %= [self rows];
+	}
 	if(row >= 0)
 	{
 		[self switchToWorkspace: [self workspaceAtRow:row column:column]];
@@ -422,7 +454,14 @@ static DMAppController *_defaultDMAppController = nil;
 	if(![self getCurrentWorkspaceRow:&row column:&column])
 		return;
 	
-	column --;
+	if((row == 0) && (column == 0) && [[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+	{
+		row = [self rows] - 1;
+		column = [self columns] - 1;
+	} else {
+		column --;
+	}
+	
 	if(column < 0)
 	{
 		column = [self columns] - 1;
@@ -441,7 +480,13 @@ static DMAppController *_defaultDMAppController = nil;
 	if(![self getCurrentWorkspaceRow:&row column:&column])
 		return;
 	
-	column ++;
+	if((row == [self rows]-1) && (column == [self columns]-1) && [[NSUserDefaults standardUserDefaults] boolForKey:@"WrapDesktops"])
+	{
+		row = column = 0;
+	} else {
+		column ++;
+	}
+	
 	if(column >= [self columns])
 	{
 		column = 0;
