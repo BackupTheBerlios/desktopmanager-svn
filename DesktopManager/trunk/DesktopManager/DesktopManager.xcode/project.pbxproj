@@ -128,6 +128,7 @@
 		29B97317FDCFA39411CA2CEA = {
 			children = (
 				A4570261080052A50061B98C,
+				A44454C9080B0168005FCD80,
 				A4570072080025590061B98C,
 				A457FFB907FF87170061B98C,
 				A457FE6507FF600C0061B98C,
@@ -283,6 +284,8 @@
 				A4570073080025590061B98C,
 				A4570090080028710061B98C,
 				A4570263080052A50061B98C,
+				A44454B5080B0030005FCD80,
+				A44454CA080B0168005FCD80,
 			);
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +308,7 @@
 				A457FFA507FF82CB0061B98C,
 				A4570063080024080061B98C,
 				A4570091080028710061B98C,
+				A44454A2080AFFCA005FCD80,
 			);
 			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +364,65 @@
 //A42
 //A43
 //A44
+		A444549F080AFFCA005FCD80 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = DMTransitionPreferences.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44454A0080AFFCA005FCD80 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = DMTransitionPreferences.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44454A2080AFFCA005FCD80 = {
+			fileRef = A44454A0080AFFCA005FCD80;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A44454B3080B0030005FCD80 = {
+			children = (
+				A44454B4080B0030005FCD80,
+			);
+			isa = PBXVariantGroup;
+			name = TransitionPrefs.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44454B4080B0030005FCD80 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = en_GB;
+			path = en_GB.lproj/TransitionPrefs.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44454B5080B0030005FCD80 = {
+			fileRef = A44454B3080B0030005FCD80;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A44454C9080B0168005FCD80 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			path = pref_transition.png;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44454CA080B0168005FCD80 = {
+			fileRef = A44454C9080B0168005FCD80;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
 		A4570060080024080061B98C = {
 			fileEncoding = 4;
 			isa = PBXFileReference;
@@ -513,6 +576,8 @@
 		};
 		A457FE0507FF414F0061B98C = {
 			children = (
+				A444549F080AFFCA005FCD80,
+				A44454A0080AFFCA005FCD80,
 				A4570060080024080061B98C,
 				A4570061080024080061B98C,
 				A457FFA207FF82CB0061B98C,
@@ -525,6 +590,7 @@
 				A457FE8E07FF60BF0061B98C,
 				A457FFB407FF83160061B98C,
 				A457006F0800245C0061B98C,
+				A44454B3080B0030005FCD80,
 			);
 			isa = PBXGroup;
 			path = Preferences;

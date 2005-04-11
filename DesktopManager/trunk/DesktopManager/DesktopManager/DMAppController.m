@@ -30,6 +30,7 @@
 #import "Preferences/DMDesktopsPreferences.h"
 #import "Preferences/DMPagerPreferences.h"
 #import "Preferences/DMHotKeyPreferences.h"
+#import "Preferences/DMTransitionPreferences.h"
 
 NSString *DMAssociatedInformationChangedNotification = @"DMAssociatedInformationChangedNotification";
 NSString *DMWorkspaceWithChangedInformationKey = @"DMWorkspaceWithChangedInformationKey";
@@ -371,10 +372,12 @@ static DMAppController *_defaultDMAppController = nil;
 		
 		/* Load individual panes */
 		NSPreferencePane *pane;
-		pane = [[[DMDesktopsPreferences alloc] initWithBundle: [NSBundle bundleForClass:[self class]]] autorelease];
-		[_prefsController addPreferencePane: pane title: NSLocalizedString(@"Desktops", @"perfpane title for desktops") icon: [NSImage imageNamed: @"pref_desktops"]];		
 		pane = [[[DMHotKeyPreferences alloc] initWithBundle: [NSBundle bundleForClass:[self class]]] autorelease];
 		[_prefsController addPreferencePane: pane title: NSLocalizedString(@"Hot Keys", @"perfpane title for hot keys") icon: [NSImage imageNamed: @"pref_hotkeys"]];		
+		pane = [[[DMDesktopsPreferences alloc] initWithBundle: [NSBundle bundleForClass:[self class]]] autorelease];
+		[_prefsController addPreferencePane: pane title: NSLocalizedString(@"Desktops", @"perfpane title for desktops") icon: [NSImage imageNamed: @"pref_desktops"]];		
+		pane = [[[DMTransitionPreferences alloc] initWithBundle: [NSBundle bundleForClass:[self class]]] autorelease];
+		[_prefsController addPreferencePane: pane title: NSLocalizedString(@"Transitions", @"perfpane title for transitions") icon: [NSImage imageNamed: @"pref_transition"]];		
 		pane = [[[DMPagerPreferences alloc] initWithBundle: [NSBundle bundleForClass:[self class]]] autorelease];
 		[_prefsController addPreferencePane: pane title: NSLocalizedString(@"Pagers", @"perfpane title for pagers") icon: [NSImage imageNamed: @"pref_pager"]];		
 	}
