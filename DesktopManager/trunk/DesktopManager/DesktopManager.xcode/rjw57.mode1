@@ -301,7 +301,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A44B0DBC0809FFC3006855DC</string>
+										<string>A44B0DCA080A015E006855DC</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -613,8 +613,8 @@
 		<string>A44B09A8080944A8006855DC</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
 	<string>201 208 767 712 0 0 1280 1002 </string>
@@ -646,7 +646,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMHotKeyPreferences.m</string>
 										<key>bookmark</key>
-										<string>A44B0DBD0809FFC3006855DC</string>
+										<string>A44B0DCB080A015E006855DC</string>
 										<key>history</key>
 										<array>
 											<string>A44B0C3E0809DBCB006855DC</string>
