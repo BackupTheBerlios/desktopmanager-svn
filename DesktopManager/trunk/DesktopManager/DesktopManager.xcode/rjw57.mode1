@@ -240,6 +240,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>A457FE0507FF414F0061B98C</string>
+								<string>A457FFB407FF83160061B98C</string>
 								<string>A48FA7E107FE182000C4EDC5</string>
 								<string>A457008D0800284D0061B98C</string>
 								<string>A4EEA53807FED3F0003AABB3</string>
@@ -256,7 +257,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>15</integer>
+									<integer>14</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -293,7 +295,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMTransitionPreferences.m</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -301,9 +303,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMTransitionPreferences.m</string>
+										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A44454EC080B023F005FCD80</string>
+										<string>A44454F9080B0763005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -357,12 +359,12 @@
 											<string>A44454A6080B0012005FCD80</string>
 											<string>A44454A7080B0012005FCD80</string>
 											<string>A44454A8080B0012005FCD80</string>
-											<string>A44454D2080B01CD005FCD80</string>
 											<string>A44454D3080B01CD005FCD80</string>
 											<string>A44454D4080B01CD005FCD80</string>
 											<string>A44454D5080B01CD005FCD80</string>
 											<string>A44454E3080B01EE005FCD80</string>
-											<string>A44454E4080B01EE005FCD80</string>
+											<string>A44454EE080B0650005FCD80</string>
+											<string>A44454F4080B0656005FCD80</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -438,6 +440,7 @@
 											<string>A44454DC080B01CD005FCD80</string>
 											<string>A44454DD080B01CD005FCD80</string>
 											<string>A44454E5080B01EE005FCD80</string>
+											<string>A44454F0080B0650005FCD80</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -459,6 +462,8 @@
 							<string>488pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -561,7 +566,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A44454ED080B023F005FCD80</string>
+										<string>A44454FA080B0763005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A44454DF080B01CD005FCD80</string>
