@@ -91,6 +91,30 @@ static DMAppController *_defaultDMAppController = nil;
 	[super dealloc];
 }
 
+- (void) didChangeValueForKey: (NSString*) key
+{
+	[super didChangeValueForKey:key];
+	if([key isEqualToString:@"hotKeys"])
+	{
+		/* Form a description of the hot keys */
+		NSMutableDictionary *userHotKeys = [NSMutableDictionary dictionary];
+		NSEnumerator *hkEnum = [_hotKeys objectEnumerator];
+		DMHotKey *hk;
+		while(hk = [hkEnum nextObject])
+		{
+			NSDictionary *hkInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInt:[hk modifiers]], @"modifiers",
+				[NSNumber numberWithInt:[hk keycode]], @"keycode",
+				[NSNumber numberWithBool:[hk enabled]], @"enabled",
+				nil];
+			[userHotKeys setObject:hkInfo forKey:[hk name]];
+		}
+		
+		[[NSUserDefaults standardUserDefaults] setObject:userHotKeys forKey:@"hotKeys"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+}
+
 - (void)applicationWillTerminate:(NSNotification*)aNotification
 {
 	/* Sync user defaults */
@@ -120,6 +144,24 @@ static DMAppController *_defaultDMAppController = nil;
 	[hk setEnabled: NO];
 	DEFAULT_HOTKEY(32, NSCommandKeyMask | NSAlternateKeyMask, showDesktopPager:, show_desktop_pager);
 	[hk setEnabled: NO];
+	
+	/* Now go through each hot key and see if we have a user preference */
+	NSDictionary *userHotKeys = [[NSUserDefaults standardUserDefaults] objectForKey:@"hotKeys"];
+	if(userHotKeys)
+	{
+		NSEnumerator *hkEnum = [_hotKeys objectEnumerator];
+		DMHotKey *hk;
+		while(hk = [hkEnum nextObject])
+		{
+			NSDictionary *hkInfo = [userHotKeys objectForKey:[hk name]];
+			if(hkInfo)
+			{
+				[hk setModifiers: [[hkInfo objectForKey:@"modifiers"] intValue]];
+				[hk setKeycode: [[hkInfo objectForKey:@"keycode"] intValue]];
+				[hk setEnabled: [[hkInfo objectForKey:@"enabled"] boolValue]];
+			}
+		}
+	}
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

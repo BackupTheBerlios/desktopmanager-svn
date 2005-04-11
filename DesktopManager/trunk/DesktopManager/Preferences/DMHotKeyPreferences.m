@@ -58,6 +58,8 @@
 
 - (IBAction) editKeyCombination: (id) sender
 {
+	[[DMAppController defaultController] willChangeValueForKey:@"hotKeys"];
+	
 	DMHotKeyFieldEditor *fieldEditor = [[[DMHotKeyFieldEditor alloc] initWithFrame:[_keyCombinationButton frame]] autorelease];
 	[fieldEditor setDelegate: self];
 	[fieldEditor setRepresentedHotKey: [[_hotKeysController selectedObjects] objectAtIndex:0]];
@@ -68,6 +70,7 @@
 - (void) endHotKeyEditing: (DMHotKeyFieldEditor*) editor
 {
 	[editor removeFromSuperview];
+	[[DMAppController defaultController] didChangeValueForKey:@"hotKeys"];
 }
 
 - (NSArray*) hotKeys

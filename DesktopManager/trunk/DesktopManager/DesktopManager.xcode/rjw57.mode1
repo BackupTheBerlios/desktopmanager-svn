@@ -254,13 +254,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>30</integer>
+									<integer>20</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 351}, {186, 652}}</string>
+							<string>{{0, 249}, {186, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -291,7 +291,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMHotKeyPreferences.m</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -299,9 +299,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMHotKeyPreferences.m</string>
+										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A44B0D9A0809FC9E006855DC</string>
+										<string>A44B0DBC0809FFC3006855DC</string>
 										<key>history</key>
 										<array>
 											<string>A48FA7AF07FE176700C4EDC5</string>
@@ -346,18 +346,18 @@
 											<string>A457014E08003F490061B98C</string>
 											<string>A45702AE08005ED30061B98C</string>
 											<string>A42881110800A1E600C68D25</string>
-											<string>A4D5C52E08073EB60087D1D3</string>
 											<string>A4D5C544080743E10087D1D3</string>
 											<string>A4D5C55A080749F10087D1D3</string>
 											<string>A4D5C56708074AD10087D1D3</string>
 											<string>A44B0AD208099472006855DC</string>
 											<string>A44B0AD308099472006855DC</string>
-											<string>A44B0C480809DD45006855DC</string>
-											<string>A44B0C530809DD75006855DC</string>
 											<string>A44B0CFE0809ED97006855DC</string>
 											<string>A44B0D530809F401006855DC</string>
 											<string>A44B0D7F0809F993006855DC</string>
-											<string>A44B0D800809F993006855DC</string>
+											<string>A44B0D9E0809FD64006855DC</string>
+											<string>A44B0D9F0809FD64006855DC</string>
+											<string>A44B0DA00809FD64006855DC</string>
+											<string>A44B0DB10809FE0A006855DC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -516,6 +516,11 @@
 											<string>A44B0D820809F993006855DC</string>
 											<string>A44B0D830809F993006855DC</string>
 											<string>A44B0D840809F993006855DC</string>
+											<string>A44B0DA20809FD64006855DC</string>
+											<string>A44B0DA30809FD64006855DC</string>
+											<string>A44B0DA40809FD64006855DC</string>
+											<string>A44B0DA50809FD64006855DC</string>
+											<string>A44B0DA60809FD64006855DC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -608,8 +613,8 @@
 		<string>A44B09A8080944A8006855DC</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>201 208 767 712 0 0 1280 1002 </string>
@@ -641,7 +646,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMHotKeyPreferences.m</string>
 										<key>bookmark</key>
-										<string>A44B0D9B0809FC9E006855DC</string>
+										<string>A44B0DBD0809FFC3006855DC</string>
 										<key>history</key>
 										<array>
 											<string>A44B0C3E0809DBCB006855DC</string>
