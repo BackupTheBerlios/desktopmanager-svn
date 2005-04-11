@@ -35,10 +35,12 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 @end
 
 @interface DMAppController : NSObject {
-	IBOutlet NSWindow* _pagerWindow;
+	IBOutlet NSPanel *_pagerWindow;
+	IBOutlet NSPanel *_windowInspector;
 	IBOutlet DMPager* _pagerView;
 	IBOutlet NSMenu *_statusMenu;
 	IBOutlet DMPreferencesController *_prefsController;
+	IBOutlet NSObjectController *_frontCGWindowController;
 	
 	/* See comment in DMAppController for data model */
 	NSMutableArray *_workspaceArray;
@@ -58,6 +60,7 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 - (IBAction) showDesktopPager: (id) sender;
 - (IBAction) showStatusPager: (id) sender;
 - (IBAction) switchToWorkspace: (CGWorkspace*) ws;
+- (IBAction) showWindowInspector: (id) sender;
 
 - (IBAction) switchWorkspaceLeft: (id) sender;
 - (IBAction) switchWorkspaceRight: (id) sender;

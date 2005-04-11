@@ -141,6 +141,7 @@
 				A48FA78007FE15AE00C4EDC5,
 				A4EEA2FA07FE25B9003AABB3,
 				A4EEA9A707FF23D6003AABB3,
+				A44455F2080B2479005FCD80,
 			);
 			isa = PBXGroup;
 			path = Resources;
@@ -286,6 +287,7 @@
 				A4570263080052A50061B98C,
 				A44454B5080B0030005FCD80,
 				A44454CA080B0168005FCD80,
+				A44455F4080B2479005FCD80,
 			);
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +421,30 @@
 		};
 		A44454CA080B0168005FCD80 = {
 			fileRef = A44454C9080B0168005FCD80;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A44455F2080B2479005FCD80 = {
+			children = (
+				A44455F3080B2479005FCD80,
+			);
+			isa = PBXVariantGroup;
+			name = WindowInspector.nib;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44455F3080B2479005FCD80 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			name = en_GB;
+			path = en_GB.lproj/WindowInspector.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A44455F4080B2479005FCD80 = {
+			fileRef = A44455F2080B2479005FCD80;
 			isa = PBXBuildFile;
 			settings = {
 			};

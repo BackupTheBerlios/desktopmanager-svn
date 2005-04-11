@@ -27,13 +27,23 @@
 
 @interface CGWindow : NSObject {
 	int _wid;
+	NSString *_ownerName;
 }
 
 - (id) initWithWindowNumber: (int) wid;
 - (int) windowNumber;
 
+- (NSString*) windowTitle;
+- (int) windowLevel;
+
 - (BOOL) isSticky;
 - (void) setSticky: (BOOL) sticky;
+
+- (NSImage*) ownerIcon;
+- (pid_t) ownerPid;
+- (ProcessSerialNumber) ownerPSN;
+- (void) makeOwnerActive;
+- (NSString*) ownerName;
 
 - (NSRect) frame;
 

@@ -21,6 +21,13 @@
 #import "CGSPrivate.h"
 #import "CGStickyWindowController.h"
 
+static CGSValue kCGSWindowTitle = NULL;
+void _ensure_kCGSWindowTitle() {
+	if(!kCGSWindowTitle) {
+		kCGSWindowTitle = CGSCreateCStringNoCopy("kCGSWindowTitle");
+	}
+}
+
 @implementation NSWindow (CoreGraphics)
 - (CGWindow*) cgWindow
 {
@@ -36,8 +43,16 @@
 	if(mySelf)
 	{
 		_wid = wid;
+		_ownerName = nil;
 	}
 	return mySelf;
+}
+
+- (void) dealloc
+{
+	if(_ownerName)
+		[_ownerName release];
+	[super dealloc];
 }
 
 - (int) windowNumber
@@ -76,6 +91,99 @@
 			[controller removeStickyWindow:self];
 		}
 	}
+}
+
+- (NSString*) windowTitle {
+	CGSValue windowTitle = NULL;
+	OSStatus retVal;
+    CGSConnection connection = _CGSDefaultConnection();
+	
+	_ensure_kCGSWindowTitle();
+	
+	if(retVal = CGSGetWindowProperty(connection, _wid, 
+									 kCGSWindowTitle, &windowTitle)) {
+		NSLog(@"Error getting window title for wid %i.", _wid);
+		return nil;
+	}
+	
+	char *strVal = CGSCStringValue(windowTitle);
+	if(strVal) {
+		return [NSString stringWithUTF8String: strVal];
+	}
+	
+	return nil;
+}
+
+- (int) windowLevel {
+    CGSConnection connection = _CGSDefaultConnection();
+    int level = -1;
+    OSStatus retVal;
+    
+    if(retVal = CGSGetWindowLevel(connection, _wid, &level)) {
+        NSLog(@"Error getting window level: %i", retVal);
+    }
+    
+    return level;
+}
+
+- (pid_t) ownerPid {
+	OSStatus retVal;
+	CGSConnection connection = _CGSDefaultConnection();
+	CGSConnection ownerCID;
+	
+	if(retVal = CGSGetWindowOwner(connection, _wid, &ownerCID)) {
+		NSLog(@"Error getting window owner: %i\n", retVal);
+		return 0;
+	}
+	
+	pid_t pid = 0;
+	if(retVal = CGSConnectionGetPID(ownerCID, &pid, ownerCID)) {
+		NSLog(@"Error getting connection PID: %i\n", retVal);
+	}
+	
+	return pid;
+}
+
+- (NSString*) ownerName {
+    if(_ownerName == nil) {
+        CFStringRef strProcessName;
+        ProcessSerialNumber psn = [self ownerPSN];
+        int retVal;
+		
+        if(retVal = CopyProcessName(&psn, &strProcessName)) {
+            NSLog(@"Error getting process name: %i\n", retVal);
+        }
+        
+        _ownerName = (NSString*) strProcessName;
+    }
+	
+    return _ownerName;
+}
+
+- (ProcessSerialNumber) ownerPSN {
+    ProcessSerialNumber psn;
+	
+    int retVal;
+    if(retVal = GetProcessForPID([self ownerPid], &psn)) {
+        NSLog(@"Error getting PSN from PID: %i\n", retVal);
+    }
+	
+    return psn;
+}
+
+- (void) makeOwnerActive
+{
+    OSStatus retVal;
+    ProcessSerialNumber psn = [self ownerPSN];
+    if(retVal = SetFrontProcess(&psn)) {
+        NSLog(@"Error focusing owner: %i\n", (int)retVal);
+    }
+}
+
+- (NSImage*) ownerIcon
+{
+	NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+	return [workspace iconForFile:[workspace fullPathForApplication:[self ownerName]]];
 }
 
 /* Comparison operations */

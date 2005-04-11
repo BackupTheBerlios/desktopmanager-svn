@@ -5,6 +5,7 @@
                 showDesktopPager = id; 
                 showPreferences = id; 
                 showStatusPager = id; 
+                showWindowInspector = id; 
                 switchToNextWorkspace = id; 
                 switchToPreviousWorkspace = id; 
                 switchToWorkspace = id; 
@@ -16,11 +17,12 @@
             CLASS = DMAppController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
+                "_frontCGWindowController" = NSObjectController; 
                 "_pagerView" = DMPager; 
                 "_pagerWindow" = NSWindow; 
                 "_prefsController" = DMPreferencesController; 
                 "_statusMenu" = NSMenu; 
-                "_windowInspector" = NSPabel; 
+                "_windowInspector" = NSPanel; 
             }; 
             SUPERCLASS = NSObject; 
         }, 

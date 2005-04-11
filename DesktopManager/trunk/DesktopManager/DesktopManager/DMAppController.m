@@ -206,14 +206,16 @@ static DMAppController *_defaultDMAppController = nil;
 	_pagerWindow = nil;
 	_pagerView = nil;
 	_statusMenuItem = nil;
-		
+	_windowInspector = nil;	
+	_frontCGWindowController = nil;
+	
 	[self setRows: [defaults integerForKey: @"PagerRows"]];
 	[self setColumns: [defaults integerForKey: @"PagerColumns"]];
 		
 	/* Refresh current workspace at a greater frequency than others
 	 * since it is the one we're most likely to modify */
 	_currentWorkspaceRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentWorkspace:) userInfo:nil repeats:YES];
-	_workspaceRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(updateWorkspaces:) userInfo:nil repeats:YES];
+	_workspaceRefreshTimer = [NSTimer scheduledTimerWithTimeInterval:4.14134 target:self selector:@selector(updateWorkspaces:) userInfo:nil repeats:YES];
 	
 	_prefsController = nil;
 
@@ -242,6 +244,8 @@ static DMAppController *_defaultDMAppController = nil;
 	
 	_hotKeys = [[NSMutableArray array] retain];
 	[self buildDefaultHotKeys];
+	
+	[self showWindowInspector: nil];
 }
 
 - (IBAction) showStatusPager: (id) sender
@@ -328,6 +332,22 @@ static DMAppController *_defaultDMAppController = nil;
 	}
 }
 
+- (IBAction) showWindowInspector: (id) sender
+{
+	if(!_windowInspector)
+	{
+		/* Load inspector */
+		NSNib *inspectorNib = [[[NSNib alloc] initWithNibNamed:@"WindowInspector" bundle:[NSBundle mainBundle]] autorelease];
+		[inspectorNib instantiateNibWithOwner:self topLevelObjects:nil];
+		
+		[_windowInspector setHidesOnDeactivate:NO];
+		[_windowInspector setFloatingPanel:YES];
+	}
+
+	[_windowInspector orderFront: nil];
+	[[_windowInspector cgWindow] setSticky:YES];
+}
+
 - (IBAction) showDesktopPager: (id) sender
 {
 	if(!_pagerWindow || !_pagerView)
@@ -338,7 +358,7 @@ static DMAppController *_defaultDMAppController = nil;
 		
 		[_pagerWindow setBackgroundColor: [NSColor colorWithCalibratedWhite:0.0 alpha:0.5]];
 		[_pagerWindow setOpaque: NO];
-		[_pagerWindow setLevel: NSFloatingWindowLevel];
+		[_pagerWindow setFloatingPanel:YES];
 		[_pagerWindow setHidesOnDeactivate: NO];
 		
 		[_pagerView setAutosizesCells: YES];
@@ -683,7 +703,25 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void) updateCurrentWorkspace: (NSTimer*) timer
 {
-	[[self currentWorkspace] refreshCachedWindowList];
+	CGWorkspace *ws = [self currentWorkspace];
+	[ws refreshCachedWindowList];
+	if(_frontCGWindowController)
+	{
+		NSArray *list = [ws cachedWindowList];
+		int i = [list count] - 1;
+		CGWindow *win = nil;
+		BOOL found = NO;
+		while((i>=0) && !found) {
+			win = [list objectAtIndex:i];
+			found = win && ([win windowLevel] == NSNormalWindowLevel);
+			i--;
+		}
+		if(found && ([_frontCGWindowController content] != win)) {
+			[_frontCGWindowController setContent: win];
+		} else if([_frontCGWindowController content] != nil) {
+			[_frontCGWindowController setContent: nil];
+		}
+	}
 }
 
 - (void) updateWorkspaces: (NSTimer*) timer
