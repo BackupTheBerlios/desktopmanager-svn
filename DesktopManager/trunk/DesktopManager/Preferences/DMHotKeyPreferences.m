@@ -23,6 +23,149 @@
 
 @interface DMLocaliseHotKeyDescription: NSValueTransformer {}
 @end
+
+@interface DMHotKeyFieldEditor : NSView {
+	id _delegate;
+	DMHotKey *_representedHotKey;
+}
+
+- (id) delegate;
+- (void) setDelegate: (id) delegate;
+- (DMHotKey*) representedHotKey;
+- (void) setRepresentedHotKey: (DMHotKey*) hk;
+
+@end
+
+@implementation DMHotKeyPreferences
+
+- (id) initWithBundle: (NSBundle*) bundle
+{
+	id mySelf = [super initWithBundle: bundle];
+	if(mySelf) 
+	{
+		if(![NSValueTransformer valueTransformerForName:@"DMLocaliseHotKeyDescription"])
+		{
+			[NSValueTransformer setValueTransformer:[[[DMLocaliseHotKeyDescription alloc] init] autorelease] forName:@"DMLocaliseHotKeyDescription"];
+		}
+	}
+	return mySelf;
+}
+
+- (NSString*) mainNibName
+{
+	return @"HotKeyPrefs";
+}
+
+- (IBAction) editKeyCombination: (id) sender
+{
+	DMHotKeyFieldEditor *fieldEditor = [[[DMHotKeyFieldEditor alloc] initWithFrame:[_keyCombinationButton frame]] autorelease];
+	[fieldEditor setDelegate: self];
+	[fieldEditor setRepresentedHotKey: [[_hotKeysController selectedObjects] objectAtIndex:0]];
+	[[_keyCombinationButton superview] addSubview:fieldEditor];
+	[[[self mainView] window] makeFirstResponder: fieldEditor];
+}
+
+- (void) endHotKeyEditing: (DMHotKeyFieldEditor*) editor
+{
+	[editor removeFromSuperview];
+}
+
+- (NSArray*) hotKeys
+{
+	return [[DMAppController defaultController] hotKeys];
+}
+
+@end
+
+@implementation DMHotKeyFieldEditor
+
+- (BOOL)acceptsFirstResponder
+{
+	return YES;
+}
+
+- (BOOL)resignFirstResponder
+{
+	if(_delegate && [_delegate respondsToSelector:@selector(endHotKeyEditing:)])
+	{
+		[_delegate endHotKeyEditing: self];
+	}
+	return YES;
+}
+
+- (BOOL)performKeyEquivalent:(NSEvent *)theEvent
+{
+	[self keyDown: theEvent];
+	return YES;
+}
+
+- (void) keyDown: (NSEvent*) keyEvent
+{
+	[_representedHotKey setModifiers:[keyEvent modifierFlags]];
+	[_representedHotKey setKeycode:[keyEvent keyCode]];
+	
+	if([[self window] firstResponder] == self) 
+	{
+		[[self window] makeFirstResponder: [self nextResponder]];
+	}
+}
+
+- (void) drawRect: (NSRect) aRect
+{
+	NSButtonCell *cell = [[NSButtonCell alloc] initTextCell:@"..."];
+	[cell setBezelStyle: NSShadowlessSquareBezelStyle];
+	[cell setBezeled: YES];
+	[cell drawWithFrame:[self bounds] inView:self];
+}
+
+- (id) delegate
+{
+	return _delegate;
+}
+
+- (void) setDelegate: (id) delegate
+{
+	if(_delegate)
+		[_delegate release];
+	if(delegate)
+		[delegate retain];
+	_delegate = delegate;
+}
+
+- (DMHotKey*) representedHotKey
+{
+	return _representedHotKey;
+}
+
+- (void) setRepresentedHotKey: (DMHotKey*) hk
+{
+	if(_representedHotKey)
+		[_representedHotKey release];
+	if(hk)
+		[hk retain];
+	_representedHotKey = hk;
+}
+
+- (void) dealloc
+{
+	[self setDelegate: nil];
+	[self setRepresentedHotKey: nil];
+	[super dealloc];
+}
+
+- (id) initWithFrame: (NSRect) frame
+{
+	id mySelf = [super initWithFrame:frame];
+	if(mySelf)
+	{
+		_delegate = nil;
+		_representedHotKey = nil;
+	}
+	return mySelf;
+}
+
+@end
+
 @implementation DMLocaliseHotKeyDescription
 + (Class)transformedValueClass { return [NSString class]; }
 + (BOOL)allowsReverseTransformation { return NO; }
@@ -31,47 +174,3 @@
 }
 @end
 
-@implementation DMHotKeyPreferences
-
-- (NSString*) mainNibName
-{
-	return @"HotKeyPrefs";
-}
-
-- (void) mainViewDidLoad
-{
-	if(![NSValueTransformer valueTransformerForName:@"DMHotKeyTransformer"])
-	{
-		[NSValueTransformer setValueTransformer:[[[DMHotKeyTransformer alloc] init] autorelease] forName:@"DMHotKeyTransformer"];
-	}
-	if(![NSValueTransformer valueTransformerForName:@"DMLocaliseHotKeyDescription"])
-	{
-		[NSValueTransformer setValueTransformer:[[[DMLocaliseHotKeyDescription alloc] init] autorelease] forName:@"DMLocaliseHotKeyDescription"];
-	}
-	[_appControllerController setContent: [DMAppController defaultController]];
-}
-
-@end
-
-@implementation DMHotKeyTransformer 
-
-+ (Class)transformedValueClass 
-{ 
-	return [NSString class];
-}
-
-+ (BOOL)allowsReverseTransformation 
-{ 
-	return NO; 
-}
-
-- (id)transformedValue:(id)value 
-{
-	if(!value || ![value isKindOfClass:[DMHotKey class]])
-		return nil;
-	
-	DMHotKey *hk = value;
-	return [hk stringValue];
-}
-
-@end

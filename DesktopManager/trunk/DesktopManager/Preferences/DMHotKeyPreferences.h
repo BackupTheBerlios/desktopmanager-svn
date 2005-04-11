@@ -20,12 +20,14 @@
 #import <Cocoa/Cocoa.h>
 #import <PreferencePanes/PreferencePanes.h>
 
-@interface DMHotKeyTransformer : NSValueTransformer {
-}
-@end
+@class DMHotKey;
 
 @interface DMHotKeyPreferences : NSPreferencePane {
-	IBOutlet NSObjectController *_appControllerController;
+	IBOutlet NSObjectController *_dataController;
+	IBOutlet NSArrayController *_hotKeysController;
+	IBOutlet NSButton *_keyCombinationButton;
 }
+
+- (IBAction) editKeyCombination: (id) sender;
 
 @end

@@ -91,5 +91,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 @interface DMAppController (HotKeys)
 
 - (NSArray*) hotKeys;
+- (void) insertObject:(id)hotKey inHotKeysAtIndex:(unsigned int)index;
+- (void) removeObjectFromHotKeysAtIndex:(unsigned int)index;
+- (void) replaceObjectInHotKeysAtIndex:(unsigned int)index withObject: (id) hotKey;
 
 @end

@@ -26,13 +26,14 @@
 #define HOTKEY_RIGHTARROWCHAR   0x2192
 #define HOTKEY_DOWNARROWCHAR    0x2193
     
-@interface DMHotKey : NSObject {
+@interface DMHotKey : NSObject <NSCopying> {
     int keycode;
     int modifiers;
     BOOL registered;
 	BOOL _wasRegistered;
 	BOOL _enabled;
     EventHotKeyRef myRef;
+	NSString *_description;
 	
 	id _target;
 	SEL _action;
@@ -41,6 +42,9 @@
 + (id) hotKeyWithKeycode: (int) keycode modifiers: (int) modifier;
 - (id) initWithKeycode: (int) keycode modifiers: (int) modifier;
 - (id) initWithHotKey: (DMHotKey*) key;
+
+- (NSString*) name;
+- (void) setName: (NSString*) description;
 
 - (void) registerHotKey;
 - (void) unregisterHotKey;

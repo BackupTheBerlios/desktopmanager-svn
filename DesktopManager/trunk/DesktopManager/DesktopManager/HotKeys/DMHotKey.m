@@ -38,6 +38,7 @@
 		_target = nil;
 		keycode = 0; 
 		modifiers = 0;
+		_description = nil;
 		
 		// Register our interest in hotkey notifications
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hotKeyPressedNotification:) name:@"DMInternalHotKeyPress" object:nil];
@@ -70,11 +71,27 @@
 - (void) dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver: self];
 
+	[self setName: nil];
+	
 	if(_target)
 		[_target release];
 	
     if([self isRegistered]) { [self unregisterHotKey]; }
     [super dealloc];
+}
+
+- (NSString*) name
+{
+	return _description;
+}
+
+- (void) setName: (NSString*) description
+{
+	[self willChangeValueForKey:@"name"];
+	if(_description)
+		[_description release];
+	_description = [description retain];
+	[self didChangeValueForKey:@"name"];
 }
 
 - (void) setTarget: (id) target
@@ -181,20 +198,24 @@
 
 - (void) setKeycode: (int) _keycode
 {
+	[self willChangeValueForKey:@"stringValue"];
     keycode = _keycode;
     if([self isRegistered]) { 
         [self unregisterHotKey];
         [self registerHotKey];
     }
+	[self didChangeValueForKey:@"stringValue"];
 }
 
 - (void) setModifiers: (int) _modifiers
 {
+	[self willChangeValueForKey:@"stringValue"];
     modifiers = _modifiers;
     if([self isRegistered]) { 
         [self unregisterHotKey];
         [self registerHotKey];
     }
+	[self didChangeValueForKey:@"stringValue"];
 }
 
 NSString *C2S(unichar ch) {

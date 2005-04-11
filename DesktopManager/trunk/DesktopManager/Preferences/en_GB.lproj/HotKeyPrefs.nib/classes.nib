@@ -1,10 +1,16 @@
 {
     IBClasses = (
-        {CLASS = DMHotKeyCell; LANGUAGE = ObjC; SUPERCLASS = NSTextFieldCell; }, 
+        {CLASS = DMHotKeyCell; LANGUAGE = ObjC; SUPERCLASS = NSCell; }, 
+        {CLASS = DMHotKeyEditor; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {
+            ACTIONS = {editKeyCombination = id; }; 
             CLASS = DMHotKeyPreferences; 
             LANGUAGE = ObjC; 
-            OUTLETS = {"_appControllerController" = NSObjectController; }; 
+            OUTLETS = {
+                "_dataController" = NSObjectController; 
+                "_hotKeysController" = NSArrayController; 
+                "_keyCombinationButton" = NSButton; 
+            }; 
             SUPERCLASS = NSPreferencePane; 
         }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 

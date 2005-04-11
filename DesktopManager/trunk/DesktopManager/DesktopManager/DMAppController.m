@@ -102,10 +102,8 @@ static DMAppController *_defaultDMAppController = nil;
 	[hk setTarget: self]; \
 	[hk setAction: @selector( theselector )]; \
 	[hk registerHotKey]; \
-	[_hotKeys addObject: [NSDictionary dictionaryWithObjectsAndKeys: \
-		@#thedescription, @"description", \
-		hk, @"hotkey", \
-		nil]]; }
+	[hk setName: @#thedescription]; \
+	[_hotKeys addObject: hk]; }
 
 - (void) buildDefaultHotKeys
 {
@@ -421,6 +419,35 @@ static DMAppController *_defaultDMAppController = nil;
 - (NSArray*) hotKeys
 {
 	return _hotKeys;
+}
+
+- (void) insertObject:(id)hotKey inHotKeysAtIndex:(unsigned int)index {
+	if(![hotKey isKindOfClass:[DMHotKey class]])
+	{
+		NSLog(@"Attempt to insert non hot-key");
+		return;
+	}
+	[self willChangeValueForKey:@"hotKeys"];
+	[_hotKeys insertObject:hotKey atIndex:index];
+	[self didChangeValueForKey:@"hotKeys"];
+}
+
+- (void) removeObjectFromHotKeysAtIndex:(unsigned int)index {
+	[self willChangeValueForKey:@"hotKeys"];
+	[_hotKeys removeObjectAtIndex:index];
+	[self didChangeValueForKey:@"hotKeys"];
+}
+
+- (void) replaceObjectInHotKeysAtIndex:(unsigned int)index withObject: (id) hotKey
+{
+	if(![hotKey isKindOfClass:[DMHotKey class]])
+	{
+		NSLog(@"Attempt to replace non hot-key");
+		return;
+	}
+	[self willChangeValueForKey:@"hotKeys"];
+	[_hotKeys replaceObjectAtIndex:index withObject:hotKey];
+	[self didChangeValueForKey:@"hotKeys"];
 }
 
 @end
