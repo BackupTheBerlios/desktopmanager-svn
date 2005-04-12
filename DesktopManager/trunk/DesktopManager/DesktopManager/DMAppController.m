@@ -369,7 +369,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[inspectorNib instantiateNibWithOwner:self topLevelObjects:nil];
 		
 		[_windowInspector setHidesOnDeactivate:NO];
-		[_windowInspector setFloatingPanel:YES];
+		[_windowInspector setFloatingPanel:NO];
 	}
 
 	[_windowInspector setBecomesKeyOnlyIfNeeded:YES];
@@ -767,7 +767,7 @@ static DMAppController *_defaultDMAppController = nil;
 		BOOL found = NO;
 		while((i>=0) && !found) {
 			win = [list objectAtIndex:i];
-			found = win && ([win windowLevel] == NSNormalWindowLevel);
+			found = win && ([win windowLevel] == NSNormalWindowLevel) && ([[win ownerName] isNotEqualTo: [[NSProcessInfo processInfo] processName]]);
 			i--;
 		}
 		if(found && ([_frontCGWindowController content] != win)) {

@@ -293,7 +293,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A44458F5080C884F005FCD80</string>
+										<string>A4445902080C8A22005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -506,6 +506,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>A4EEA6E707FEE8D7003AABB3</string>
 		<string>A44458F0080C8799005FCD80</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
@@ -888,7 +889,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A4EEA6E707FEE8D7003AABB3</string>
-				<string>A4445559080B17F6005FCD80</string>
+				<string>A44458FF080C8A0A005FCD80</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>WindowString</key>
@@ -958,7 +959,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {833, 317}}</string>
 								<key>RubberWindowFrame</key>
-								<string>107 239 833 359 0 0 1280 1002 </string>
+								<string>161 300 833 359 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXRunSessionModule</string>
@@ -988,7 +989,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
 			<key>WindowString</key>
-			<string>107 239 833 359 0 0 1280 1002 </string>
+			<string>161 300 833 359 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
