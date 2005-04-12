@@ -241,12 +241,14 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>A48FA71907FE127000C4EDC5</string>
 								<string>A48FA7E107FE182000C4EDC5</string>
+								<string>A457008D0800284D0061B98C</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>17</integer>
+									<integer>15</integer>
 									<integer>14</integer>
 									<integer>0</integer>
 								</array>
@@ -283,7 +285,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMAppController.m</string>
+								<string>DMHotKey.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -291,9 +293,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMAppController.m</string>
+										<string>DMHotKey.m</string>
 										<key>bookmark</key>
-										<string>A4445902080C8A22005FCD80</string>
+										<string>A444590A080C8BAF005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -319,8 +321,6 @@
 											<string>A42881110800A1E600C68D25</string>
 											<string>A44B0AD208099472006855DC</string>
 											<string>A44B0AD308099472006855DC</string>
-											<string>A44B0CFE0809ED97006855DC</string>
-											<string>A44B0D530809F401006855DC</string>
 											<string>A44454A4080B0012005FCD80</string>
 											<string>A44454A6080B0012005FCD80</string>
 											<string>A44454A7080B0012005FCD80</string>
@@ -355,7 +355,9 @@
 											<string>A4445833080C7715005FCD80</string>
 											<string>A4445834080C7715005FCD80</string>
 											<string>A44458A1080C863F005FCD80</string>
-											<string>A44458EB080C8799005FCD80</string>
+											<string>A4445904080C8A71005FCD80</string>
+											<string>A4445905080C8A71005FCD80</string>
+											<string>A44B0D530809F401006855DC</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -419,6 +421,8 @@
 											<string>A4445538080B16A9005FCD80</string>
 											<string>A4445546080B178D005FCD80</string>
 											<string>A44456F4080B4350005FCD80</string>
+											<string>A4445906080C8A71005FCD80</string>
+											<string>A4445907080C8A71005FCD80</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

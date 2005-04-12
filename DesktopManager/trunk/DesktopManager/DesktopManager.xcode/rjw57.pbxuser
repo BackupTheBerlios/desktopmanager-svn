@@ -1300,6 +1300,13 @@
 			A4445900080C8A11005FCD80 = A4445900080C8A11005FCD80;
 			A4445901080C8A17005FCD80 = A4445901080C8A17005FCD80;
 			A4445902080C8A22005FCD80 = A4445902080C8A22005FCD80;
+			A4445904080C8A71005FCD80 = A4445904080C8A71005FCD80;
+			A4445905080C8A71005FCD80 = A4445905080C8A71005FCD80;
+			A4445906080C8A71005FCD80 = A4445906080C8A71005FCD80;
+			A4445907080C8A71005FCD80 = A4445907080C8A71005FCD80;
+			A4445908080C8A71005FCD80 = A4445908080C8A71005FCD80;
+			A4445909080C8A78005FCD80 = A4445909080C8A78005FCD80;
+			A444590A080C8BAF005FCD80 = A444590A080C8BAF005FCD80;
 			A44B0AD208099472006855DC = A44B0AD208099472006855DC;
 			A44B0AD308099472006855DC = A44B0AD308099472006855DC;
 			A44B0AD608099472006855DC = A44B0AD608099472006855DC;
@@ -11764,6 +11771,76 @@
 		vrLen = 973;
 		vrLoc = 22845;
 	};
+	A4445904080C8A71005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 770";
+		rLen = 0;
+		rLoc = 23523;
+		rType = 0;
+		vrLen = 973;
+		vrLoc = 22845;
+	};
+	A4445905080C8A71005FCD80 = {
+		fRef = A457008E080028710061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKey.h: copyWithZone:";
+		rLen = 0;
+		rLoc = 2002;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 1344;
+	};
+	A4445906080C8A71005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 770";
+		rLen = 0;
+		rLoc = 23523;
+		rType = 0;
+		vrLen = 973;
+		vrLoc = 22845;
+	};
+	A4445907080C8A71005FCD80 = {
+		fRef = A457008E080028710061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKey.h: copyWithZone:";
+		rLen = 0;
+		rLoc = 2002;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 1344;
+	};
+	A4445908080C8A71005FCD80 = {
+		fRef = A457008F080028710061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKey.m: 150";
+		rLen = 0;
+		rLoc = 3233;
+		rType = 0;
+		vrLen = 680;
+		vrLoc = 2638;
+	};
+	A4445909080C8A78005FCD80 = {
+		fRef = A457008F080028710061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKey.m: 150";
+		rLen = 0;
+		rLoc = 3233;
+		rType = 0;
+		vrLen = 680;
+		vrLoc = 2638;
+	};
+	A444590A080C8BAF005FCD80 = {
+		fRef = A457008F080028710061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKey.m: 150";
+		rLen = 0;
+		rLoc = 3233;
+		rType = 0;
+		vrLen = 680;
+		vrLoc = 2638;
+	};
 	A44B0AD0080993D0006855DC = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
@@ -11835,7 +11912,7 @@
 		isa = PBXTextBookmark;
 		name = "DMHotKey.m: 213";
 		rLen = 0;
-		rLoc = 4596;
+		rLoc = 4594;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 4273;
@@ -11964,17 +12041,17 @@
 	};
 	A457008E080028710061B98C = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 1021}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 1021}}";
 			sepNavSelRange = "{2002, 0}";
-			sepNavVisRect = "{{0, 567}, {511, 454}}";
+			sepNavVisRect = "{{0, 555}, {636, 458}}";
 		};
 	};
 	A457008F080028710061B98C = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {511, 5235}}";
-			sepNavSelRange = "{4596, 0}";
-			sepNavVisRect = "{{0, 2852}, {511, 454}}";
-			sepNavWindowFrame = "{{15, 439}, {750, 558}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 5151}}";
+			sepNavSelRange = "{3233, 0}";
+			sepNavVisRect = "{{0, 1738}, {636, 458}}";
+			sepNavWindowFrame = "{{107, 355}, {750, 558}}";
 		};
 	};
 	A457009608002AD90061B98C = {

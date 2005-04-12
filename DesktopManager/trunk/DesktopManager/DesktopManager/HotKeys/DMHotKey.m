@@ -146,7 +146,7 @@
 		// We were pressed - perform action.
 		if(_target && [_target respondsToSelector:_action])
 		{
-			[_target performSelector:_action withObject:self];
+			[NSApp sendAction:_action to:_target from:self];
 		}
     }
 }
