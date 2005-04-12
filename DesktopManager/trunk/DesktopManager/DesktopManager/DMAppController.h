@@ -23,12 +23,25 @@
 @class CGWorkspace;
 @class DMPager;
 @class DMPreferencesController;
+@class CGWorkspace;
+
+#import "CoreGraphics/CGWorkspace.h"
 
 /* Notification sent when information associated with a particular
  * workspace changes. */
 extern NSString *DMAssociatedInformationChangedNotification;
 
 extern NSString *DMWorkspaceWithChangedInformationKey;
+
+/* CGWorkspace additions */
+@interface CGWorkspace (DMAppControllerAdditions)
+
+- (NSDictionary*) associatedInfo;
+- (void) setAssociatedInfo: (NSDictionary*) aInfo;
+- (NSString*) name;
+- (void) setName: (NSString*) name;
+
+@end
 
 @interface DMApplication : NSApplication {
 }
@@ -76,6 +89,9 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (CGWorkspace*) workspaceAtRow: (int) row column: (int) column;
 - (CGWorkspace*) currentWorkspace;
+
+- (NSArray*) workspaces;
+- (NSArray*) associatedInfoForAllWorkspaces;
 
 - (NSDictionary*) associatedInfoForWorkspace: (CGWorkspace*) ws;
 - (void) setAssociatedInfo: (NSDictionary*) info forWorkspace: (CGWorkspace*) ws;

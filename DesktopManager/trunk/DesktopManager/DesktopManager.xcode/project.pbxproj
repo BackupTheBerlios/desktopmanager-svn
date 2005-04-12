@@ -449,6 +449,18 @@
 			settings = {
 			};
 		};
+		A444572A080C6377005FCD80 = {
+			fileRef = 29B97325FDCFA39411CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A444572B080C6378005FCD80 = {
+			fileRef = 29B97324FDCFA39411CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
 		A4570060080024080061B98C = {
 			fileEncoding = 4;
 			isa = PBXFileReference;
@@ -883,6 +895,8 @@
 				A4EEA47507FE2ED3003AABB3,
 				A4EEA47707FE2EF8003AABB3,
 				A457FE4307FF5A3C0061B98C,
+				A444572A080C6377005FCD80,
+				A444572B080C6378005FCD80,
 			);
 			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;

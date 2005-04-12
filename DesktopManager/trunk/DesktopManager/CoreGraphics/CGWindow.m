@@ -18,8 +18,11 @@
 */
 
 #import "CGWindow.h"
+#import "CGWorkspace.h"
 #import "CGSPrivate.h"
 #import "CGStickyWindowController.h"
+#import "ExtensionUtils.h"
+#import "WindowControllerEvents.h"
 
 static CGSValue kCGSWindowTitle = NULL;
 void _ensure_kCGSWindowTitle() {
@@ -184,6 +187,30 @@ void _ensure_kCGSWindowTitle() {
 {
 	NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 	return [workspace iconForFile:[workspace fullPathForApplication:[self ownerName]]];
+}
+
+- (CGWorkspace*) workspace
+{
+	int workspace = -1;
+	CGSGetWindowWorkspace(_CGSDefaultConnection(),_wid,&workspace);
+	if(workspace >= 0)
+	{
+		return [[[CGWorkspace alloc] initRepresentingWorkspace:workspace] autorelease];
+	}
+	
+	return nil;
+}
+
+- (void) setWorkspace: (CGWorkspace*) ws {
+	if(!ws) { return;}
+	
+    AppleEvent theEvent;
+    
+    makeEvent(kWindowControllerMoveToWorkspace, &theEvent);
+    addIntParm(_wid, 'wid ', &theEvent);
+    addIntParm([ws workspaceNumber], 'wksp', &theEvent);
+    
+    sendEvent(&theEvent);
 }
 
 /* Comparison operations */

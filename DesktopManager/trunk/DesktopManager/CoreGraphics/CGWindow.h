@@ -20,6 +20,7 @@
 
 /* NSWindow additions */
 @class CGWindow;
+@class CGWorkspace;
 
 @interface NSWindow (CoreGraphics)
 - (CGWindow*) cgWindow;
@@ -38,6 +39,9 @@
 
 - (BOOL) isSticky;
 - (void) setSticky: (BOOL) sticky;
+
+- (CGWorkspace*) workspace;
+- (void) setWorkspace: (CGWorkspace*) ws;
 
 - (NSImage*) ownerIcon;
 - (pid_t) ownerPid;

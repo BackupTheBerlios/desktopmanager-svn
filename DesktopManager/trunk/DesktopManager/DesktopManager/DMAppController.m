@@ -564,6 +564,25 @@ static DMAppController *_defaultDMAppController = nil;
 
 @implementation DMAppController (DataModel)
 
+- (NSArray*) workspaces
+{
+	return _workspaceArray;
+}
+
+- (NSArray*) associatedInfoForAllWorkspaces
+{
+	NSMutableArray *infoArray = [NSMutableArray array];
+	
+	NSEnumerator *wsEnum = [[self workspaces] objectEnumerator];
+	CGWorkspace *ws;
+	while(ws = [wsEnum nextObject])
+	{
+		[infoArray addObject:[self associatedInfoForWorkspace:ws]];
+	}
+	
+	return infoArray;
+}
+
 - (CGWorkspace*) workspaceAtRow: (int) row column: (int) column
 {
 	/* Sanity check */
@@ -683,7 +702,11 @@ static DMAppController *_defaultDMAppController = nil;
 	if(![_workspaceArray containsObject: ws])
 		return nil;
 	
-	return [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%iInfo",[ws workspaceNumber]]];
+	NSDictionary *aInfo = [[NSUserDefaults standardUserDefaults] dictionaryForKey: [NSString stringWithFormat:@"Workspace%iInfo",[ws workspaceNumber]]];
+	
+	return aInfo ? aInfo : [NSDictionary dictionaryWithObjectsAndKeys:
+		[NSString stringWithFormat:NSLocalizedString(@"Desktop %i", @"Format for untitled desktops"), [_workspaceArray indexOfObject:ws] + 1], @"name",
+		nil];
 }
 
 - (void) setAssociatedInfo: (NSDictionary*) info forWorkspace: (CGWorkspace*) ws
@@ -795,6 +818,36 @@ enum {
     }
 	
     [super sendEvent: theEvent];
+}
+
+@end
+
+@implementation CGWorkspace (DMAppControllerAdditions)
+
+- (NSDictionary*) associatedInfo
+{
+	return [[DMAppController defaultController] associatedInfoForWorkspace:self];
+}
+
+- (void) setAssociatedInfo: (NSDictionary*) aInfo
+{
+	[self willChangeValueForKey:@"name"];
+	[self willChangeValueForKey:@"associatedInfo"];
+	[[DMAppController defaultController] setAssociatedInfo:aInfo forWorkspace:self];
+	[self didChangeValueForKey:@"name"];
+	[self didChangeValueForKey:@"associatedInfo"];
+}
+
+- (NSString*) name
+{
+	return [[self associatedInfo] objectForKey:@"name"];
+}
+
+- (void) setName: (NSString*) name
+{
+	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: [self associatedInfo]];
+	[dict setObject: name forKey: @"name"];
+	[self setAssociatedInfo: dict];
 }
 
 @end

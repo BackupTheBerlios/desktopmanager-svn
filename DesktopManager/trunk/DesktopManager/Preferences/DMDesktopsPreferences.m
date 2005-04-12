@@ -111,25 +111,17 @@
 
 - (NSString*) currentDesktopName
 {
-	DMAppController *controller = [DMAppController defaultController];
 	DMPagerCell *cell = [_pager selectedCell];
 	CGWorkspace *ws = [cell representedObject];
-	NSDictionary* associatedInfo = [controller associatedInfoForWorkspace: ws];
-	NSString *name = [NSString stringWithFormat:NSLocalizedString(@"Workspace %i", @"Default workspace name format"), [ws workspaceNumber]];
-	if(associatedInfo && [associatedInfo objectForKey: @"name"])
-	{
-		return [associatedInfo objectForKey: @"name"];
-	}
 	
-	return name;
+	return [ws name];
 }
 
 - (void) setCurrentDesktopName: (NSString*) name
 {
-	DMAppController *controller = [DMAppController defaultController];
 	DMPagerCell *cell = [_pager selectedCell];
 	CGWorkspace *ws = [cell representedObject];
-	[controller setAssociatedInfo:[NSDictionary dictionaryWithObject:name forKey:@"name"] forWorkspace:ws];
+	[ws setName: name];
 }
 
 @end
