@@ -86,7 +86,7 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 134911273;
+			PBXPerProjectTemplateStateSaveDate = 135038866;
 			PBXPrepackagedSmartGroups_v2 = (
 				{
 					PBXTransientLocationAtTop = bottom;
@@ -263,7 +263,7 @@
 					};
 				},
 			);
-			PBXWorkspaceStateSaveDate = 134911273;
+			PBXWorkspaceStateSaveDate = 135038866;
 		};
 		perUserProjectItems = {
 			A42881110800A1E600C68D25 = A42881110800A1E600C68D25;
@@ -1285,6 +1285,11 @@
 			A44458AC080C873A005FCD80 = A44458AC080C873A005FCD80;
 			A44458AD080C8759005FCD80 = A44458AD080C8759005FCD80;
 			A44458AE080C8759005FCD80 = A44458AE080C8759005FCD80;
+			A44458EB080C8799005FCD80 = A44458EB080C8799005FCD80;
+			A44458EC080C8799005FCD80 = A44458EC080C8799005FCD80;
+			A44458F3080C8806005FCD80 = A44458F3080C8806005FCD80;
+			A44458F4080C881C005FCD80 = A44458F4080C881C005FCD80;
+			A44458F5080C884F005FCD80 = A44458F5080C884F005FCD80;
 			A44B0AD208099472006855DC = A44B0AD208099472006855DC;
 			A44B0AD308099472006855DC = A44B0AD308099472006855DC;
 			A44B0AD608099472006855DC = A44B0AD608099472006855DC;
@@ -1511,7 +1516,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 391";
 		rLen = 0;
-		rLoc = 14961;
+		rLoc = 15153;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 12885;
@@ -1540,7 +1545,7 @@
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		rLen = 1;
-		rLoc = 300;
+		rLoc = 302;
 		rType = 1;
 	};
 	A4445472080A9959005FCD80 = {
@@ -1548,7 +1553,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11109;
+		rLoc = 11301;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 10084;
@@ -1568,7 +1573,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11109;
+		rLoc = 11301;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 10084;
@@ -1588,7 +1593,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11109;
+		rLoc = 11301;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 10084;
@@ -1608,7 +1613,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11109;
+		rLoc = 11301;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 10084;
@@ -1618,7 +1623,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1628,7 +1633,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1638,7 +1643,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1648,7 +1653,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1658,7 +1663,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1668,7 +1673,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1678,7 +1683,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1688,7 +1693,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1698,7 +1703,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1708,7 +1713,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1718,7 +1723,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1728,7 +1733,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1738,7 +1743,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1748,7 +1753,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1758,7 +1763,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1768,7 +1773,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1778,7 +1783,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1788,7 +1793,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1798,7 +1803,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1808,7 +1813,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1818,7 +1823,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1828,7 +1833,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1838,7 +1843,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1848,7 +1853,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1858,7 +1863,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1868,7 +1873,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1878,7 +1883,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1888,7 +1893,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1898,7 +1903,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1908,7 +1913,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1918,7 +1923,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11143;
+		rLoc = 11335;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1928,7 +1933,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1938,7 +1943,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 285";
 		rLen = 0;
-		rLoc = 10999;
+		rLoc = 11191;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1948,7 +1953,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -1958,7 +1963,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 285";
 		rLen = 0;
-		rLoc = 10999;
+		rLoc = 11191;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1968,7 +1973,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 285";
 		rLen = 0;
-		rLoc = 11024;
+		rLoc = 11216;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -1978,7 +1983,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -2002,7 +2007,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 285";
 		rLen = 0;
-		rLoc = 11024;
+		rLoc = 11216;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -2072,7 +2077,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 285";
 		rLen = 0;
-		rLoc = 11024;
+		rLoc = 11216;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 9979;
@@ -2152,7 +2157,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -2182,7 +2187,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -2202,7 +2207,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 10128;
@@ -2252,7 +2257,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 380";
 		rLen = 0;
-		rLoc = 14489;
+		rLoc = 14681;
 		rType = 0;
 		vrLen = 1448;
 		vrLoc = 12182;
@@ -2262,7 +2267,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 290";
 		rLen = 0;
-		rLoc = 11157;
+		rLoc = 11349;
 		rType = 0;
 		vrLen = 373;
 		vrLoc = 10154;
@@ -2272,7 +2277,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 380";
 		rLen = 0;
-		rLoc = 14489;
+		rLoc = 14681;
 		rType = 0;
 		vrLen = 1448;
 		vrLoc = 12182;
@@ -2320,7 +2325,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 380";
 		rLen = 0;
-		rLoc = 14489;
+		rLoc = 14681;
 		rType = 0;
 		vrLen = 1448;
 		vrLoc = 12182;
@@ -2377,7 +2382,7 @@
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		rLen = 1;
-		rLoc = 413;
+		rLoc = 415;
 		rType = 1;
 	};
 	A44454E0080B01CD005FCD80 = {
@@ -2385,7 +2390,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2405,7 +2410,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2455,7 +2460,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2475,7 +2480,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2495,7 +2500,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2515,7 +2520,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2535,7 +2540,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 380";
 		rLen = 0;
-		rLoc = 14489;
+		rLoc = 14681;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2555,7 +2560,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2565,7 +2570,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2575,7 +2580,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2585,7 +2590,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2595,7 +2600,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2605,7 +2610,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2615,7 +2620,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2625,7 +2630,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2635,7 +2640,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2645,7 +2650,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2665,7 +2670,7 @@
 		isa = PBXTextBookmark;
 		name = Transitions;
 		rLen = 11;
-		rLoc = 14485;
+		rLoc = 14677;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 12180;
@@ -2695,7 +2700,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2715,7 +2720,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2745,7 +2750,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2755,7 +2760,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2765,7 +2770,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2775,7 +2780,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2785,7 +2790,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2795,7 +2800,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2805,7 +2810,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2815,7 +2820,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2825,7 +2830,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2835,7 +2840,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2845,7 +2850,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2855,7 +2860,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2865,7 +2870,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2875,7 +2880,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2885,7 +2890,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2895,7 +2900,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2905,7 +2910,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2915,7 +2920,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2925,7 +2930,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2935,7 +2940,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2945,7 +2950,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 378";
 		rLen = 0;
-		rLoc = 14300;
+		rLoc = 14492;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2955,7 +2960,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2965,7 +2970,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2975,7 +2980,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -2985,7 +2990,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -2995,7 +3000,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3005,7 +3010,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -3024,18 +3029,13 @@
 		path = /Users/rjw57/Developer/DesktopManager.old/Core/DMController.m;
 		refType = 0;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {570, 5039}}";
-			sepNavSelRange = "{3833, 31}";
-			sepNavVisRect = "{{0, 1344}, {570, 471}}";
-		};
 	};
 	A4445526080B1354005FCD80 = {
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -3052,6 +3052,7 @@
 	};
 	A4445528080B1354005FCD80 = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
 		name = DMController.m;
 		path = /Users/rjw57/Developer/DesktopManager.old/Core/DMController.m;
 		refType = 0;
@@ -3062,7 +3063,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3079,6 +3080,7 @@
 	};
 	A444552B080B135C005FCD80 = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
 		name = DMController.m;
 		path = /Users/rjw57/Developer/DesktopManager.old/Core/DMController.m;
 		refType = 0;
@@ -3089,7 +3091,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3109,7 +3111,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3129,7 +3131,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3149,7 +3151,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3169,7 +3171,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -3219,7 +3221,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14312;
+		rLoc = 14504;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 12182;
@@ -3269,7 +3271,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3291,12 +3293,6 @@
 		path = /Users/rjw57/Developer/DesktopManager.old/Core/ForeignWindow.m;
 		refType = 0;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {705, 7447}}";
-			sepNavSelRange = "{12508, 804}";
-			sepNavVisRect = "{{0, 6469}, {705, 443}}";
-			sepNavWindowFrame = "{{61, 397}, {750, 558}}";
-		};
 	};
 	A4445541080B178D005FCD80 = {
 		fRef = A4EEA6F307FEE9A5003AABB3;
@@ -3360,6 +3356,7 @@
 	};
 	A4445547080B178D005FCD80 = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
 		name = ForeignWindow.m;
 		path = /Users/rjw57/Developer/DesktopManager.old/Core/ForeignWindow.m;
 		refType = 0;
@@ -3420,7 +3417,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -3437,7 +3434,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 379";
 		rLen = 0;
-		rLoc = 14322;
+		rLoc = 14514;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 12750;
@@ -4197,7 +4194,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 689";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 959;
 		vrLoc = 20151;
@@ -4257,7 +4254,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 689";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 959;
 		vrLoc = 20151;
@@ -4307,7 +4304,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4326,7 +4323,7 @@
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		rLen = 1;
-		rLoc = 741;
+		rLoc = 743;
 		rType = 1;
 	};
 	A44455AE080B1E62005FCD80 = {
@@ -4344,7 +4341,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4354,7 +4351,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4364,7 +4361,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4374,7 +4371,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4384,7 +4381,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4394,7 +4391,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4404,7 +4401,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4414,7 +4411,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4424,7 +4421,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4434,7 +4431,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 1059;
 		vrLoc = 20194;
@@ -4454,7 +4451,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4484,7 +4481,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 692";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 20611;
@@ -4508,7 +4505,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 693";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 18446;
@@ -4538,7 +4535,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 694";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 20643;
@@ -4555,7 +4552,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 694";
 		rLen = 0;
-		rLoc = 22634;
+		rLoc = 22826;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 20643;
@@ -5015,7 +5012,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 345";
 		rLen = 0;
-		rLoc = 12544;
+		rLoc = 12736;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11297;
@@ -5035,7 +5032,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 339";
 		rLen = 0;
-		rLoc = 12200;
+		rLoc = 12392;
 		rType = 0;
 		vrLen = 756;
 		vrLoc = 11040;
@@ -5055,7 +5052,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 339";
 		rLen = 0;
-		rLoc = 12200;
+		rLoc = 12392;
 		rType = 0;
 		vrLen = 756;
 		vrLoc = 11040;
@@ -5075,7 +5072,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12426;
+		rLoc = 12618;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 11043;
@@ -5095,7 +5092,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12426;
+		rLoc = 12618;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 11043;
@@ -5115,7 +5112,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12426;
+		rLoc = 12618;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 11043;
@@ -5155,7 +5152,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12426;
+		rLoc = 12618;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 11043;
@@ -5215,7 +5212,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 713";
 		rLen = 0;
-		rLoc = 22851;
+		rLoc = 23043;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 21021;
@@ -5235,7 +5232,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 713";
 		rLen = 0;
-		rLoc = 22851;
+		rLoc = 23043;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 21021;
@@ -5255,7 +5252,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 713";
 		rLen = 0;
-		rLoc = 22851;
+		rLoc = 23043;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 21021;
@@ -5275,7 +5272,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 713";
 		rLen = 0;
-		rLoc = 22851;
+		rLoc = 23043;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 21021;
@@ -5295,7 +5292,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12519;
+		rLoc = 12711;
 		rType = 0;
 		vrLen = 973;
 		vrLoc = 11227;
@@ -5315,7 +5312,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12519;
+		rLoc = 12711;
 		rType = 0;
 		vrLen = 973;
 		vrLoc = 11227;
@@ -5325,7 +5322,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12519;
+		rLoc = 12711;
 		rType = 0;
 		vrLen = 973;
 		vrLoc = 11227;
@@ -5345,7 +5342,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 345";
 		rLen = 0;
-		rLoc = 12519;
+		rLoc = 12711;
 		rType = 0;
 		vrLen = 994;
 		vrLoc = 11377;
@@ -5365,7 +5362,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 340";
 		rLen = 0;
-		rLoc = 12265;
+		rLoc = 12457;
 		rType = 0;
 		vrLen = 978;
 		vrLoc = 11325;
@@ -5385,7 +5382,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 340";
 		rLen = 0;
-		rLoc = 12265;
+		rLoc = 12457;
 		rType = 0;
 		vrLen = 978;
 		vrLoc = 11325;
@@ -5505,7 +5502,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 340";
 		rLen = 0;
-		rLoc = 12265;
+		rLoc = 12457;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 11325;
@@ -5525,7 +5522,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5545,7 +5542,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5565,7 +5562,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5585,7 +5582,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5605,7 +5602,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5625,7 +5622,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5645,7 +5642,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5665,7 +5662,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5685,7 +5682,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5705,7 +5702,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5725,7 +5722,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5745,7 +5742,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5765,7 +5762,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5785,7 +5782,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5805,7 +5802,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12462;
+		rLoc = 12654;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 11325;
@@ -5825,7 +5822,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -5845,7 +5842,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -5865,7 +5862,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -5885,7 +5882,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -5905,7 +5902,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -5945,7 +5942,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 712";
 		rLen = 0;
-		rLoc = 22693;
+		rLoc = 22885;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 20799;
@@ -6165,7 +6162,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12437;
+		rLoc = 12629;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 11105;
@@ -6195,7 +6192,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12437;
+		rLoc = 12629;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 11076;
@@ -6215,7 +6212,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12454;
+		rLoc = 12646;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 11105;
@@ -6235,7 +6232,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12454;
+		rLoc = 12646;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 11105;
@@ -6255,7 +6252,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12454;
+		rLoc = 12646;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 11105;
@@ -6275,7 +6272,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 344";
 		rLen = 0;
-		rLoc = 12454;
+		rLoc = 12646;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 11105;
@@ -6295,7 +6292,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12543;
+		rLoc = 12735;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 11105;
@@ -6315,7 +6312,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 347";
 		rLen = 0;
-		rLoc = 12543;
+		rLoc = 12735;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 11105;
@@ -6335,7 +6332,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 361";
 		rLen = 0;
-		rLoc = 13053;
+		rLoc = 13245;
 		rType = 0;
 		vrLen = 993;
 		vrLoc = 11328;
@@ -6355,7 +6352,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 361";
 		rLen = 0;
-		rLoc = 13053;
+		rLoc = 13245;
 		rType = 0;
 		vrLen = 993;
 		vrLoc = 11328;
@@ -6375,7 +6372,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: showWindowInspector:";
 		rLen = 0;
-		rLoc = 12619;
+		rLoc = 12811;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 11504;
@@ -6405,7 +6402,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: showWindowInspector:";
 		rLen = 0;
-		rLoc = 12619;
+		rLoc = 12811;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 11504;
@@ -6495,7 +6492,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: showWindowInspector:";
 		rLen = 0;
-		rLoc = 12619;
+		rLoc = 12811;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 11504;
@@ -6515,7 +6512,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 22335;
+		rLoc = 22527;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 20700;
@@ -6565,7 +6562,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 719";
 		rLen = 0;
-		rLoc = 22795;
+		rLoc = 22987;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 20981;
@@ -6585,7 +6582,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 717";
 		rLen = 0;
-		rLoc = 22632;
+		rLoc = 22824;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 20981;
@@ -6605,7 +6602,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 717";
 		rLen = 0;
-		rLoc = 22632;
+		rLoc = 22824;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 20981;
@@ -6625,7 +6622,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 717";
 		rLen = 0;
-		rLoc = 22632;
+		rLoc = 22824;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 20981;
@@ -8678,7 +8675,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18524;
+		rLoc = 18716;
 		rType = 0;
 		vrLen = 685;
 		vrLoc = 17164;
@@ -8698,7 +8695,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18524;
+		rLoc = 18716;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 17164;
@@ -8718,7 +8715,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18524;
+		rLoc = 18716;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 17164;
@@ -8738,7 +8735,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18743;
+		rLoc = 18935;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 17164;
@@ -8758,7 +8755,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18743;
+		rLoc = 18935;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 16623;
@@ -8768,7 +8765,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 582";
 		rLen = 0;
-		rLoc = 18724;
+		rLoc = 18916;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 17594;
@@ -8828,7 +8825,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 582";
 		rLen = 0;
-		rLoc = 18749;
+		rLoc = 18941;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 17441;
@@ -8848,7 +8845,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 582";
 		rLen = 0;
-		rLoc = 18749;
+		rLoc = 18941;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 17441;
@@ -8868,7 +8865,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 582";
 		rLen = 0;
-		rLoc = 18749;
+		rLoc = 18941;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 17441;
@@ -8888,7 +8885,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 582";
 		rLen = 0;
-		rLoc = 18749;
+		rLoc = 18941;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 17441;
@@ -8908,7 +8905,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 574";
 		rLen = 0;
-		rLoc = 18563;
+		rLoc = 18755;
 		rType = 0;
 		vrLen = 734;
 		vrLoc = 17441;
@@ -8928,7 +8925,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -8948,7 +8945,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -8968,7 +8965,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -8988,7 +8985,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -9008,7 +9005,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -9028,7 +9025,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 20346;
@@ -9048,7 +9045,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9068,7 +9065,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9088,7 +9085,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9108,7 +9105,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9128,7 +9125,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9148,7 +9145,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 707";
 		rLen = 0;
-		rLoc = 21863;
+		rLoc = 22055;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9168,7 +9165,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9188,7 +9185,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9208,7 +9205,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9228,7 +9225,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9248,7 +9245,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9268,7 +9265,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9288,7 +9285,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9308,7 +9305,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9328,7 +9325,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9348,7 +9345,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 17291;
@@ -9368,7 +9365,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 766;
 		vrLoc = 17164;
@@ -9398,7 +9395,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 874;
 		vrLoc = 16666;
@@ -9408,7 +9405,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: workspaces";
 		rLen = 0;
-		rLoc = 18435;
+		rLoc = 18627;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 16624;
@@ -9428,7 +9425,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25064;
+		rLoc = 25256;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9448,7 +9445,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9495,7 +9492,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9515,7 +9512,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9535,7 +9532,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9555,7 +9552,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9575,7 +9572,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9595,7 +9592,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9615,7 +9612,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9635,7 +9632,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9655,7 +9652,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9675,7 +9672,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9695,7 +9692,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9715,7 +9712,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 827";
 		rLen = 0;
-		rLoc = 25108;
+		rLoc = 25300;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 23390;
@@ -9725,7 +9722,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 21899;
+		rLoc = 22091;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 20386;
@@ -9745,7 +9742,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 21899;
+		rLoc = 22091;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 20386;
@@ -9765,7 +9762,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 702";
 		rLen = 0;
-		rLoc = 21613;
+		rLoc = 21805;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 20386;
@@ -9775,7 +9772,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 702";
 		rLen = 0;
-		rLoc = 21613;
+		rLoc = 21805;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 20386;
@@ -10025,7 +10022,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 702";
 		rLen = 0;
-		rLoc = 21613;
+		rLoc = 21805;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 20386;
@@ -10055,7 +10052,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 834";
 		rLen = 0;
-		rLoc = 25497;
+		rLoc = 25689;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 23540;
@@ -10125,7 +10122,7 @@
 		isa = PBXTextBookmark;
 		name = "- (void) setAssociatedInfo: (NSDictionary*) aInfo\n";
 		rLen = 50;
-		rLoc = 25112;
+		rLoc = 25304;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 23809;
@@ -10135,7 +10132,7 @@
 		isa = PBXTextBookmark;
 		name = "- (void) setAssociatedInfo: (NSDictionary*) aInfo\n";
 		rLen = 50;
-		rLoc = 25112;
+		rLoc = 25304;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 23809;
@@ -10165,7 +10162,7 @@
 		isa = PBXTextBookmark;
 		name = "- (void) setAssociatedInfo: (NSDictionary*) aInfo\n";
 		rLen = 50;
-		rLoc = 25112;
+		rLoc = 25304;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 23809;
@@ -10225,7 +10222,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 833";
 		rLen = 0;
-		rLoc = 25163;
+		rLoc = 25355;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10245,7 +10242,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 833";
 		rLen = 0;
-		rLoc = 25286;
+		rLoc = 25478;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10265,7 +10262,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 833";
 		rLen = 0;
-		rLoc = 25286;
+		rLoc = 25478;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10285,7 +10282,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 833";
 		rLen = 0;
-		rLoc = 25286;
+		rLoc = 25478;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10305,7 +10302,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 824";
 		rLen = 0;
-		rLoc = 25061;
+		rLoc = 25253;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10325,7 +10322,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 824";
 		rLen = 0;
-		rLoc = 25061;
+		rLoc = 25253;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 24079;
@@ -10395,7 +10392,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 22012;
+		rLoc = 22204;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 20528;
@@ -10405,7 +10402,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 22012;
+		rLoc = 22204;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 20528;
@@ -10465,7 +10462,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 22017;
+		rLoc = 22209;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10485,7 +10482,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 22017;
+		rLoc = 22209;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10505,7 +10502,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 708";
 		rLen = 0;
-		rLoc = 22017;
+		rLoc = 22209;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10525,7 +10522,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 710";
 		rLen = 0;
-		rLoc = 22038;
+		rLoc = 22230;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10545,7 +10542,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10565,7 +10562,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10585,7 +10582,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10605,7 +10602,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10625,7 +10622,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10645,7 +10642,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10665,7 +10662,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10685,7 +10682,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10705,7 +10702,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10725,7 +10722,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10745,7 +10742,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10765,7 +10762,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10785,7 +10782,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10805,7 +10802,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10825,7 +10822,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10845,7 +10842,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10865,7 +10862,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10885,7 +10882,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10905,7 +10902,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10925,7 +10922,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10945,7 +10942,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10965,7 +10962,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -10985,7 +10982,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11005,7 +11002,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11025,7 +11022,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11045,7 +11042,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11065,7 +11062,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11085,7 +11082,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11095,7 +11092,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11225,7 +11222,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 715";
 		rLen = 0;
-		rLoc = 22175;
+		rLoc = 22367;
 		rType = 0;
 		vrLen = 1226;
 		vrLoc = 20528;
@@ -11245,7 +11242,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 368";
 		rLen = 0;
-		rLoc = 12484;
+		rLoc = 12676;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 12013;
@@ -11264,7 +11261,7 @@
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		rLen = 1;
-		rLoc = 369;
+		rLoc = 371;
 		rType = 1;
 	};
 	A444588D080C8525005FCD80 = {
@@ -11282,7 +11279,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12530;
+		rLoc = 12722;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11292,7 +11289,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 368";
 		rLen = 0;
-		rLoc = 12626;
+		rLoc = 12818;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 12013;
@@ -11302,7 +11299,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11312,7 +11309,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 368";
 		rLen = 0;
-		rLoc = 12626;
+		rLoc = 12818;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 12013;
@@ -11322,7 +11319,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11332,7 +11329,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 368";
 		rLen = 0;
-		rLoc = 12626;
+		rLoc = 12818;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 12013;
@@ -11342,7 +11339,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11352,7 +11349,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 368";
 		rLen = 0;
-		rLoc = 12626;
+		rLoc = 12818;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 12013;
@@ -11362,7 +11359,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11382,7 +11379,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11402,7 +11399,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11422,7 +11419,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11442,7 +11439,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 369";
 		rLen = 0;
-		rLoc = 12692;
+		rLoc = 12884;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 12116;
@@ -11452,7 +11449,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 284";
 		rLen = 0;
-		rLoc = 10214;
+		rLoc = 10310;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 9551;
@@ -11462,7 +11459,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 371";
 		rLen = 0;
-		rLoc = 12661;
+		rLoc = 12853;
 		rType = 0;
 		vrLen = 486;
 		vrLoc = 12232;
@@ -11482,7 +11479,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 284";
 		rLen = 0;
-		rLoc = 10214;
+		rLoc = 10310;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 9438;
@@ -11492,7 +11489,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 284";
 		rLen = 0;
-		rLoc = 10214;
+		rLoc = 10310;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 9438;
@@ -11522,7 +11519,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 372";
 		rLen = 0;
-		rLoc = 12660;
+		rLoc = 12852;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 12185;
@@ -11532,7 +11529,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 371";
 		rLen = 0;
-		rLoc = 12704;
+		rLoc = 12896;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 12131;
@@ -11542,7 +11539,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 372";
 		rLen = 0;
-		rLoc = 12722;
+		rLoc = 12914;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 12185;
@@ -11552,7 +11549,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 289";
 		rLen = 0;
-		rLoc = 10424;
+		rLoc = 10616;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 9331;
@@ -11562,7 +11559,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 374";
 		rLen = 0;
-		rLoc = 12753;
+		rLoc = 12945;
 		rType = 0;
 		vrLen = 510;
 		vrLoc = 12262;
@@ -11572,7 +11569,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 366";
 		rLen = 0;
-		rLoc = 12372;
+		rLoc = 12564;
 		rType = 0;
 		vrLen = 968;
 		vrLoc = 12256;
@@ -11582,7 +11579,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 375";
 		rLen = 0;
-		rLoc = 12753;
+		rLoc = 12945;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 12262;
@@ -11592,7 +11589,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 390";
 		rLen = 0;
-		rLoc = 13288;
+		rLoc = 13480;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 12638;
@@ -11602,10 +11599,60 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 375";
 		rLen = 0;
-		rLoc = 12753;
+		rLoc = 12945;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 12262;
+	};
+	A44458EB080C8799005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 283";
+		rLen = 0;
+		rLoc = 10310;
+		rType = 0;
+		vrLen = 1200;
+		vrLoc = 9331;
+	};
+	A44458EC080C8799005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: showsWindowInspectorAdvanced";
+		rLen = 0;
+		rLoc = 9687;
+		rType = 0;
+		vrLen = 1200;
+		vrLoc = 9331;
+	};
+	A44458F3080C8806005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9919;
+		rType = 0;
+		vrLen = 1340;
+		vrLoc = 9331;
+	};
+	A44458F4080C881C005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9919;
+		rType = 0;
+		vrLen = 1340;
+		vrLoc = 9331;
+	};
+	A44458F5080C884F005FCD80 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 278";
+		rLen = 0;
+		rLoc = 9919;
+		rType = 0;
+		vrLen = 1340;
+		vrLoc = 9331;
 	};
 	A44B0AD0080993D0006855DC = {
 		isa = PBXFileReference;
@@ -11863,7 +11910,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 327";
 		rLen = 0;
-		rLoc = 18421;
+		rLoc = 18613;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 11724;
@@ -12562,9 +12609,9 @@
 	};
 	A4EEA29C07FE18AB003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {583, 13145}}";
-			sepNavSelRange = "{12753, 0}";
-			sepNavVisRect = "{{0, 5459}, {583, 212}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 12935}}";
+			sepNavSelRange = "{9919, 0}";
+			sepNavVisRect = "{{0, 3831}, {636, 458}}";
 		};
 	};
 	A4EEA2A407FE18F3003AABB3 = {
