@@ -19,10 +19,11 @@
             OUTLETS = {
                 "_frontCGWindowController" = NSObjectController; 
                 "_pagerView" = DMPager; 
-                "_pagerWindow" = NSWindow; 
+                "_pagerWindow" = NSPanel; 
                 "_prefsController" = DMPreferencesController; 
                 "_statusMenu" = NSMenu; 
                 "_windowInspector" = NSPanel; 
+                "_windowInspectorShrinkView" = NSView; 
             }; 
             SUPERCLASS = NSObject; 
         }, 

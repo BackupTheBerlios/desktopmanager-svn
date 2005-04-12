@@ -70,6 +70,7 @@ static DMAppController *_defaultDMAppController = nil;
 		_statusMenuItem = nil;
 		_rows = 0;
 		_columns = 0;
+		_displaysWindowInfoAdvanced = YES;
 	}
 	return mySelf;
 }
@@ -263,6 +264,31 @@ static DMAppController *_defaultDMAppController = nil;
 	[self pagerResized];
 }
 
+- (BOOL) showsWindowInspectorAdvanced
+{
+	return _displaysWindowInfoAdvanced;
+}
+
+- (void) setShowsWindowInspectorAdvanced: (BOOL) showIt
+{
+	[self willChangeValueForKey:@"showsWindowInspectorAdvanced"];
+	NSRect newFrame = [_windowInspector frame];
+	if(!showIt && [self showsWindowInspectorAdvanced])
+	{
+		newFrame.size.height -= [_windowInspectorShrinkView frame].size.height;
+		newFrame.origin.y += [_windowInspectorShrinkView frame].size.height;
+		[_windowInspector setFrame:newFrame display:YES animate:YES];
+	} else if(showIt && ![self showsWindowInspectorAdvanced])
+	{
+		newFrame.size.height += [_windowInspectorShrinkView frame].size.height;
+		newFrame.origin.y -= [_windowInspectorShrinkView frame].size.height;
+		[_windowInspector setFrame:newFrame display:YES animate:YES];
+	}
+	
+	_displaysWindowInfoAdvanced = showIt;
+	[self didChangeValueForKey:@"showsWindowInspectorAdvanced"];
+}
+
 - (IBAction) switchToWorkspace: (CGWorkspace*) ws
 {
 	if(!ws || ![ws isKindOfClass:[CGWorkspace class]])
@@ -344,6 +370,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[_windowInspector setFloatingPanel:YES];
 	}
 
+	[self setShowsWindowInspectorAdvanced: NO];
 	[_windowInspector orderFront: nil];
 	[[_windowInspector cgWindow] setSticky:YES];
 }

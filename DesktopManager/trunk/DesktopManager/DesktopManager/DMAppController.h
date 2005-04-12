@@ -50,6 +50,7 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 @interface DMAppController : NSObject {
 	IBOutlet NSPanel *_pagerWindow;
 	IBOutlet NSPanel *_windowInspector;
+	IBOutlet NSView *_windowInspectorShrinkView;
 	IBOutlet DMPager* _pagerView;
 	IBOutlet NSMenu *_statusMenu;
 	IBOutlet DMPreferencesController *_prefsController;
@@ -65,6 +66,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 	
 	NSStatusItem *_statusMenuItem;
 	NSStatusItem *_statusPagerItem;
+	
+	BOOL _displaysWindowInfoAdvanced;
 }
 
 + (DMAppController*) defaultController;
@@ -82,6 +85,9 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (IBAction) switchToNextWorkspace: (id) sender;
 - (IBAction) switchToPreviousWorkspace: (id) sender;
+
+- (BOOL) showsWindowInspectorAdvanced;
+- (void) setShowsWindowInspectorAdvanced: (BOOL) showIt;
 
 @end
 
