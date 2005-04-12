@@ -370,6 +370,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[_windowInspector setFloatingPanel:YES];
 	}
 
+	[_windowInspector setBecomesKeyOnlyIfNeeded:YES];
 	[self setShowsWindowInspectorAdvanced: NO];
 	[_windowInspector orderFront: nil];
 	[[_windowInspector cgWindow] setSticky:YES];
@@ -394,6 +395,7 @@ static DMAppController *_defaultDMAppController = nil;
 	}
 	
 	/* Finally show the window */
+	[_pagerWindow setBecomesKeyOnlyIfNeeded:YES];
 	[_pagerWindow orderFront:nil];
 	[[_pagerWindow cgWindow] setSticky: YES];
 }
