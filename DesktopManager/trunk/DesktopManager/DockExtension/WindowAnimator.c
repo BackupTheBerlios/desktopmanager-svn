@@ -35,11 +35,13 @@ typedef struct {
 	float progress;
 } _Animation;
 
-_Animation* _animationList[MAX_ANIMATIONS];
+static _Animation** _animationList;
 
-void initAnimationSystem() 
+void initAnimationSystem(ptrdiff_t offset) 
 {
 	int i;
+	
+	_animationList = malloc(sizeof(_Animation*) * MAX_ANIMATIONS);
 	for(i=0; i<MAX_ANIMATIONS; i++) {
 		_animationList[i] = NULL;
 	}

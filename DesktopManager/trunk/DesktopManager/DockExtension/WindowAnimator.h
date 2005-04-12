@@ -19,7 +19,7 @@
 #include <Carbon/Carbon.h>
 #include "CGSPrivate.h"
 
-void initAnimationSystem();
+void initAnimationSystem(ptrdiff_t offset);
 
 int createResizeAnimation(CGSWindow *pWidList, int nWids, CGAffineTransform *startTransform, CGAffineTransform *endTransform, float startAlpha, float endAlpha, int duration);
 

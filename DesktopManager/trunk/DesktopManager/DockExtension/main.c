@@ -46,9 +46,10 @@ void INJECT_ENTRY (ptrdiff_t codeOffset, void *paramBlock, size_t paramSize);
  * as kind as possible... */
 void INJECT_ENTRY( ptrdiff_t offset, void *paramBlock, size_t paramSize ) {
     OSErr err;
-	
-	initAnimationSystem();
-	
+
+	// Not yet
+	initAnimationSystem(offset);
+  	
 	// syslog(LOG_ERR, "Hello");
     
 	//NSLog(@"Boo");
