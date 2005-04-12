@@ -242,13 +242,13 @@
 								<string>A48FA71907FE127000C4EDC5</string>
 								<string>A48FA7E107FE182000C4EDC5</string>
 								<string>A457008D0800284D0061B98C</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>20</integer>
 									<integer>14</integer>
 									<integer>0</integer>
 								</array>
@@ -285,7 +285,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMHotKey.m</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -293,9 +293,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMHotKey.m</string>
+										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A444590A080C8BAF005FCD80</string>
+										<string>A4445928080C8E67005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -315,7 +315,6 @@
 											<string>A457FFA807FF83030061B98C</string>
 											<string>A457FFBC07FF87270061B98C</string>
 											<string>A457004E07FF9C9D0061B98C</string>
-											<string>A45700CB08002DEB0061B98C</string>
 											<string>A457014E08003F490061B98C</string>
 											<string>A45702AE08005ED30061B98C</string>
 											<string>A42881110800A1E600C68D25</string>
@@ -355,9 +354,10 @@
 											<string>A4445833080C7715005FCD80</string>
 											<string>A4445834080C7715005FCD80</string>
 											<string>A44458A1080C863F005FCD80</string>
-											<string>A4445904080C8A71005FCD80</string>
 											<string>A4445905080C8A71005FCD80</string>
-											<string>A44B0D530809F401006855DC</string>
+											<string>A4445916080C8D21005FCD80</string>
+											<string>A4445922080C8E0E005FCD80</string>
+											<string>A4445923080C8E0E005FCD80</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -423,6 +423,8 @@
 											<string>A44456F4080B4350005FCD80</string>
 											<string>A4445906080C8A71005FCD80</string>
 											<string>A4445907080C8A71005FCD80</string>
+											<string>A4445918080C8D21005FCD80</string>
+											<string>A4445924080C8E0E005FCD80</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -963,7 +965,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {833, 317}}</string>
 								<key>RubberWindowFrame</key>
-								<string>161 300 833 359 0 0 1280 1002 </string>
+								<string>124 243 833 359 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXRunSessionModule</string>
@@ -993,7 +995,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
 			<key>WindowString</key>
-			<string>161 300 833 359 0 0 1280 1002 </string>
+			<string>124 243 833 359 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>

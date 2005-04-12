@@ -24,6 +24,8 @@
 	<string>DMApplication</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>LSBackgroundOnlt</key>
+	<true/>
 	<key>LSMultipleInstancesProhibited</key>
 	<true/>
 	<key>LSUIPresentationMode</key>

@@ -369,7 +369,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[inspectorNib instantiateNibWithOwner:self topLevelObjects:nil];
 		
 		[_windowInspector setHidesOnDeactivate:NO];
-		[_windowInspector setFloatingPanel:NO];
+		[_windowInspector setFloatingPanel:YES];
 	}
 
 	[_windowInspector setBecomesKeyOnlyIfNeeded:YES];
