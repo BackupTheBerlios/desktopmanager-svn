@@ -71,12 +71,15 @@ static DMAppController *_defaultDMAppController = nil;
 		_rows = 0;
 		_columns = 0;
 		_displaysWindowInfoAdvanced = YES;
+		_foregroundWin = nil;
 	}
 	return mySelf;
 }
 
 - (void) dealloc
 {
+	if(_foregroundWin)
+		[_foregroundWin release];
 	if(_hotKeys)
 		[_hotKeys release];
 	if(_statusMenuItem)
@@ -114,6 +117,25 @@ static DMAppController *_defaultDMAppController = nil;
 		
 		[[NSUserDefaults standardUserDefaults] setObject:userHotKeys forKey:@"hotKeys"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	if((object == _foregroundWin) && ([keyPath isEqualToString:@"sticky"]))
+	{
+		CGWindow *win = (CGWindow*) object;
+		//NSLog(@"foreground sticky state changed to %@", [change objectForKey:NSKeyValueChangeNewKey]);
+		NSMutableDictionary *winInfo = [NSMutableDictionary dictionary];
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		NSString *key = [win userDefaultsKey];
+		if([defaults dictionaryForKey:key]) {
+			[winInfo setDictionary:[defaults dictionaryForKey:key]];
+		}
+		
+		[winInfo setObject:[change objectForKey:NSKeyValueChangeNewKey] forKey:@"sticky"];
+		[defaults setObject:winInfo forKey:key];
+		[defaults synchronize];
 	}
 }
 
@@ -208,7 +230,6 @@ static DMAppController *_defaultDMAppController = nil;
 	_pagerView = nil;
 	_statusMenuItem = nil;
 	_windowInspector = nil;	
-	_frontCGWindowController = nil;
 	
 	[self setRows: [defaults integerForKey: @"PagerRows"]];
 	[self setColumns: [defaults integerForKey: @"PagerColumns"]];
@@ -658,6 +679,11 @@ static DMAppController *_defaultDMAppController = nil;
 	return YES;
 }
 
+- (CGWindow*) foregroundWindow
+{
+	return _foregroundWin;
+}
+
 - (CGWorkspace*) currentWorkspace
 {
 	/* For neatness' sake actually return the object we store representing
@@ -755,26 +781,62 @@ static DMAppController *_defaultDMAppController = nil;
 
 @implementation DMAppController (Private)
 
+- (void) newWindows: (NSArray*) windows onWorkspace: (CGWorkspace*) ws
+{
+	CGWindow *win;
+	NSEnumerator *winEnum = [windows objectEnumerator];
+	while(win = [winEnum nextObject]) 
+	{
+		NSString *winKey = [win userDefaultsKey];
+		NSDictionary *winInfo = [[NSUserDefaults standardUserDefaults] dictionaryForKey: winKey];
+		if(winInfo) 
+		{
+			/* We have some properties stored! */
+			if([winInfo objectForKey:@"sticky"])
+				[win setSticky:[[winInfo objectForKey:@"sticky"] boolValue]];
+		}
+	}
+}
+
 - (void) updateCurrentWorkspace: (NSTimer*) timer
 {
 	CGWorkspace *ws = [self currentWorkspace];
+	NSSet *oldList = [NSSet setWithArray: [ws cachedWindowList]];
 	[ws refreshCachedWindowList];
-	if(_frontCGWindowController)
-	{
-		NSArray *list = [ws cachedWindowList];
-		int i = [list count] - 1;
-		CGWindow *win = nil;
-		BOOL found = NO;
-		while((i>=0) && !found) {
-			win = [list objectAtIndex:i];
-			found = win && ([win windowLevel] == NSNormalWindowLevel) && ([[win ownerName] isNotEqualTo: [[NSProcessInfo processInfo] processName]]);
-			i--;
+	NSMutableSet *windowSet = [NSMutableSet setWithArray:[ws cachedWindowList]];
+	[windowSet minusSet:oldList];
+	
+	if([windowSet count]) {
+		[self newWindows: [windowSet allObjects] onWorkspace: ws];
+	}
+	
+	NSArray *list = [ws cachedWindowList];
+	int i = [list count] - 1;
+	CGWindow *win = nil;
+	BOOL found = NO;
+	while((i>=0) && !found) {
+		win = [list objectAtIndex:i];
+		found = win && ([win windowLevel] == NSNormalWindowLevel) && ([[win ownerName] isNotEqualTo: [[NSProcessInfo processInfo] processName]]);
+		i--;
+	}
+	
+	if(found && (_foregroundWin != win)) {
+		[self willChangeValueForKey:@"foregroundWindow"];
+		if(_foregroundWin) {
+			[_foregroundWin removeObserver:self forKeyPath:@"sticky"];
+			[_foregroundWin release];
 		}
-		if(found && ([_frontCGWindowController content] != win)) {
-			[_frontCGWindowController setContent: win];
-		} else if([_frontCGWindowController content] != nil) {
-			[_frontCGWindowController setContent: nil];
+		_foregroundWin = [win retain];
+		[_foregroundWin addObserver:self forKeyPath:@"sticky" options:NSKeyValueObservingOptionNew context:nil];
+		[self didChangeValueForKey:@"foregroundWindow"];
+	} else if(!found && _foregroundWin) {
+		[self willChangeValueForKey:@"foregroundWindow"];
+		if(_foregroundWin) {
+			[_foregroundWin removeObserver:self forKeyPath:@"sticky"];
+			[_foregroundWin release];
 		}
+		_foregroundWin = nil;
+		[self didChangeValueForKey:@"foregroundWindow"];
 	}
 }
 
@@ -784,8 +846,15 @@ static DMAppController *_defaultDMAppController = nil;
 	CGWorkspace *ws;
 	while(ws = [wsEnum nextObject])
 	{
+		NSSet *oldList = [NSSet setWithArray: [ws cachedWindowList]];
 		if(![ws isCurrentWorkspace])
 			[ws refreshCachedWindowList];
+		NSMutableSet *windowSet = [NSMutableSet setWithArray:[ws cachedWindowList]];
+		[windowSet minusSet:oldList];
+		
+		if([windowSet count]) {
+			[self newWindows: [windowSet allObjects] onWorkspace: ws];
+		}
 	}
 }
 
@@ -879,6 +948,15 @@ enum {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: [self associatedInfo]];
 	[dict setObject: name forKey: @"name"];
 	[self setAssociatedInfo: dict];
+}
+
+@end
+
+@implementation CGWindow (DMAppControllerAdditions)
+
+- (NSString*) userDefaultsKey
+{
+	return [NSString stringWithFormat:@"Window:%x:%x", [[self windowTitle] hash], [[self ownerName] hash]];
 }
 
 @end

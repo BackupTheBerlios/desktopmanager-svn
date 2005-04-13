@@ -17,7 +17,6 @@
             CLASS = DMAppController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
-                "_frontCGWindowController" = NSObjectController; 
                 "_pagerView" = DMPager; 
                 "_pagerWindow" = NSPanel; 
                 "_prefsController" = DMPreferencesController; 

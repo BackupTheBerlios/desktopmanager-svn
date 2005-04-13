@@ -21,11 +21,13 @@
 #import <Cocoa/Cocoa.h>
 
 @class CGWorkspace;
+@class CGWindow;
 @class DMPager;
 @class DMPreferencesController;
 @class CGWorkspace;
 
 #import "CoreGraphics/CGWorkspace.h"
+#import "CoreGraphics/CGWindow.h"
 
 /* Notification sent when information associated with a particular
  * workspace changes. */
@@ -43,6 +45,12 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 @end
 
+@interface CGWindow (DMAppControllerAdditions)
+
+- (NSString*) userDefaultsKey;
+
+@end
+
 @interface DMApplication : NSApplication {
 }
 @end
@@ -54,7 +62,6 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 	IBOutlet DMPager* _pagerView;
 	IBOutlet NSMenu *_statusMenu;
 	IBOutlet DMPreferencesController *_prefsController;
-	IBOutlet NSObjectController *_frontCGWindowController;
 	
 	/* See comment in DMAppController for data model */
 	NSMutableArray *_workspaceArray;
@@ -68,6 +75,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 	NSStatusItem *_statusPagerItem;
 	
 	BOOL _displaysWindowInfoAdvanced;
+	
+	CGWindow *_foregroundWin;
 }
 
 + (DMAppController*) defaultController;
@@ -95,6 +104,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (CGWorkspace*) workspaceAtRow: (int) row column: (int) column;
 - (CGWorkspace*) currentWorkspace;
+
+- (CGWindow*) foregroundWindow;
 
 - (NSArray*) workspaces;
 - (NSArray*) associatedInfoForAllWorkspaces;

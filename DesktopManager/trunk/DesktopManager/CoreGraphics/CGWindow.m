@@ -82,6 +82,7 @@ void _ensure_kCGSWindowTitle() {
 {
 	CGStickyWindowController *controller = [CGStickyWindowController defaultController];
 	
+	[self willChangeValueForKey:@"sticky"];
 	if(sticky)
 	{
 		if(![controller isWindowSticky:self])
@@ -94,6 +95,7 @@ void _ensure_kCGSWindowTitle() {
 			[controller removeStickyWindow:self];
 		}
 	}
+	[self didChangeValueForKey:@"sticky"];
 }
 
 - (NSString*) windowTitle {
