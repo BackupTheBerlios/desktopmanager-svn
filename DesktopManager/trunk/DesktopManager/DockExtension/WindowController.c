@@ -65,26 +65,14 @@ void unFadeWindow(int wid) {
     CGSSetWindowAlpha(cid, wid, 1.0);
 }
 
-extern CGSValue kCGSMovementGroup;
-
 void moveWindow(int wid, float x, float y) {
     CGSConnection cid;
     CGPoint point;
-	CGSValue group = NULL;
-	
+    
     cid = _CGSDefaultConnection();
     point.x = x; point.y = y;
-
-	if(CGSGetWindowProperty(cid, wid, kCGSMovementGroup, &group)) {
-		return;
-	}
-	
-	if(group) {
-		// CGSMoveWindowWithGroup(cid, wid, &point, groupNo);
-		//CGSMoveWindowWithGroup(cid, wid, &point, groupNo);
-	} else {
-		CGSMoveWindow(cid, wid, &point);
-	}
+    
+    CGSMoveWindow(cid, wid, &point);
 }
 
 void moveToWorkspace(int wid, int workspace) {
