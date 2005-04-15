@@ -87,9 +87,12 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (IBAction) showPreferences: (id) sender;
 - (IBAction) showDesktopPager: (id) sender;
+- (IBAction) hideDesktopPager: (id) sender;
+- (IBAction) toggleDesktopPager: (id) sender;
 - (IBAction) showStatusPager: (id) sender;
 - (IBAction) switchToWorkspace: (CGWorkspace*) ws;
 - (IBAction) showWindowInspector: (id) sender;
+- (IBAction) hideWindowInspector: (id) sender;
 
 - (IBAction) switchWorkspaceLeft: (id) sender;
 - (IBAction) switchWorkspaceRight: (id) sender;

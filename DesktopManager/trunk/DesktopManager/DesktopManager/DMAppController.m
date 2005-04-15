@@ -196,7 +196,7 @@ static DMAppController *_defaultDMAppController = nil;
 	DEFAULT_HOTKEY(126, NSCommandKeyMask | NSAlternateKeyMask, switchWorkspaceUp:, move_to_upper_ws);
 	DEFAULT_HOTKEY(35, NSCommandKeyMask | NSAlternateKeyMask, showPreferences:, show_prefs);
 	[hk setEnabled: NO];
-	DEFAULT_HOTKEY(5, NSCommandKeyMask | NSAlternateKeyMask, showDesktopPager:, show_desktop_pager);
+	DEFAULT_HOTKEY(5, NSCommandKeyMask | NSAlternateKeyMask, toggleDesktopPager:, show_desktop_pager);
 	[hk setEnabled: NO];
 	
 	/* Now go through each hot key and see if we have a user preference */
@@ -407,9 +407,14 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (BOOL)validateMenuItem:(id <NSMenuItem>)menuItem
 {
-	if([menuItem action] == @selector(showDesktopPager:))
+	if([_pagerWindow isVisible] && ([menuItem action] == @selector(showDesktopPager:)))
 	{
-		return ![self desktopPagerVisible];
+		[menuItem setAction:@selector(hideDesktopPager:)];
+		[menuItem setTitle:NSLocalizedString(@"Hide Desktop Pager", @"Status menu item to hide desktop pager")];
+	} else if(![_pagerWindow isVisible] && ([menuItem action] == @selector(hideDesktopPager:)))
+	{
+		[menuItem setAction:@selector(showDesktopPager:)];
+		[menuItem setTitle:NSLocalizedString(@"Show Desktop Pager", @"Status menu item to show desktop pager")];
 	}
 }
 
@@ -429,6 +434,11 @@ static DMAppController *_defaultDMAppController = nil;
 	[self setShowsWindowInspectorAdvanced: NO];
 	[_windowInspector orderFront: nil];
 	[[_windowInspector cgWindow] setSticky:YES];
+}
+
+- (IBAction) hideWindowInspector: (id) sender
+{
+	[_windowInspector orderOut:nil];
 }
 
 - (IBAction) showDesktopPager: (id) sender
@@ -453,6 +463,19 @@ static DMAppController *_defaultDMAppController = nil;
 	[_pagerWindow setBecomesKeyOnlyIfNeeded:YES];
 	[_pagerWindow orderFront:nil];
 	[[_pagerWindow cgWindow] setSticky: YES];
+}
+
+- (IBAction) hideDesktopPager: (id) sender
+{
+	[_pagerWindow orderOut:nil];
+}
+
+- (IBAction) toggleDesktopPager: (id) sender
+{
+	if([_pagerWindow isVisible])
+		[self hideDesktopPager:nil];
+	else
+		[self showDesktopPager:nil];
 }
 
 /* Notification of workspace change */
