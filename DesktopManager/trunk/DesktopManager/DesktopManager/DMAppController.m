@@ -198,7 +198,7 @@ static DMAppController *_defaultDMAppController = nil;
 	[hk setEnabled: NO];
 	DEFAULT_HOTKEY(5, NSCommandKeyMask | NSAlternateKeyMask, toggleDesktopPager:, show_desktop_pager);
 	[hk setEnabled: NO];
-	DEFAULT_HOTKEY(6, NSCommandKeyMask | NSAlternateKeyMask, toggleWindowInspector:, show_window_inspector);
+	DEFAULT_HOTKEY(34, NSCommandKeyMask | NSAlternateKeyMask, toggleWindowInspector:, show_window_inspector);
 	[hk setEnabled: NO];
 	
 	/* Now go through each hot key and see if we have a user preference */
