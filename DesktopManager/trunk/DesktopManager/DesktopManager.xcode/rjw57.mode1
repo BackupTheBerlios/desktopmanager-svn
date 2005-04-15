@@ -252,8 +252,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>37</integer>
+									<integer>31</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -289,7 +289,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMDesktopsPreferences.m</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -297,9 +297,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMDesktopsPreferences.m</string>
+										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4445B0D080FEA0E005FCD80</string>
+										<string>A4445B14080FEAC2005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -357,11 +357,11 @@
 											<string>A4445ABE080FE596005FCD80</string>
 											<string>A4445ACC080FE618005FCD80</string>
 											<string>A4445AE6080FE7FE005FCD80</string>
-											<string>A4445AF4080FE8D7005FCD80</string>
 											<string>A4445AFB080FE93D005FCD80</string>
 											<string>A4445B05080FE9CA005FCD80</string>
 											<string>A4445B06080FE9CA005FCD80</string>
-											<string>A4445AD3080FE6D9005FCD80</string>
+											<string>A4445B11080FEAC2005FCD80</string>
+											<string>A4445B12080FEAC2005FCD80</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -502,6 +502,7 @@
 											<string>A4445B00080FE93D005FCD80</string>
 											<string>A4445B07080FE9CA005FCD80</string>
 											<string>A4445B08080FE9CA005FCD80</string>
+											<string>A4445B13080FEAC2005FCD80</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -593,8 +594,8 @@
 		<string>A4445950080C8EAB005FCD80</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>227 143 983 737 0 0 1280 1002 </string>
@@ -626,7 +627,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4445B0E080FEA0E005FCD80</string>
+										<string>A4445B15080FEAC2005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A44456C9080B3EC4005FCD80</string>

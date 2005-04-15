@@ -303,13 +303,13 @@ static DMAppController *_defaultDMAppController = nil;
 	{
 		newFrame.size.height -= [_windowInspectorShrinkView frame].size.height;
 		newFrame.origin.y += [_windowInspectorShrinkView frame].size.height;
-		newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
+		//newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
 		[_windowInspector setFrame:newFrame display:YES animate:YES];
 	} else if(showIt && ![self showsWindowInspectorAdvanced])
 	{
 		newFrame.size.height += [_windowInspectorShrinkView frame].size.height;
 		newFrame.origin.y -= [_windowInspectorShrinkView frame].size.height;
-		newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
+		//newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
 		[_windowInspector setFrame:newFrame display:YES animate:YES];
 	}
 	
