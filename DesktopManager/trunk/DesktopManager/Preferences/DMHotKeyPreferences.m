@@ -24,18 +24,6 @@
 @interface DMLocaliseHotKeyDescription: NSValueTransformer {}
 @end
 
-@interface DMHotKeyFieldEditor : NSView {
-	id _delegate;
-	DMHotKey *_representedHotKey;
-}
-
-- (id) delegate;
-- (void) setDelegate: (id) delegate;
-- (DMHotKey*) representedHotKey;
-- (void) setRepresentedHotKey: (DMHotKey*) hk;
-
-@end
-
 @implementation DMHotKeyPreferences
 
 - (id) initWithBundle: (NSBundle*) bundle
@@ -59,7 +47,6 @@
 - (IBAction) editKeyCombination: (id) sender
 {
 	[[DMAppController defaultController] willChangeValueForKey:@"hotKeys"];
-	
 	DMHotKeyFieldEditor *fieldEditor = [[[DMHotKeyFieldEditor alloc] initWithFrame:[_keyCombinationButton frame]] autorelease];
 	[fieldEditor setDelegate: self];
 	[fieldEditor setRepresentedHotKey: [[_hotKeysController selectedObjects] objectAtIndex:0]];
@@ -106,6 +93,7 @@
 {
 	[_representedHotKey setModifiers:[keyEvent modifierFlags]];
 	[_representedHotKey setKeycode:[keyEvent keyCode]];
+	[_representedHotKey setEnabled: YES];
 	
 	if([[self window] firstResponder] == self) 
 	{

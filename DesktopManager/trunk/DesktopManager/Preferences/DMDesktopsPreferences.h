@@ -25,6 +25,9 @@
 @interface DMDesktopsPreferences : NSPreferencePane {
 	IBOutlet DMPager* _pager;
 	IBOutlet NSObjectController* _appControllerController;
+	IBOutlet NSButton *_keyCombinationButton;
 }
+
+- (IBAction) editKeyCombination: (id) sender;
 
 @end

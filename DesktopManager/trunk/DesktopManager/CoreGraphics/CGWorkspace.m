@@ -158,4 +158,9 @@ CGSTransitionOption _defaultTransitionOption = CGSDown;
 	return [ws workspaceNumber] == [self workspaceNumber];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+	CGWorkspace *ws = [[CGWorkspace allocWithZone:zone] initRepresentingWorkspace:_workspaceNumber];
+}
+
 @end

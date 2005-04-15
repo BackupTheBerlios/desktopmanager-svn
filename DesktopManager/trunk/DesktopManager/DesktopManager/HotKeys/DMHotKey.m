@@ -22,6 +22,11 @@
 
 @implementation DMHotKey
 
++ (id) hotKey
+{
+	return [[[DMHotKey alloc] init] autorelease];
+}
+
 + (id) hotKeyWithKeycode: (int) kcode modifiers: (int) mfier
 {
     return [[[DMHotKey alloc] initWithKeycode: kcode modifiers: mfier] autorelease];
@@ -32,11 +37,11 @@
 	id mySelf = [super init];
 	if(mySelf)
 	{
-		registered = FALSE;
+		registered = NO;
 		_wasRegistered = NO;
-		_enabled = YES;
+		_enabled = NO;
 		_target = nil;
-		keycode = 0; 
+		keycode = -1; 
 		modifiers = 0;
 		_description = nil;
 		
@@ -53,6 +58,7 @@
 	{
 		keycode = kcode;
 		modifiers = mdfer;
+		_enabled = YES;
     }
     return mySelf;
 }
@@ -64,6 +70,7 @@
 	{
 		keycode = [key keycode];
 		modifiers = [key modifiers];
+		_enabled = [key enabled];
     }
     return mySelf;
 }
@@ -153,11 +160,15 @@
 
 - (BOOL) isRegistered { return registered; }
 
+- (BOOL) isValid { return (keycode >= 0); }
+
 - (void) registerHotKey {
-	if(!_enabled) {
+	if(!_enabled || (keycode < 0)) {
 		return;
 	}
-    if(registered) { return; }
+    if(registered) { 
+		return; 
+	}
     EventHotKeyID hotKeyID;
     EventHotKeyRef hotkeyRef;
     hotKeyID.id = (int)self; 
@@ -170,7 +181,9 @@
 }
 
 - (void) unregisterHotKey {
-    if(!registered) { return; }
+    if(!registered || (keycode < 0)) {
+		return; 
+	}
     UnregisterEventHotKey(myRef);
     registered = NO;
 }
@@ -202,8 +215,8 @@
     keycode = _keycode;
     if([self isRegistered]) { 
         [self unregisterHotKey];
-        [self registerHotKey];
     }
+	[self registerHotKey];
 	[self didChangeValueForKey:@"stringValue"];
 }
 
@@ -213,8 +226,8 @@
     modifiers = _modifiers;
     if([self isRegistered]) { 
         [self unregisterHotKey];
-        [self registerHotKey];
     }
+	[self registerHotKey];
 	[self didChangeValueForKey:@"stringValue"];
 }
 
@@ -300,6 +313,9 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 }
 
 - (NSString*) stringValue {
+	if(keycode < 0)
+		return @"-";
+	
 	NSMutableString *string = [NSMutableString string];
 	if(modifiers & NSControlKeyMask) {
 		[string appendString: @"Ctrl-"];

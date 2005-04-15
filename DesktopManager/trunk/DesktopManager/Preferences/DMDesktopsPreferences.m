@@ -18,12 +18,14 @@
 */
 
 #import "DMDesktopsPreferences.h"
+#import "DMHotKeyPreferences.h"
 
 #import "CoreGraphics/CGWorkspace.h"
 
 #import "DesktopManager/DMAppController.h"
 #import "DesktopManager/Pager/DMPager.h"
 #import "DesktopManager/Pager/DMPagerCell.h"
+#import "DesktopManager/HotKeys/DMHotKey.h"
 
 @interface DMDesktopsPrefsPagerCell : DMPagerCell {
 }
@@ -81,8 +83,8 @@
 
 - (void) desktopSelected: (id) sender
 {
-	[self willChangeValueForKey:@"currentDesktopName"];
-	[self didChangeValueForKey:@"currentDesktopName"];
+	[self willChangeValueForKey:@"currentWorkspace"];
+	[self didChangeValueForKey:@"currentWorkspace"];
 }
 
 - (void) mainViewDidLoad
@@ -109,19 +111,31 @@
 	[self updatePager];
 }
 
-- (NSString*) currentDesktopName
+- (CGWorkspace*) currentWorkspace
 {
 	DMPagerCell *cell = [_pager selectedCell];
 	CGWorkspace *ws = [cell representedObject];
 	
-	return [ws name];
+	return ws;
 }
 
-- (void) setCurrentDesktopName: (NSString*) name
+- (IBAction) editKeyCombination: (id) sender
 {
-	DMPagerCell *cell = [_pager selectedCell];
-	CGWorkspace *ws = [cell representedObject];
-	[ws setName: name];
+	[[self currentWorkspace] willChangeValueForKey:@"hotKey"];
+	DMHotKeyFieldEditor *fieldEditor = [[[DMHotKeyFieldEditor alloc] initWithFrame:[_keyCombinationButton frame]] autorelease];
+	[fieldEditor setDelegate: self];
+	[fieldEditor setRepresentedHotKey: [[self currentWorkspace] hotKey]];
+	[[_keyCombinationButton superview] addSubview:fieldEditor];
+	[[[self mainView] window] makeFirstResponder: fieldEditor];
+}
+
+- (void) endHotKeyEditing: (DMHotKeyFieldEditor*) editor
+{
+	[editor removeFromSuperview];
+	DMHotKey *hk = [[self currentWorkspace] hotKey];
+	if(![hk isRegistered])
+		[hk registerHotKey];
+	[[self currentWorkspace] didChangeValueForKey:@"hotKey"];
 }
 
 @end

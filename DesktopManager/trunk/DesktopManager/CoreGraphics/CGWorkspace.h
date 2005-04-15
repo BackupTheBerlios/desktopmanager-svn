@@ -25,7 +25,7 @@ extern NSString* CGWorkspaceDidChangeNotification;
 extern NSString* CGWorkspaceFromNumberKey;
 extern NSString* CGWorkspaceToNumberKey;
 
-@interface CGWorkspace : NSObject {
+@interface CGWorkspace : NSObject<NSCopying> {
 	int _workspaceNumber;
 	NSMutableArray *_windowList;
 }

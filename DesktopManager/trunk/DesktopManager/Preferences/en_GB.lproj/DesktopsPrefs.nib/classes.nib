@@ -1,9 +1,14 @@
 {
     IBClasses = (
         {
+            ACTIONS = {editKeyCombination = id; }; 
             CLASS = DMDesktopsPreferences; 
             LANGUAGE = ObjC; 
-            OUTLETS = {"_appControllerController" = NSObjectController; "_pager" = DMPager; }; 
+            OUTLETS = {
+                "_appControllerController" = NSObjectController; 
+                "_keyCombinationButton" = NSButton; 
+                "_pager" = DMPager; 
+            }; 
             SUPERCLASS = NSPreferencePane; 
         }, 
         {CLASS = DMDesktopsPrefsPager; LANGUAGE = ObjC; SUPERCLASS = DMPager; }, 

@@ -72,12 +72,15 @@ static DMAppController *_defaultDMAppController = nil;
 		_columns = 0;
 		_displaysWindowInfoAdvanced = YES;
 		_foregroundWin = nil;
+		_workspaceHotKeyDict = [[NSMutableDictionary dictionary] retain];
 	}
 	return mySelf;
 }
 
 - (void) dealloc
 {
+	if(_workspaceHotKeyDict)
+		[_workspaceHotKeyDict release];
 	if(_foregroundWin)
 		[_foregroundWin release];
 	if(_hotKeys)
@@ -183,6 +186,8 @@ static DMAppController *_defaultDMAppController = nil;
 				[hk setModifiers: [[hkInfo objectForKey:@"modifiers"] intValue]];
 				[hk setKeycode: [[hkInfo objectForKey:@"keycode"] intValue]];
 				[hk setEnabled: [[hkInfo objectForKey:@"enabled"] boolValue]];
+				
+				// NSLog(@"hk: %@, %i, %i, %i", [hk name], [hk modifiers], [hk keycode], [hk enabled]);
 			}
 		}
 	}
@@ -777,6 +782,19 @@ static DMAppController *_defaultDMAppController = nil;
 	[[NSNotificationCenter defaultCenter] postNotificationName:DMAssociatedInformationChangedNotification object:self userInfo:[NSDictionary dictionaryWithObject:ws forKey:DMWorkspaceWithChangedInformationKey]];
 }
 
+- (DMHotKey*) hotKeyForWorkspace: (CGWorkspace*) ws
+{
+	DMHotKey *hk = [_workspaceHotKeyDict objectForKey:ws];
+	if(!hk)
+	{
+		hk = [DMHotKey hotKey];
+		[hk setTarget:ws];
+		[hk setAction:@selector(selectWithAppController:)];
+		[_workspaceHotKeyDict setObject:hk forKey:ws];
+	}
+	return hk;
+}
+
 @end
 
 @implementation DMAppController (Private)
@@ -868,7 +886,19 @@ static DMAppController *_defaultDMAppController = nil;
 	int i;
 	for(i=1; i<=_rows*_columns; i++)
 	{
-		[_workspaceArray addObject:[[[CGWorkspace alloc] autorelease] initRepresentingWorkspace:i]];
+		CGWorkspace *ws = [[[CGWorkspace alloc] autorelease] initRepresentingWorkspace:i];
+		[_workspaceArray addObject:ws];
+	}
+	
+	/* Remove hot keys for no longer present workspaces */
+	NSEnumerator *keyEnum = [_workspaceHotKeyDict keyEnumerator];
+	CGWorkspace *ws;
+	while(ws = [keyEnum nextObject])
+	{
+		if(![_workspaceArray containsObject:ws])
+		{
+			[_workspaceHotKeyDict removeObjectForKey:ws];
+		}
 	}
 }
 
@@ -948,6 +978,16 @@ enum {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary: [self associatedInfo]];
 	[dict setObject: name forKey: @"name"];
 	[self setAssociatedInfo: dict];
+}
+
+- (DMHotKey*) hotKey
+{
+	return [[DMAppController defaultController] hotKeyForWorkspace: self];
+}
+
+- (IBAction) selectWithAppController: (id) sender
+{
+	[[DMAppController defaultController] switchToWorkspace:self];
 }
 
 @end

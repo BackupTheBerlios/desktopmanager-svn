@@ -22,6 +22,18 @@
 
 @class DMHotKey;
 
+@interface DMHotKeyFieldEditor : NSView {
+	id _delegate;
+	DMHotKey *_representedHotKey;
+}
+
+- (id) delegate;
+- (void) setDelegate: (id) delegate;
+- (DMHotKey*) representedHotKey;
+- (void) setRepresentedHotKey: (DMHotKey*) hk;
+
+@end
+
 @interface DMHotKeyPreferences : NSPreferencePane {
 	IBOutlet NSObjectController *_dataController;
 	IBOutlet NSArrayController *_hotKeysController;

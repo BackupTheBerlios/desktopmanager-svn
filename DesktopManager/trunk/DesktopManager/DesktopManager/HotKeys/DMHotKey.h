@@ -39,6 +39,7 @@
 	SEL _action;
 }
 
++ (id) hotKey;
 + (id) hotKeyWithKeycode: (int) keycode modifiers: (int) modifier;
 - (id) initWithKeycode: (int) keycode modifiers: (int) modifier;
 - (id) initWithHotKey: (DMHotKey*) key;
@@ -49,6 +50,7 @@
 - (void) registerHotKey;
 - (void) unregisterHotKey;
 - (BOOL) isRegistered;
+- (BOOL) isValid;
 
 - (int) keycode;
 - (int) modifiers;

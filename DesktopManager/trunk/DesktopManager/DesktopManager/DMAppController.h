@@ -25,6 +25,7 @@
 @class DMPager;
 @class DMPreferencesController;
 @class CGWorkspace;
+@class DMHotKey;
 
 #import "CoreGraphics/CGWorkspace.h"
 #import "CoreGraphics/CGWindow.h"
@@ -42,6 +43,7 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 - (void) setAssociatedInfo: (NSDictionary*) aInfo;
 - (NSString*) name;
 - (void) setName: (NSString*) name;
+- (DMHotKey*) hotKey;
 
 @end
 
@@ -62,6 +64,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 	IBOutlet DMPager* _pagerView;
 	IBOutlet NSMenu *_statusMenu;
 	IBOutlet DMPreferencesController *_prefsController;
+	
+	NSMutableDictionary *_workspaceHotKeyDict;
 	
 	/* See comment in DMAppController for data model */
 	NSMutableArray *_workspaceArray;
@@ -112,6 +116,7 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (NSDictionary*) associatedInfoForWorkspace: (CGWorkspace*) ws;
 - (void) setAssociatedInfo: (NSDictionary*) info forWorkspace: (CGWorkspace*) ws;
+- (DMHotKey*) hotKeyForWorkspace: (CGWorkspace*) ws;
 
 - (BOOL) getCurrentWorkspaceRow: (int*) row column: (int*) column;
 - (BOOL) getWorkspace: (CGWorkspace*) ws row: (int*) row column: (int*) column;
