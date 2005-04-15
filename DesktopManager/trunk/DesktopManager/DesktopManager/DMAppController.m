@@ -144,6 +144,33 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void)applicationWillTerminate:(NSNotification*)aNotification
 {
+	/* Update per-desktop hot keys */
+	NSEnumerator *wsEnum = [_workspaceArray objectEnumerator];
+	CGWorkspace *ws;
+	while(ws = [wsEnum nextObject])
+	{
+		NSMutableDictionary *newInfo = [NSMutableDictionary dictionary];
+		NSDictionary *wsInfo = [self associatedInfoForWorkspace: ws];
+		if(wsInfo)
+		{
+			[newInfo setDictionary:wsInfo];
+		}
+		
+		NSMutableDictionary *hkInfo = [NSMutableDictionary dictionary];
+		if([newInfo objectForKey:@"hotKey"])
+		{
+			[hkInfo setDictionary:[newInfo objectForKey:@"hotKey"]];
+		}
+		
+		DMHotKey *hk = [self hotKeyForWorkspace:ws];
+		[hkInfo setObject:[NSNumber numberWithInt:[hk keycode]] forKey:@"keycode"];
+		[hkInfo setObject:[NSNumber numberWithInt:[hk modifiers]] forKey:@"modifiers"];
+		[hkInfo setObject:[NSNumber numberWithBool:[hk enabled]] forKey:@"enabled"];
+		
+		[newInfo setObject:hkInfo forKey:@"hotKey"];
+		[self setAssociatedInfo:newInfo forWorkspace:ws];
+	}
+	
 	/* Sync user defaults */
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -790,6 +817,16 @@ static DMAppController *_defaultDMAppController = nil;
 		hk = [DMHotKey hotKey];
 		[hk setTarget:ws];
 		[hk setAction:@selector(selectWithAppController:)];
+		
+		NSDictionary *wsInfo = [self associatedInfoForWorkspace: ws];
+		if([wsInfo objectForKey:@"hotKey"])
+		{
+			NSDictionary *hkInfo = [wsInfo objectForKey:@"hotKey"];
+			[hk setKeycode:[[hkInfo objectForKey:@"keycode"] intValue]];
+			[hk setModifiers:[[hkInfo objectForKey:@"modifiers"] intValue]];
+			[hk setEnabled:[[hkInfo objectForKey:@"enabled"] boolValue]];
+		}
+		
 		[_workspaceHotKeyDict setObject:hk forKey:ws];
 	}
 	return hk;

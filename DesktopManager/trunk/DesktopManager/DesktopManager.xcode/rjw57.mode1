@@ -273,7 +273,7 @@
 							<real>277</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>227 143 983 737 0 0 1280 1002 </string>
+						<string>156 265 983 737 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -299,7 +299,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4445B14080FEAC2005FCD80</string>
+										<string>A4445B3A081019E7005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -516,7 +516,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {683, 475}}</string>
 								<key>RubberWindowFrame</key>
-								<string>227 143 983 737 0 0 1280 1002 </string>
+								<string>156 265 983 737 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -524,6 +524,8 @@
 							<string>475pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -536,7 +538,7 @@
 								<key>Frame</key>
 								<string>{{0, 482}, {683, 213}}</string>
 								<key>RubberWindowFrame</key>
-								<string>227 143 983 737 0 0 1280 1002 </string>
+								<string>156 265 983 737 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -592,13 +594,13 @@
 	<array>
 		<string>A4EEA6E707FEE8D7003AABB3</string>
 		<string>A4445950080C8EAB005FCD80</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
-	<string>227 143 983 737 0 0 1280 1002 </string>
+	<string>156 265 983 737 0 0 1280 1002 </string>
 	<key>WindowTools</key>
 	<array>
 		<dict>
@@ -627,7 +629,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4445B15080FEAC2005FCD80</string>
+										<string>A4445B3B081019E7005FCD80</string>
 										<key>history</key>
 										<array>
 											<string>A44456C9080B3EC4005FCD80</string>
@@ -635,7 +637,7 @@
 											<string>A44457D7080C7357005FCD80</string>
 											<string>A4445A6B080FE093005FCD80</string>
 											<string>A4445AC7080FE596005FCD80</string>
-											<string>A4445AC8080FE596005FCD80</string>
+											<string>A4445B1B081016D4005FCD80</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -670,8 +672,6 @@
 							<string>229pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
