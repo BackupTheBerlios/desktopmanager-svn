@@ -93,6 +93,7 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 - (IBAction) switchToWorkspace: (CGWorkspace*) ws;
 - (IBAction) showWindowInspector: (id) sender;
 - (IBAction) hideWindowInspector: (id) sender;
+- (IBAction) toggleWindowInspector: (id) sender;
 
 - (IBAction) switchWorkspaceLeft: (id) sender;
 - (IBAction) switchWorkspaceRight: (id) sender;

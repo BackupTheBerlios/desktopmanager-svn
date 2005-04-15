@@ -2,9 +2,12 @@
     IBClasses = (
         {
             ACTIONS = {
+                hideDesktopPager = id; 
+                hideWindowInspector = id; 
                 showDesktopPager = id; 
                 showPreferences = id; 
                 showStatusPager = id; 
+                showWindowInspector = id; 
                 switchToNextWorkspace = id; 
                 switchToPreviousWorkspace = id; 
                 switchToWorkspace = id; 
@@ -12,14 +15,18 @@
                 switchWorkspaceLeft = id; 
                 switchWorkspaceRight = id; 
                 switchWorkspaceUp = id; 
+                toggleDesktopPager = id; 
+                toggleWindowInspector = id; 
             }; 
             CLASS = DMAppController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
                 "_pagerView" = DMPager; 
-                "_pagerWindow" = NSWindow; 
+                "_pagerWindow" = NSPanel; 
                 "_prefsController" = DMPreferencesController; 
                 "_statusMenu" = NSMenu; 
+                "_windowInspector" = NSPanel; 
+                "_windowInspectorShrinkView" = NSView; 
             }; 
             SUPERCLASS = NSObject; 
         }, 

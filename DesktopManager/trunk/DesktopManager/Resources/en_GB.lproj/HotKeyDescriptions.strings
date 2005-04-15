@@ -8,3 +8,4 @@ move_to_lower_ws = "Switch one desktop down";
 move_to_next_ws = "Switch to next desktop";
 move_to_prev_ws = "Switch to previous desktop";
 show_desktop_pager = "Toggle desktop pager";
+show_window_inspector = "Toggle window inspector";

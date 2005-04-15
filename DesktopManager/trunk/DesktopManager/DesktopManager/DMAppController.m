@@ -170,7 +170,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[newInfo setObject:hkInfo forKey:@"hotKey"];
 		[self setAssociatedInfo:newInfo forWorkspace:ws];
 	}
-	
+		
 	/* Sync user defaults */
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -197,6 +197,8 @@ static DMAppController *_defaultDMAppController = nil;
 	DEFAULT_HOTKEY(35, NSCommandKeyMask | NSAlternateKeyMask, showPreferences:, show_prefs);
 	[hk setEnabled: NO];
 	DEFAULT_HOTKEY(5, NSCommandKeyMask | NSAlternateKeyMask, toggleDesktopPager:, show_desktop_pager);
+	[hk setEnabled: NO];
+	DEFAULT_HOTKEY(6, NSCommandKeyMask | NSAlternateKeyMask, toggleWindowInspector:, show_window_inspector);
 	[hk setEnabled: NO];
 	
 	/* Now go through each hot key and see if we have a user preference */
@@ -415,6 +417,14 @@ static DMAppController *_defaultDMAppController = nil;
 	{
 		[menuItem setAction:@selector(showDesktopPager:)];
 		[menuItem setTitle:NSLocalizedString(@"Show Desktop Pager", @"Status menu item to show desktop pager")];
+	} else 	if([_windowInspector isVisible] && ([menuItem action] == @selector(showWindowInspector:)))
+	{
+		[menuItem setAction:@selector(hideWindowInspector:)];
+		[menuItem setTitle:NSLocalizedString(@"Hide Window Inspector", @"Status menu item to hide inspector")];
+	} else if(![_windowInspector isVisible] && ([menuItem action] == @selector(hideWindowInspector:)))
+	{
+		[menuItem setAction:@selector(showWindowInspector:)];
+		[menuItem setTitle:NSLocalizedString(@"Show Window Inspector", @"Status menu item to show inspector")];
 	}
 }
 
@@ -439,6 +449,14 @@ static DMAppController *_defaultDMAppController = nil;
 - (IBAction) hideWindowInspector: (id) sender
 {
 	[_windowInspector orderOut:nil];
+}
+
+- (IBAction) toggleWindowInspector: (id) sender
+{
+	if([_windowInspector isVisible])
+		[self hideWindowInspector:nil];
+	else
+		[self showWindowInspector:nil];
 }
 
 - (IBAction) showDesktopPager: (id) sender
