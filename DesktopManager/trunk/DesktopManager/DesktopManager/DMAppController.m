@@ -255,6 +255,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[NSNumber numberWithInt:4], @"PagerColumns",
 		[NSNumber numberWithBool:YES], @"DisplayStatusPagerOnLaunch",
 		[NSNumber numberWithBool:YES], @"DisplayDesktopPagerOnLaunch",
+		[NSNumber numberWithBool:YES], @"DisplayWindowInspectorOnLaunch",
 		[NSNumber numberWithFloat: 0.2], @"SwitchDuration",
 		[NSNumber numberWithInt: CGSNone], @"SwitchTransition",
 		[NSNumber numberWithBool:NO], @"WrapDesktops",
@@ -301,7 +302,10 @@ static DMAppController *_defaultDMAppController = nil;
 	_hotKeys = [[NSMutableArray array] retain];
 	[self buildDefaultHotKeys];
 	
-	[self showWindowInspector: nil];
+	if([[NSUserDefaults standardUserDefaults] boolForKey: @"DisplayWindowInspectorOnLaunch"])
+	{
+		[self showWindowInspector: nil];
+	}
 }
 
 - (IBAction) showStatusPager: (id) sender
