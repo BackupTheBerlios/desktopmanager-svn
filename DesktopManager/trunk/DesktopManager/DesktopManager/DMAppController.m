@@ -72,6 +72,8 @@ static DMAppController *_defaultDMAppController = nil;
 		_columns = 0;
 		_displaysWindowInfoAdvanced = YES;
 		_foregroundWin = nil;
+		_inspectorRectTag = -1;
+		_inspectorFadeTimer = nil;
 		_workspaceHotKeyDict = [[NSMutableDictionary dictionary] retain];
 	}
 	return mySelf;
@@ -79,6 +81,10 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void) dealloc
 {
+	if(_inspectorFadeTimer)
+		[_inspectorFadeTimer invalidate];
+	if((_inspectorRectTag >= 0) && _windowInspector)
+		[[_windowInspector contentView] removeTrackingRect:_inspectorRectTag];
 	if(_workspaceHotKeyDict)
 		[_workspaceHotKeyDict release];
 	if(_foregroundWin)
@@ -332,18 +338,22 @@ static DMAppController *_defaultDMAppController = nil;
 {
 	[self willChangeValueForKey:@"showsWindowInspectorAdvanced"];
 	NSRect newFrame = [_windowInspector frame];
+
 	if(!showIt && [self showsWindowInspectorAdvanced])
 	{
 		newFrame.size.height -= [_windowInspectorShrinkView frame].size.height;
 		newFrame.origin.y += [_windowInspectorShrinkView frame].size.height;
-		//newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
-		[_windowInspector setFrame:newFrame display:YES animate:YES];
 	} else if(showIt && ![self showsWindowInspectorAdvanced])
 	{
 		newFrame.size.height += [_windowInspectorShrinkView frame].size.height;
 		newFrame.origin.y -= [_windowInspectorShrinkView frame].size.height;
-		//newFrame = [_windowInspector constrainFrameRect:newFrame toScreen:[_windowInspector screen]];
-		[_windowInspector setFrame:newFrame display:YES animate:YES];
+	}
+	
+	NSSize contentSize = [_windowInspector contentRectForFrameRect:newFrame].size;
+	[_windowInspector setFrame:newFrame display:YES animate:YES];
+	if(_inspectorRectTag >= 0) {
+		[[_windowInspector contentView] removeTrackingRect:_inspectorRectTag];
+		_inspectorRectTag = [[_windowInspector contentView] addTrackingRect:NSMakeRect(0,0,contentSize.width, contentSize.height) owner:self userData:nil assumeInside:NO];
 	}
 	
 	_displaysWindowInfoAdvanced = showIt;
@@ -432,6 +442,50 @@ static DMAppController *_defaultDMAppController = nil;
 	}
 }
 
+- (void)mouseExited:(NSEvent *)theEvent
+{
+	if(_inspectorFadeTimer)
+		[_inspectorFadeTimer invalidate];
+	_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startInspectorFade:) userInfo:nil repeats:NO];
+//	NSLog(@"Exit");
+}
+
+- (void)mouseEntered:(NSEvent *)theEvent
+{
+//	NSLog(@"Enter");
+	if(!_windowInspector) 
+		return;
+	
+	if(_inspectorFadeTimer) {
+		[_inspectorFadeTimer invalidate];
+		_inspectorFadeTimer = nil;
+	}
+	
+	[_windowInspector setAlphaValue:1.0];
+}
+
+- (void) inspectorFade: (NSTimer*) timer
+{
+	NSDate *then = (NSDate*) [timer userInfo];
+	NSTimeInterval ti = [[NSDate date] timeIntervalSinceDate:then];
+	
+	ti /= 0.33; /* Fade time */
+	
+	if(ti > 1.0)
+	{
+		[_windowInspector setAlphaValue:0.75];
+		[_inspectorFadeTimer invalidate];
+		_inspectorFadeTimer = nil;
+	} else {
+		[_windowInspector setAlphaValue:1.0 - (ti * 0.25)];
+	}
+}
+
+- (void) startInspectorFade: (NSTimer*) timer
+{
+	_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(inspectorFade:) userInfo:[NSDate date] repeats:YES];
+}
+
 - (IBAction) showWindowInspector: (id) sender
 {
 	if(!_windowInspector)
@@ -442,12 +496,19 @@ static DMAppController *_defaultDMAppController = nil;
 		
 		[_windowInspector setHidesOnDeactivate:NO];
 		[_windowInspector setFloatingPanel:YES];
+		
+		_inspectorRectTag = [[_windowInspector contentView] addTrackingRect:[[_windowInspector contentView] bounds] owner:self userData:nil assumeInside:NO];
 	}
 
 	[_windowInspector setBecomesKeyOnlyIfNeeded:YES];
 	[self setShowsWindowInspectorAdvanced: NO];
 	[_windowInspector orderFront: nil];
 	[[_windowInspector cgWindow] setSticky:YES];
+	[_windowInspector setAlphaValue:1.0];
+	
+	if(_inspectorFadeTimer)
+		[_inspectorFadeTimer invalidate];
+	_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startInspectorFade:) userInfo:nil repeats:NO];
 }
 
 - (IBAction) hideWindowInspector: (id) sender

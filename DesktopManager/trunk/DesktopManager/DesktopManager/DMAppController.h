@@ -78,6 +78,9 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 	NSStatusItem *_statusMenuItem;
 	NSStatusItem *_statusPagerItem;
 	
+	NSTrackingRectTag _inspectorRectTag;
+	NSTimer *_inspectorFadeTimer;
+	
 	BOOL _displaysWindowInfoAdvanced;
 	
 	CGWindow *_foregroundWin;
