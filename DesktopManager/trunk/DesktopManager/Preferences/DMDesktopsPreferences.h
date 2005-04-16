@@ -21,13 +21,16 @@
 #import <PreferencePanes/PreferencePanes.h>
 
 @class DMPager;
+@class CGWorkspace;
 
 @interface DMDesktopsPreferences : NSPreferencePane {
 	IBOutlet DMPager* _pager;
 	IBOutlet NSObjectController* _appControllerController;
+	IBOutlet NSObjectController* _selectedWSController;
 	IBOutlet NSButton *_keyCombinationButton;
 }
 
 - (IBAction) editKeyCombination: (id) sender;
+- (CGWorkspace*) currentWorkspace;
 
 @end

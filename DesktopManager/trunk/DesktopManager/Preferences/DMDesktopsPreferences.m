@@ -83,8 +83,10 @@
 
 - (void) desktopSelected: (id) sender
 {
-	[self willChangeValueForKey:@"currentWorkspace"];
-	[self didChangeValueForKey:@"currentWorkspace"];
+	[_selectedWSController setContent:[self currentWorkspace]];
+	//NSLog(@"Selection");
+	//[self willChangeValueForKey:@"currentWorkspace"];
+	//[self didChangeValueForKey:@"currentWorkspace"];
 }
 
 - (void) mainViewDidLoad
@@ -108,6 +110,7 @@
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+	//[self performSelectorOnMainThread:@selector(updatePager) withObject:nil waitUntilDone:NO];
 	[self updatePager];
 }
 

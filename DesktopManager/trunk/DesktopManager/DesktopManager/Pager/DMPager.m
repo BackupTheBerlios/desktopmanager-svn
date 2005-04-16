@@ -116,6 +116,7 @@
 	_appController = [appController retain];
 	[_appController addObserver:self forKeyPath:@"rows" options:NSKeyValueObservingOptionNew context:nil];
 	[_appController addObserver:self forKeyPath:@"columns" options:NSKeyValueObservingOptionNew context:nil];
+	
 	[_appController addObserver:self forKeyPath:@"currentWorkspace" options:NSKeyValueObservingOptionNew context:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(workspaceInfoUpdated:) name:DMAssociatedInformationChangedNotification object:_appController];

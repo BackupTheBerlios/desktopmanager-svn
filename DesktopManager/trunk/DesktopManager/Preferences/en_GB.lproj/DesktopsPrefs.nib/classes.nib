@@ -8,6 +8,7 @@
                 "_appControllerController" = NSObjectController; 
                 "_keyCombinationButton" = NSButton; 
                 "_pager" = DMPager; 
+                "_selectedWSController" = NSObjectController; 
             }; 
             SUPERCLASS = NSPreferencePane; 
         }, 
