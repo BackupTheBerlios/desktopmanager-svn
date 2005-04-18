@@ -45,6 +45,7 @@ static CGStickyWindowController *_defaultCGStickyWindowController = nil;
 			_defaultCGStickyWindowController = mySelf;
 		
 		_stickyWindows = [[NSMutableArray array] retain];
+		_makeUnStickyTimer = nil;
 		
 		/* Make sure we know about any workspace changes */
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(workspaceWillChange:) name:CGWorkspaceWillChangeNotification object:nil];
@@ -58,6 +59,8 @@ static CGStickyWindowController *_defaultCGStickyWindowController = nil;
 	if(self == _defaultCGStickyWindowController)
 		_defaultCGStickyWindowController = nil;
 	
+	if(_makeUnStickyTimer)
+		[_makeUnStickyTimer invalidate];
 	if(_stickyWindows)
 		[_stickyWindows release];
 	
@@ -80,7 +83,7 @@ static CGStickyWindowController *_defaultCGStickyWindowController = nil;
 	}
 }
 
-- (void) workspaceDidChange: (NSNotification*) notification
+- (void) makeListUnSticky: (NSTimer*) timer
 {
 	/* Set everything we are maintaining to be non-sticky */
 	AppleEvent theEvent;
@@ -92,6 +95,16 @@ static CGStickyWindowController *_defaultCGStickyWindowController = nil;
 		addIntParm([window windowNumber], 'wid ', &theEvent);
 		sendEvent(&theEvent);
 	}
+
+	_makeUnStickyTimer = nil;
+}
+
+- (void) workspaceDidChange: (NSNotification*) notification
+{
+	if(_makeUnStickyTimer)
+		[_makeUnStickyTimer invalidate];
+	
+	_makeUnStickyTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(makeListUnSticky:) userInfo:nil repeats:NO];
 }
 
 - (void) addStickyWindow: (CGWindow*) window

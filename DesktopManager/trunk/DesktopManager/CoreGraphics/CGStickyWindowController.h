@@ -23,6 +23,7 @@
 
 @interface CGStickyWindowController : NSObject {
 	NSMutableArray *_stickyWindows;
+	NSTimer *_makeUnStickyTimer;
 }
 
 + (CGStickyWindowController*) defaultController;

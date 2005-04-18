@@ -392,6 +392,14 @@
 			A4B4C95408146979004D91AF = A4B4C95408146979004D91AF;
 			A4B4C95508146979004D91AF = A4B4C95508146979004D91AF;
 			A4B4C95608146979004D91AF = A4B4C95608146979004D91AF;
+			A4B4C957081469EF004D91AF = A4B4C957081469EF004D91AF;
+			A4B4C958081469EF004D91AF = A4B4C958081469EF004D91AF;
+			A4B4C959081469EF004D91AF = A4B4C959081469EF004D91AF;
+			A4B4C95A081469EF004D91AF = A4B4C95A081469EF004D91AF;
+			A4B4C95B081469EF004D91AF = A4B4C95B081469EF004D91AF;
+			A4B4C95C081469EF004D91AF = A4B4C95C081469EF004D91AF;
+			A4B4C95D081469EF004D91AF = A4B4C95D081469EF004D91AF;
+			A4B4C95E081469EF004D91AF = A4B4C95E081469EF004D91AF;
 			A4EEA2A407FE18F3003AABB3 = A4EEA2A407FE18F3003AABB3;
 			A4EEA2C707FE1B76003AABB3 = A4EEA2C707FE1B76003AABB3;
 			A4EEA2CB07FE1B76003AABB3 = A4EEA2CB07FE1B76003AABB3;
@@ -534,7 +542,7 @@
 		isa = PBXTextBookmark;
 		name = removeObserve;
 		rLen = 13;
-		rLoc = 2130;
+		rLoc = 2217;
 		rType = 0;
 		vrLen = 134;
 		vrLoc = 2041;
@@ -561,7 +569,7 @@
 		isa = PBXTextBookmark;
 		name = removeObserve;
 		rLen = 13;
-		rLoc = 2130;
+		rLoc = 2217;
 		rType = 0;
 		vrLen = 134;
 		vrLoc = 2041;
@@ -870,7 +878,7 @@
 		isa = PBXTextBookmark;
 		name = "CGStickyWindowController.m: 77";
 		rLen = 0;
-		rLoc = 2460;
+		rLoc = 2547;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 400;
@@ -1873,6 +1881,86 @@
 		vrLen = 457;
 		vrLoc = 1563;
 	};
+	A4B4C957081469EF004D91AF = {
+		fRef = A4EEA2BA07FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.m: 70";
+		rLen = 0;
+		rLoc = 2016;
+		rType = 0;
+		vrLen = 457;
+		vrLoc = 1563;
+	};
+	A4B4C958081469EF004D91AF = {
+		fRef = A4EEA6F607FEEB0B003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGStickyWindowController.h: _makeUnStickyTimer";
+		rLen = 0;
+		rLoc = 996;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 59;
+	};
+	A4B4C959081469EF004D91AF = {
+		fRef = A4EEA6F707FEEB0B003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGStickyWindowController.m: 107";
+		rLen = 0;
+		rLoc = 3352;
+		rType = 0;
+		vrLen = 951;
+		vrLoc = 2402;
+	};
+	A4B4C95A081469EF004D91AF = {
+		fRef = A4EEA59607FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.h: 23";
+		rLen = 0;
+		rLoc = 901;
+		rType = 0;
+		vrLen = 917;
+		vrLoc = 0;
+	};
+	A4B4C95B081469EF004D91AF = {
+		fRef = A4EEA2BA07FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.m: 70";
+		rLen = 0;
+		rLoc = 2016;
+		rType = 0;
+		vrLen = 457;
+		vrLoc = 1563;
+	};
+	A4B4C95C081469EF004D91AF = {
+		fRef = A4EEA6F607FEEB0B003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGStickyWindowController.h: _makeUnStickyTimer";
+		rLen = 0;
+		rLoc = 996;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 59;
+	};
+	A4B4C95D081469EF004D91AF = {
+		fRef = A4EEA6F707FEEB0B003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGStickyWindowController.m: 107";
+		rLen = 0;
+		rLoc = 3352;
+		rType = 0;
+		vrLen = 951;
+		vrLoc = 2402;
+	};
+	A4B4C95E081469EF004D91AF = {
+		fRef = A4EEA59607FEDA2C003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMPagerCell.h: 23";
+		rLen = 0;
+		rLoc = 901;
+		rType = 0;
+		vrLen = 917;
+		vrLoc = 0;
+	};
 	A4EEA29B07FE18AB003AABB3 = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {636, 2044}}";
@@ -1977,9 +2065,9 @@
 	};
 	A4EEA59607FEDA2C003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {570, 471}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 458}}";
 			sepNavSelRange = "{901, 0}";
-			sepNavVisRect = "{{0, 0}, {570, 471}}";
+			sepNavVisRect = "{{0, 0}, {636, 458}}";
 		};
 	};
 	A4EEA59707FEDA2C003AABB3 = {
@@ -2035,16 +2123,16 @@
 	};
 	A4EEA6F607FEEB0B003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {570, 489}}";
-			sepNavSelRange = "{645, 0}";
-			sepNavVisRect = "{{0, 10}, {570, 471}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 503}}";
+			sepNavSelRange = "{996, 0}";
+			sepNavVisRect = "{{0, 31}, {636, 458}}";
 		};
 	};
 	A4EEA6F707FEEB0B003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {734, 1637}}";
-			sepNavSelRange = "{2130, 13}";
-			sepNavVisRect = "{{0, 873}, {734, 89}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 1847}}";
+			sepNavSelRange = "{3352, 0}";
+			sepNavVisRect = "{{0, 1096}, {636, 458}}";
 		};
 	};
 	A4EEA70207FEED30003AABB3 = {
