@@ -67,6 +67,7 @@ CGSTransitionOption _defaultTransitionOption = CGSDown;
 {
 	if(_windowList)
 		[_windowList release];
+	[super dealloc];
 }
 
 - (NSArray*) refreshCachedWindowList

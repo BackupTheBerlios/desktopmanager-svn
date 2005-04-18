@@ -256,8 +256,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>1</integer>
+									<integer>27</integer>
+									<integer>21</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -293,7 +293,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMDesktopsPreferences.h</string>
+								<string>CGWorkspace.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -301,9 +301,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMDesktopsPreferences.h</string>
+										<string>CGWorkspace.m</string>
 										<key>bookmark</key>
-										<string>A401D137081152670063FEA1</string>
+										<string>A4B4C95608146979004D91AF</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -354,7 +354,6 @@
 											<string>A4445A08080DC5F0005FCD80</string>
 											<string>A4445A09080DC5F0005FCD80</string>
 											<string>A4445A8C080FE2F2005FCD80</string>
-											<string>A4445A92080FE34E005FCD80</string>
 											<string>A4445AA4080FE448005FCD80</string>
 											<string>A4445ACC080FE618005FCD80</string>
 											<string>A4445AFB080FE93D005FCD80</string>
@@ -367,7 +366,8 @@
 											<string>A401D0B3081146510063FEA1</string>
 											<string>A401D0E6081148CB0063FEA1</string>
 											<string>A401D134081152670063FEA1</string>
-											<string>A401D135081152670063FEA1</string>
+											<string>A4B4C95408146979004D91AF</string>
+											<string>A4445A92080FE34E005FCD80</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -432,11 +432,7 @@
 											<string>A4445546080B178D005FCD80</string>
 											<string>A44456F4080B4350005FCD80</string>
 											<string>A4445B8D08107FA6005FCD80</string>
-											<string>A401D0B4081146510063FEA1</string>
-											<string>A401D0E8081148CB0063FEA1</string>
-											<string>A401D124081151A70063FEA1</string>
-											<string>A401D129081151D80063FEA1</string>
-											<string>A401D136081152670063FEA1</string>
+											<string>A4B4C95508146979004D91AF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -494,9 +490,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A401D0A0081143980063FEA1</string>
+				<string>A4B4C94E08146903004D91AF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A401D0A1081143980063FEA1</string>
+				<string>A4B4C94F08146903004D91AF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -524,9 +520,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A4EEA6E707FEE8D7003AABB3</string>
-		<string>A401D0A3081143980063FEA1</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>A4B4C95108146903004D91AF</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
@@ -683,8 +677,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {381, 175}}</string>
-											<string>{{381, 0}, {313, 175}}</string>
+											<string>{{0, 0}, {374, 175}}</string>
+											<string>{{374, 0}, {320, 175}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -747,9 +741,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>A401D0A2081143980063FEA1</string>
+				<string>A4B4C95008146903004D91AF</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>A401D0A3081143980063FEA1</string>
+				<string>A4B4C95108146903004D91AF</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debug</string>
@@ -789,7 +783,7 @@
 												<key>PBXProjectModuleLabel</key>
 												<string>DMPager.m</string>
 												<key>bookmark</key>
-												<string>A401D138081152670063FEA1</string>
+												<string>A401D13E08115D020063FEA1</string>
 												<key>history</key>
 												<array>
 													<string>A401D0D4081147E20063FEA1</string>
@@ -972,8 +966,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {365, 167}}</string>
-											<string>{{0, 176}, {365, 267}}</string>
+											<string>{{0, 0}, {491, 167}}</string>
+											<string>{{0, 176}, {491, 267}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -999,7 +993,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {833, 317}}</string>
 								<key>RubberWindowFrame</key>
-								<string>58 486 833 359 0 0 1280 1002 </string>
+								<string>35 244 833 359 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXRunSessionModule</string>
@@ -1022,14 +1016,14 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>A401D0A5081143980063FEA1</string>
+				<string>A4B4C95208146903004D91AF</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>A401D0A6081143980063FEA1</string>
+				<string>A4B4C95308146903004D91AF</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
 			<key>WindowString</key>
-			<string>58 486 833 359 0 0 1280 1002 </string>
+			<string>35 244 833 359 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
