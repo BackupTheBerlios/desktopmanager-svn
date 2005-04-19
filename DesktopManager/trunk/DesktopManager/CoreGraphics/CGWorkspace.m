@@ -118,6 +118,10 @@ CGSTransitionOption _defaultTransitionOption = CGSDown;
 	return (currentWorkspaceNumber == [self workspaceNumber]);
 }
 
+// Experimental:
+int CGSNewTransition(int, ...);
+int CGSInvokeTransition(int, ...);
+
 - (void) makeCurrentWithTransition: (int) transition option: (int) option time: (float) seconds;
 {
 	CGSConnection cid = _CGSDefaultConnection();
@@ -129,9 +133,23 @@ CGSTransitionOption _defaultTransitionOption = CGSDown;
 			[NSNumber numberWithInt: currentWorkspaceNumber], CGWorkspaceFromNumberKey,
 			[NSNumber numberWithInt: [self workspaceNumber]], CGWorkspaceToNumberKey,
 		nil]];
+		
+	int transNo = -1;
+	struct {
+		int a,b,c,d,e;
+	} transSpec;
 	
-	CGSSetWorkspaceWithTransition(cid,[self workspaceNumber], transition, option, seconds);
+	transSpec.a = 0;
+	transSpec.b = transition;
+	transSpec.c = option;
+	transSpec.d = 0;
+	transSpec.e = 0;
 	
+	CGSNewTransition(cid, &transSpec, &transNo);
+	CGSSetWorkspace(cid,[self workspaceNumber]);
+	usleep(10000);
+	CGSInvokeTransition(cid, transNo, seconds);
+		
 	/* Provide notification. */
 	[[NSNotificationCenter defaultCenter] postNotificationName:CGWorkspaceDidChangeNotification object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithInt: currentWorkspaceNumber], CGWorkspaceFromNumberKey,
