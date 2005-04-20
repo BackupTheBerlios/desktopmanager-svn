@@ -59,6 +59,12 @@
     use virtual desktop manager for OS X. I've put it up here in the hope that
     it will be useful to others. Simply run the app and a pager
     should appear in the status bar and on the desktop.</p> 
+    <h1>Important!</h1>
+    <p>The 0.5.2-rc2 release is the most stable release and is recommended for
+    new users. It is <em>not</em> Tiger-compatible. If you are willing to
+    try incomplete code, you can try the <a href="ftp://ftp.berlios.de/pub/desktopmanager/DesktopManager.dmg">latest developer build</a>. This comes from the code
+    which will form 0.6 but is not yet feature-complete and there may
+    be bugs.</p>
     <h2>Features</h2>
     <ul>
       <li>Have any number of named virtual 'screens' (up to available memory)
