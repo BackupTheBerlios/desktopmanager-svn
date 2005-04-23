@@ -251,6 +251,7 @@
 								<string>A4EEA53807FED3F0003AABB3</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>A4570261080052A50061B98C</string>
+								<string>A4EEA2FA07FE25B9003AABB3</string>
 								<string>A4EEA9A707FF23D6003AABB3</string>
 								<string>A44455F2080B2479005FCD80</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -258,14 +259,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>13</integer>
-									<integer>1</integer>
+									<integer>63</integer>
+									<integer>62</integer>
+									<integer>44</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {277, 677}}</string>
+							<string>{{0, 510}, {277, 677}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -306,7 +307,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMHotKeyPreferences.m</string>
 										<key>bookmark</key>
-										<string>A491CD910819C97900F5E469</string>
+										<string>A491CD960819C9E400F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -541,8 +542,8 @@
 		<string>A491CD400819C3DC00F5E469</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>139 227 983 737 0 0 1280 1002 </string>
@@ -574,7 +575,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A491CD920819C97900F5E469</string>
+										<string>A491CD970819C9E400F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A491CD3B0819C3DC00F5E469</string>
