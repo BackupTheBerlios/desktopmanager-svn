@@ -116,6 +116,19 @@ extern OSStatus CGSSetWorkspaceWithTransition(const CGSConnection cid,
 /* Get the default connection for the current process. */
 extern CGSConnection _CGSDefaultConnection(void);
 
+typedef struct {
+	uint32_t unknown1;
+	CGSTransitionType type;
+	CGSTransitionOption option;
+	CGSWindow wid; /* Can be 0 for full-screen */
+	float *backColour; /* Null for black otherwise pointer to 3 float array with RGB value */
+} CGSTransitionSpec;
+
+/* Transition handling. */
+extern OSStatus CGSNewTransition(const CGSConnection cid, const CGSTransitionSpec* spec, int *pTransitionHandle);
+extern OSStatus CGSInvokeTransition(const CGSConnection cid, int transitionHandle, float duration);
+extern OSStatus CGSReleaseTransition(const CGSConnection cid, int transitionHandle);
+
 // thirtyTwo must = 32 for some reason. tags is pointer to 
 //array ot ints (size 2?). First entry holds window tags.
 // 0x0800 is sticky bit.

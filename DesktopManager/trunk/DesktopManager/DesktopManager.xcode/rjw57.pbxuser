@@ -453,6 +453,21 @@
 			A491CD950819C99700F5E469 = A491CD950819C99700F5E469;
 			A491CD960819C9E400F5E469 = A491CD960819C9E400F5E469;
 			A491CD970819C9E400F5E469 = A491CD970819C9E400F5E469;
+			A491CD980819CB2F00F5E469 = A491CD980819CB2F00F5E469;
+			A491CD990819CB2F00F5E469 = A491CD990819CB2F00F5E469;
+			A491CD9A0819CB2F00F5E469 = A491CD9A0819CB2F00F5E469;
+			A491CD9B0819CB2F00F5E469 = A491CD9B0819CB2F00F5E469;
+			A491CD9C0819CB2F00F5E469 = A491CD9C0819CB2F00F5E469;
+			A491CD9D0819CB2F00F5E469 = A491CD9D0819CB2F00F5E469;
+			A491CD9E0819CB2F00F5E469 = A491CD9E0819CB2F00F5E469;
+			A491CD9F0819CB2F00F5E469 = A491CD9F0819CB2F00F5E469;
+			A491CDA00819CB2F00F5E469 = A491CDA00819CB2F00F5E469;
+			A491CDA10819CB2F00F5E469 = A491CDA10819CB2F00F5E469;
+			A491CDA20819CB2F00F5E469 = A491CDA20819CB2F00F5E469;
+			A491CDA30819CB3900F5E469 = A491CDA30819CB3900F5E469;
+			A491CDA40819CB3900F5E469 = A491CDA40819CB3900F5E469;
+			A491CDA50819CB5C00F5E469 = A491CDA50819CB5C00F5E469;
+			A491CDA60819CB5C00F5E469 = A491CDA60819CB5C00F5E469;
 			A4B4C95408146979004D91AF = A4B4C95408146979004D91AF;
 			A4B4C958081469EF004D91AF = A4B4C958081469EF004D91AF;
 			A4B4C959081469EF004D91AF = A4B4C959081469EF004D91AF;
@@ -672,7 +687,7 @@
 		isa = PBXTextBookmark;
 		name = "CGSPrivate.h: 119";
 		rLen = 0;
-		rLoc = 4450;
+		rLoc = 5012;
 		rType = 0;
 		vrLen = 1522;
 		vrLoc = 4298;
@@ -1028,7 +1043,7 @@
 		isa = PBXTextBookmark;
 		name = CGCaptureOptions;
 		rLen = 0;
-		rLoc = 3901;
+		rLoc = 3806;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 3383;
@@ -1038,7 +1053,7 @@
 		isa = PBXTextBookmark;
 		name = "CGWorkspace.m: 147";
 		rLen = 0;
-		rLoc = 3901;
+		rLoc = 3806;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 3383;
@@ -1436,9 +1451,9 @@
 	};
 	A48FA71A07FE12B300C4EDC5 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {570, 2953}}";
-			sepNavSelRange = "{4450, 0}";
-			sepNavVisRect = "{{0, 1610}, {570, 471}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 2995}}";
+			sepNavSelRange = "{4167, 0}";
+			sepNavVisRect = "{{0, 1488}, {636, 458}}";
 		};
 	};
 	A48FA72407FE133800C4EDC5 = {
@@ -1706,7 +1721,7 @@
 		isa = PBXTextBookmark;
 		name = "CGWorkspace.m: 147";
 		rLen = 0;
-		rLoc = 3901;
+		rLoc = 3806;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 3383;
@@ -1716,7 +1731,7 @@
 		isa = PBXTextBookmark;
 		name = "CGWorkspace.m: 147";
 		rLen = 0;
-		rLoc = 3901;
+		rLoc = 3806;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 3383;
@@ -1756,7 +1771,7 @@
 		isa = PBXTextBookmark;
 		name = "CGWorkspace.m: 147";
 		rLen = 0;
-		rLoc = 3901;
+		rLoc = 3806;
 		rType = 0;
 		vrLen = 1064;
 		vrLoc = 3383;
@@ -2545,6 +2560,156 @@
 		vrLen = 403;
 		vrLoc = 1635;
 	};
+	A491CD980819CB2F00F5E469 = {
+		fRef = A4570061080024080061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKeyPreferences.m: 31";
+		rLen = 0;
+		rLoc = 1130;
+		rType = 0;
+		vrLen = 638;
+		vrLoc = 3473;
+	};
+	A491CD990819CB2F00F5E469 = {
+		fRef = A4EEA2B907FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.h: 28";
+		rLen = 0;
+		rLoc = 1100;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 471;
+	};
+	A491CD9A0819CB2F00F5E469 = {
+		fRef = A4EEA2BA07FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.m: 120";
+		rLen = 0;
+		rLoc = 3068;
+		rType = 0;
+		vrLen = 1159;
+		vrLoc = 3296;
+	};
+	A491CD9B0819CB2F00F5E469 = {
+		fRef = A48FA71A07FE12B300C4EDC5;
+		isa = PBXTextBookmark;
+		name = "CGSPrivate.h: ";
+		rLen = 0;
+		rLoc = 4672;
+		rType = 0;
+		vrLen = 1366;
+		vrLoc = 3618;
+	};
+	A491CD9C0819CB2F00F5E469 = {
+		fRef = A4570061080024080061B98C;
+		isa = PBXTextBookmark;
+		name = "DMHotKeyPreferences.m: 31";
+		rLen = 0;
+		rLoc = 1130;
+		rType = 0;
+		vrLen = 638;
+		vrLoc = 3473;
+	};
+	A491CD9D0819CB2F00F5E469 = {
+		fRef = A4EEA2B907FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.h: 28";
+		rLen = 0;
+		rLoc = 1100;
+		rType = 0;
+		vrLen = 1038;
+		vrLoc = 471;
+	};
+	A491CD9E0819CB2F00F5E469 = {
+		fRef = A4EEA2BA07FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.m: 121";
+		rLen = 0;
+		rLoc = 3068;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 2848;
+	};
+	A491CD9F0819CB2F00F5E469 = {
+		fRef = A48FA71A07FE12B300C4EDC5;
+		isa = PBXTextBookmark;
+		name = "CGSPrivate.h: ";
+		rLen = 0;
+		rLoc = 4672;
+		rType = 0;
+		vrLen = 1366;
+		vrLoc = 3618;
+	};
+	A491CDA00819CB2F00F5E469 = {
+		fRef = A4EEA2BA07FE1AEE003AABB3;
+		isa = PBXTextBookmark;
+		name = "CGWorkspace.m: 120";
+		rLen = 0;
+		rLoc = 3068;
+		rType = 0;
+		vrLen = 1159;
+		vrLoc = 3296;
+	};
+	A491CDA10819CB2F00F5E469 = {
+		fRef = A48FA71A07FE12B300C4EDC5;
+		isa = PBXTextBookmark;
+		name = "CGSPrivate.h: CGSInvokeTransition";
+		rLen = 0;
+		rLoc = 4912;
+		rType = 0;
+		vrLen = 1422;
+		vrLoc = 3956;
+	};
+	A491CDA20819CB2F00F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
+	A491CDA30819CB3900F5E469 = {
+		fRef = A48FA71A07FE12B300C4EDC5;
+		isa = PBXTextBookmark;
+		name = "CGSPrivate.h: CGSSetWorkspaceWithTransition";
+		rLen = 0;
+		rLoc = 4167;
+		rType = 0;
+		vrLen = 1422;
+		vrLoc = 3956;
+	};
+	A491CDA40819CB3900F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
+	A491CDA50819CB5C00F5E469 = {
+		fRef = A48FA71A07FE12B300C4EDC5;
+		isa = PBXTextBookmark;
+		name = "CGSPrivate.h: CGSSetWorkspaceWithTransition";
+		rLen = 0;
+		rLoc = 4167;
+		rType = 0;
+		vrLen = 1422;
+		vrLoc = 3956;
+	};
+	A491CDA60819CB5C00F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
 	A4B4C95408146979004D91AF = {
 		fRef = A457FE5F07FF5CC70061B98C;
 		isa = PBXTextBookmark;
@@ -2618,9 +2783,9 @@
 	};
 	A4EEA2BA07FE1AEE003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {636, 2631}}";
-			sepNavSelRange = "{3901, 0}";
-			sepNavVisRect = "{{0, 1820}, {636, 458}}";
+			sepNavIntBoundsRect = "{{0, 0}, {636, 2533}}";
+			sepNavSelRange = "{3068, 0}";
+			sepNavVisRect = "{{0, 1762}, {636, 458}}";
 		};
 	};
 	A4EEA2C707FE1B76003AABB3 = {
