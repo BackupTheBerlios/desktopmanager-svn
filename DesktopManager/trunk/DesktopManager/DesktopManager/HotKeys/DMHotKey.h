@@ -27,11 +27,10 @@
 #define HOTKEY_DOWNARROWCHAR    0x2193
     
 @interface DMHotKey : NSObject <NSCopying> {
-    int keycode;
-    int modifiers;
-    BOOL registered;
-	BOOL _wasRegistered;
-	BOOL _enabled;
+    int _keycode;
+    int _modifiers;
+    BOOL _registered;
+	
     EventHotKeyRef myRef;
 	NSString *_description;
 	
@@ -47,27 +46,22 @@
 - (NSString*) name;
 - (void) setName: (NSString*) description;
 
-- (void) registerHotKey;
-- (void) unregisterHotKey;
-- (BOOL) isRegistered;
-- (BOOL) isValid;
+- (BOOL) isEnabled;
+- (void) setEnabled: (BOOL) enabled;
 
 - (int) keycode;
 - (int) modifiers;
 - (int) carbonModifiers;
+
+- (void) setKeycode: (int) keycode;
+- (void) setModifiers: (int) modifiers;
 
 - (void) setTarget: (id) target;
 - (id) target;
 - (void) setAction: (SEL) action;
 - (SEL) action;
 
-- (void) setKeycode: (int) keycode;
-- (void) setModifiers: (int) modifiers;
-
-- (NSString*) stringValue;
-
-- (BOOL) enabled;
-- (void) setEnabled: (BOOL) enabled;
+- (NSString*) stringRepresentation;
 
 - (id) copyWithZone: (NSZone*) zone;
 

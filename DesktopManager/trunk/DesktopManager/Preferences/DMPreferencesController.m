@@ -41,6 +41,7 @@ static DMPreferencesController *_defaultController = nil;
 		toolbarItems = [[NSMutableDictionary dictionary] retain];		
 		selectableIdentifiers = [[NSMutableArray array] retain];
 		defaultIdentifiers = [[NSMutableArray array] retain];
+		_currentPane = nil;
 		toolbar = nil;
 	}
 	return mySelf;
@@ -48,6 +49,12 @@ static DMPreferencesController *_defaultController = nil;
 
 - (void) freeResources: (id) sender
 {
+	if(_currentPane)
+	{
+		[_currentPane willUnselect];
+		[_currentPane didUnselect];
+		_currentPane = nil;
+	}
 	if(panesArray) { 
 		[panesArray release]; 
 		panesArray = nil;
@@ -99,11 +106,19 @@ static DMPreferencesController *_defaultController = nil;
 	newFrame.origin.y += newFrame.size.height - newHeight;
 	newFrame.size.height = newHeight;
 
+	if(_currentPane)
+		[_currentPane willUnselect];
+	
 	if(oldView) { [oldView removeFromSuperview]; }
+	
+	if(_currentPane)
+		[_currentPane didUnselect];
+
 	[prefsWindow setFrame: newFrame display: YES animate: animate];
 	[pane willSelect];
 	[contentView addSubview: mainView];
 	[pane didSelect];
+	_currentPane = pane;
 }
 
 - (void) showPane: (NSPreferencePane*) pane

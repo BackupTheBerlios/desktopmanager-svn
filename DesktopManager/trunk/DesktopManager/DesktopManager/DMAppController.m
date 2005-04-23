@@ -47,6 +47,7 @@ static DMAppController *_defaultDMAppController = nil;
 - (void) updateWorkspaces: (NSTimer*) timer;
 - (void) syncModelToRowOrColumnChange;
 - (void) pagerResized;
+- (void) saveHotKeysToUserDefaults;
 @end
 
 @implementation DMAppController
@@ -110,22 +111,6 @@ static DMAppController *_defaultDMAppController = nil;
 	[super didChangeValueForKey:key];
 	if([key isEqualToString:@"hotKeys"])
 	{
-		/* Form a description of the hot keys */
-		NSMutableDictionary *userHotKeys = [NSMutableDictionary dictionary];
-		NSEnumerator *hkEnum = [_hotKeys objectEnumerator];
-		DMHotKey *hk;
-		while(hk = [hkEnum nextObject])
-		{
-			NSDictionary *hkInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-				[NSNumber numberWithInt:[hk modifiers]], @"modifiers",
-				[NSNumber numberWithInt:[hk keycode]], @"keycode",
-				[NSNumber numberWithBool:[hk enabled]], @"enabled",
-				nil];
-			[userHotKeys setObject:hkInfo forKey:[hk name]];
-		}
-		
-		[[NSUserDefaults standardUserDefaults] setObject:userHotKeys forKey:@"hotKeys"];
-		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
 }
 
@@ -150,42 +135,14 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void)applicationWillTerminate:(NSNotification*)aNotification
 {
-	/* Update per-desktop hot keys */
-	NSEnumerator *wsEnum = [_workspaceArray objectEnumerator];
-	CGWorkspace *ws;
-	while(ws = [wsEnum nextObject])
-	{
-		NSMutableDictionary *newInfo = [NSMutableDictionary dictionary];
-		NSDictionary *wsInfo = [self associatedInfoForWorkspace: ws];
-		if(wsInfo)
-		{
-			[newInfo setDictionary:wsInfo];
-		}
-		
-		NSMutableDictionary *hkInfo = [NSMutableDictionary dictionary];
-		if([newInfo objectForKey:@"hotKey"])
-		{
-			[hkInfo setDictionary:[newInfo objectForKey:@"hotKey"]];
-		}
-		
-		DMHotKey *hk = [self hotKeyForWorkspace:ws];
-		[hkInfo setObject:[NSNumber numberWithInt:[hk keycode]] forKey:@"keycode"];
-		[hkInfo setObject:[NSNumber numberWithInt:[hk modifiers]] forKey:@"modifiers"];
-		[hkInfo setObject:[NSNumber numberWithBool:[hk enabled]] forKey:@"enabled"];
-		
-		[newInfo setObject:hkInfo forKey:@"hotKey"];
-		[self setAssociatedInfo:newInfo forWorkspace:ws];
-	}
-		
-	/* Sync user defaults */
-	[[NSUserDefaults standardUserDefaults] synchronize];
+	[self saveHotKeysToUserDefaults];
 }
 
 #define DEFAULT_HOTKEY(thekeycode, themodifiers, theselector, thedescription) \
 	{ hk = [DMHotKey hotKeyWithKeycode: thekeycode modifiers: themodifiers]; \
 	[hk setTarget: self]; \
 	[hk setAction: @selector( theselector )]; \
-	[hk registerHotKey]; \
+	[hk setEnabled: YES]; \
 	[hk setName: @#thedescription]; \
 	[_hotKeys addObject: hk]; }
 
@@ -941,6 +898,56 @@ static DMAppController *_defaultDMAppController = nil;
 @end
 
 @implementation DMAppController (Private)
+
+- (void) saveHotKeysToUserDefaults
+{
+	/* Form a description of the hot keys */
+	NSMutableDictionary *userHotKeys = [NSMutableDictionary dictionary];
+	NSEnumerator *hkEnum = [_hotKeys objectEnumerator];
+	DMHotKey *hk;
+	while(hk = [hkEnum nextObject])
+	{
+		//NSLog(@"hk: %@ - %i", [hk name], [hk isEnabled]);
+		NSDictionary *hkInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithInt:[hk modifiers]], @"modifiers",
+			[NSNumber numberWithInt:[hk keycode]], @"keycode",
+			[NSNumber numberWithBool:[hk isEnabled]], @"enabled",
+			nil];
+		[userHotKeys setObject:hkInfo forKey:[hk name]];
+	}
+	
+	[[NSUserDefaults standardUserDefaults] setObject:userHotKeys forKey:@"hotKeys"];
+	
+	/* Update per-desktop hot keys */
+	NSEnumerator *wsEnum = [_workspaceArray objectEnumerator];
+	CGWorkspace *ws;
+	while(ws = [wsEnum nextObject])
+	{
+		NSMutableDictionary *newInfo = [NSMutableDictionary dictionary];
+		NSDictionary *wsInfo = [self associatedInfoForWorkspace: ws];
+		if(wsInfo)
+		{
+			[newInfo setDictionary:wsInfo];
+		}
+		
+		NSMutableDictionary *hkInfo = [NSMutableDictionary dictionary];
+		if([newInfo objectForKey:@"hotKey"])
+		{
+			[hkInfo setDictionary:[newInfo objectForKey:@"hotKey"]];
+		}
+		
+		DMHotKey *hk = [self hotKeyForWorkspace:ws];
+		[hkInfo setObject:[NSNumber numberWithInt:[hk keycode]] forKey:@"keycode"];
+		[hkInfo setObject:[NSNumber numberWithInt:[hk modifiers]] forKey:@"modifiers"];
+		[hkInfo setObject:[NSNumber numberWithBool:[hk isEnabled]] forKey:@"enabled"];
+		
+		[newInfo setObject:hkInfo forKey:@"hotKey"];
+		[self setAssociatedInfo:newInfo forWorkspace:ws];
+	}
+	
+	/* Sync user defaults */
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 - (void) newWindows: (NSArray*) windows onWorkspace: (CGWorkspace*) ws
 {

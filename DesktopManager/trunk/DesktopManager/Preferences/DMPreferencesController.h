@@ -29,6 +29,8 @@
 	NSMutableDictionary *toolbarItems;
 	NSMutableArray *selectableIdentifiers;
 	NSMutableArray *defaultIdentifiers;
+	
+	NSPreferencePane *_currentPane;
     int fromRow;
 }
 

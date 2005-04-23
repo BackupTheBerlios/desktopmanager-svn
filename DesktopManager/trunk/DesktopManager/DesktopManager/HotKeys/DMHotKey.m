@@ -37,12 +37,10 @@
 	id mySelf = [super init];
 	if(mySelf)
 	{
-		registered = NO;
-		_wasRegistered = NO;
-		_enabled = NO;
+		_registered = NO;
 		_target = nil;
-		keycode = -1; 
-		modifiers = 0;
+		_keycode = -1; 
+		_modifiers = 0;
 		_description = nil;
 		
 		// Register our interest in hotkey notifications
@@ -56,9 +54,8 @@
     id mySelf = [self init];
     if(mySelf)
 	{
-		keycode = kcode;
-		modifiers = mdfer;
-		_enabled = YES;
+		[self setKeycode:kcode];
+		[self setModifiers:mdfer];
     }
     return mySelf;
 }
@@ -68,9 +65,9 @@
     id mySelf = [self init];
     if(mySelf)
 	{
-		keycode = [key keycode];
-		modifiers = [key modifiers];
-		_enabled = [key enabled];
+		[self setKeycode:[key keycode]];
+		[self setModifiers:[key modifiers]];
+		[self setEnabled: [key isEnabled]];
     }
     return mySelf;
 }
@@ -83,7 +80,9 @@
 	if(_target)
 		[_target release];
 	
-    if([self isRegistered]) { [self unregisterHotKey]; }
+    if(_registered) { 
+		[self setEnabled: NO]; 
+	}
     [super dealloc];
 }
 
@@ -123,24 +122,33 @@
 	return _action;
 }
 
-- (BOOL) enabled {
-	return _enabled;
+- (BOOL) isEnabled {
+	return _registered;
 }
 
 - (void) setEnabled: (BOOL) enabled {
-	if(enabled == _enabled) {
+	if(enabled == _registered) {
 		return;
 	}
+	if(_keycode < 0)
+		return;
 	
-	_enabled = enabled;
-	if(!_enabled && registered) {
-		_wasRegistered = YES;
-		[self unregisterHotKey];
-	}
-	
-	if(_enabled && _wasRegistered) {
-		_wasRegistered = NO;
-		[self registerHotKey];
+	if(!enabled && _registered) {
+		UnregisterEventHotKey(myRef);
+		myRef = NULL;
+		_registered = NO;
+	} else if(enabled && !_registered) {
+		EventHotKeyID hotKeyID;
+		EventHotKeyRef hotkeyRef;
+		hotKeyID.id = (int)self; 
+		OSStatus retVal = RegisterEventHotKey([self keycode], [self carbonModifiers], hotKeyID,
+											  GetApplicationEventTarget(), 0, &hotkeyRef);
+		if(retVal) {
+			NSLog(@"Error registering hot key");
+		} else {
+			myRef = hotkeyRef;
+			_registered = YES;
+		}
 	}
 }
 
@@ -158,77 +166,50 @@
     }
 }
 
-- (BOOL) isRegistered { return registered; }
-
-- (BOOL) isValid { return (keycode >= 0); }
-
-- (void) registerHotKey {
-	if(!_enabled || (keycode < 0)) {
-		return;
-	}
-    if(registered) { 
-		return; 
-	}
-    EventHotKeyID hotKeyID;
-    EventHotKeyRef hotkeyRef;
-    hotKeyID.id = (int)self; 
-    OSStatus retVal = RegisterEventHotKey([self keycode], [self carbonModifiers], hotKeyID,
-        GetApplicationEventTarget(), 0, &hotkeyRef);
-    if(retVal) { NSLog(@"Error registering hot key"); }
-        
-    myRef = hotkeyRef;
-    registered = YES;
-}
-
-- (void) unregisterHotKey {
-    if(!registered || (keycode < 0)) {
-		return; 
-	}
-    UnregisterEventHotKey(myRef);
-    registered = NO;
-}
-
 - (int) keycode
 {
-    return keycode;
+    return _keycode;
 }
 
 - (int) modifiers
 {
-    return modifiers;
+    return _modifiers;
 }
 
 - (int) carbonModifiers
 {
     int cmod = 0;
-    if(modifiers & NSCommandKeyMask) { cmod |= cmdKey; }
-    if(modifiers & NSAlternateKeyMask) { cmod |= optionKey; }
-    if(modifiers & NSShiftKeyMask) { cmod |= shiftKey; }
-    if(modifiers & NSControlKeyMask) { cmod |= controlKey; }
+    if(_modifiers & NSCommandKeyMask) { cmod |= cmdKey; }
+    if(_modifiers & NSAlternateKeyMask) { cmod |= optionKey; }
+    if(_modifiers & NSShiftKeyMask) { cmod |= shiftKey; }
+    if(_modifiers & NSControlKeyMask) { cmod |= controlKey; }
     
     return cmod;
 }
 
-- (void) setKeycode: (int) _keycode
+- (void) setKeycode: (int) keycode
 {
-	[self willChangeValueForKey:@"stringValue"];
-    keycode = _keycode;
-    if([self isRegistered]) { 
-        [self unregisterHotKey];
-    }
-	[self registerHotKey];
-	[self didChangeValueForKey:@"stringValue"];
+	[self willChangeValueForKey:@"stringRepresentation"];
+    _keycode = keycode;
+    if([self isEnabled])
+	{
+		/* Force a re-registering */
+		[self setEnabled:NO];
+		[self setEnabled:YES];
+	}
+	[self didChangeValueForKey:@"stringRepresentation"];
 }
 
-- (void) setModifiers: (int) _modifiers
+- (void) setModifiers: (int) modifiers
 {
-	[self willChangeValueForKey:@"stringValue"];
-    modifiers = _modifiers;
-    if([self isRegistered]) { 
-        [self unregisterHotKey];
+	[self willChangeValueForKey:@"stringRepresentation"];
+    _modifiers = modifiers;
+    if([self isEnabled]) { 
+		/* Force a re-registering */
+		[self setEnabled:NO];
+		[self setEnabled:YES];
     }
-	[self registerHotKey];
-	[self didChangeValueForKey:@"stringValue"];
+	[self didChangeValueForKey:@"stringRepresentation"];
 }
 
 NSString *C2S(unichar ch) {
@@ -297,7 +278,7 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 			return C2S(0x2196);
 			break;
 		case kSpaceCharCode:
-			return @"<Spc>";
+			return @"Space";
 			break;
 		case kReturnCharCode:
 			return C2S(0x23CE);
@@ -312,21 +293,21 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 	return [C2S(charCode) uppercaseString];
 }
 
-- (NSString*) stringValue {
-	if(keycode < 0)
+- (NSString*) stringRepresentation {
+	if(_keycode < 0)
 		return @"-";
 	
 	NSMutableString *string = [NSMutableString string];
-	if(modifiers & NSControlKeyMask) {
+	if(_modifiers & NSControlKeyMask) {
 		[string appendString: @"Ctrl-"];
 	}
-	if(modifiers & NSShiftKeyMask) {
+	if(_modifiers & NSShiftKeyMask) {
 		[string appendString: C2S(0x21E7)];
 	}
-	if(modifiers & NSAlternateKeyMask) {
+	if(_modifiers & NSAlternateKeyMask) {
 		[string appendString: C2S(0x2325)];
 	}
-	if(modifiers & NSCommandKeyMask) {
+	if(_modifiers & NSCommandKeyMask) {
 		[string appendString: C2S(0x2318)];
 	}
 
@@ -347,7 +328,7 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 		UniCharCount length;
 		if(layout && (UCKeyTranslate(layout,(UInt16) [self keycode],kUCKeyActionDisplay,0,LMGetKbdType(),0,&deadKeyState,10,&length,uniStr) == noErr))
 		{	
-			[string appendString: _charCodeToString(uniStr[0], keycode)];
+			[string appendString: _charCodeToString(uniStr[0], _keycode)];
 			return string;
 		}
 	} else if(layout_kind == kKLKCHRKind) 
@@ -359,9 +340,9 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 		
 		if(kchrHandle) {
 			UInt32 state = 0;
-			UInt32 charCode = KeyTranslate(kchrHandle, keycode, &state);
+			UInt32 charCode = KeyTranslate(kchrHandle, _keycode, &state);
 			
-			[string appendString: _charCodeToString(charCode, keycode)];
+			[string appendString: _charCodeToString(charCode, _keycode)];
 			
 			return string;
 		}
@@ -372,8 +353,7 @@ NSString *_charCodeToString(unichar charCode, int keyCode) {
 
 - (id) copyWithZone: (NSZone*) zone
 {
-    DMHotKey *hk= [[[DMHotKey allocWithZone: zone] initWithKeycode: keycode modifiers: modifiers] autorelease];
-	[hk setEnabled: [self enabled]];
+    DMHotKey *hk= [[[DMHotKey allocWithZone: zone] initWithHotKey:self] autorelease];
 	return hk;
 }
 @end
