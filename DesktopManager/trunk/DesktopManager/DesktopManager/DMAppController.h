@@ -50,6 +50,8 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 @interface CGWindow (DMAppControllerAdditions)
 
 - (NSString*) userDefaultsKey;
+- (CGWorkspace*) initialWorkspace;
+- (void) setInitialWorkspace: (CGWorkspace*) ws;
 
 @end
 
@@ -133,6 +135,10 @@ extern NSString *DMWorkspaceWithChangedInformationKey;
 
 - (int) columns;
 - (void) setColumns: (int) columns;
+
+/* Use nil here to specify application default */
+- (CGWorkspace*) initialWorkspaceForWindow: (CGWindow*) win;
+- (void) setInitialWorkspace: (CGWorkspace*) ws forWindow: (CGWindow*) win;
 
 @end
 

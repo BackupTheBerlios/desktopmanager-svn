@@ -257,13 +257,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>42</integer>
+									<integer>41</integer>
 									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {277, 677}}</string>
+							<string>{{0, 510}, {277, 677}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -294,7 +294,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMAppController.m</string>
+								<string>DMAppController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -302,9 +302,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMAppController.m</string>
+										<string>DMAppController.h</string>
 										<key>bookmark</key>
-										<string>A4B0651A081AB292001BCF4F</string>
+										<string>A4B06560081ABAC3001BCF4F</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -352,7 +352,6 @@
 											<string>A4445B5308106E1E005FCD80</string>
 											<string>A4445B6508106EC4005FCD80</string>
 											<string>A4445B8908107FA6005FCD80</string>
-											<string>A4445B9108108099005FCD80</string>
 											<string>A401D0E6081148CB0063FEA1</string>
 											<string>A401D134081152670063FEA1</string>
 											<string>A4B4C95408146979004D91AF</string>
@@ -368,7 +367,8 @@
 											<string>A491CD990819CB2F00F5E469</string>
 											<string>A491CD9A0819CB2F00F5E469</string>
 											<string>A491CDA70819CBD900F5E469</string>
-											<string>A4B0650D081AAFDB001BCF4F</string>
+											<string>A4B06554081ABAAC001BCF4F</string>
+											<string>A4B06520081AB75B001BCF4F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -433,6 +433,13 @@
 											<string>A4445546080B178D005FCD80</string>
 											<string>A44456F4080B4350005FCD80</string>
 											<string>A4445B8D08107FA6005FCD80</string>
+											<string>A4B06522081AB75B001BCF4F</string>
+											<string>A4B06523081AB75B001BCF4F</string>
+											<string>A4B06524081AB75B001BCF4F</string>
+											<string>A4B06525081AB75B001BCF4F</string>
+											<string>A4B06526081AB75B001BCF4F</string>
+											<string>A4B06527081AB75B001BCF4F</string>
+											<string>A4B06555081ABAAC001BCF4F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -520,8 +527,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>A4B0655B081ABAAC001BCF4F</string>
+		<string>A48FA75D07FE14DD00C4EDC5</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>139 227 983 737 0 0 1280 1002 </string>
@@ -553,15 +562,18 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A491CDC00819D34F00F5E469</string>
+										<string>A4B06561081ABAC3001BCF4F</string>
 										<key>history</key>
 										<array>
 											<string>A491CD3B0819C3DC00F5E469</string>
-											<string>A491CD7C0819C89000F5E469</string>
+											<string>A4B06557081ABAAC001BCF4F</string>
+											<string>A4B06558081ABAAC001BCF4F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
 											<string>A491CD3D0819C3DC00F5E469</string>
+											<string>A4B06530081AB7EE001BCF4F</string>
+											<string>A4B06559081ABAAC001BCF4F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -622,7 +634,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A48FA75D07FE14DD00C4EDC5</string>
-				<string>A491CD3F0819C3DC00F5E469</string>
+				<string>A4B06532081AB7EE001BCF4F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -960,7 +972,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {833, 317}}</string>
 								<key>RubberWindowFrame</key>
-								<string>67 533 833 359 0 0 1280 1002 </string>
+								<string>33 140 833 359 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXRunSessionModule</string>
@@ -990,7 +1002,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>
 			<key>WindowString</key>
-			<string>67 533 833 359 0 0 1280 1002 </string>
+			<string>33 140 833 359 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>

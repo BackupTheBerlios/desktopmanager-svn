@@ -136,8 +136,6 @@
 {
 	[editor removeFromSuperview];
 	DMHotKey *hk = [[self currentWorkspace] hotKey];
-	if(![hk isRegistered])
-		[hk registerHotKey];
 	[[self currentWorkspace] didChangeValueForKey:@"hotKey"];
 }
 

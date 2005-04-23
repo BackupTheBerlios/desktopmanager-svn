@@ -904,6 +904,53 @@ static DMAppController *_defaultDMAppController = nil;
 	return hk;
 }
 
+- (CGWorkspace*) initialWorkspaceForWindow: (CGWindow*) win
+{
+	NSString *key = [NSString stringWithFormat:@"initialWorkspaceForWindow%@", [win userDefaultsKey]];
+	NSArray *workspaceLoc = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+	
+	if(!workspaceLoc)
+		return nil;
+	
+	int row = [[workspaceLoc objectAtIndex:0] intValue];
+	int col = [[workspaceLoc objectAtIndex:1] intValue];
+		
+	if(row < 0) { row = 0; }
+	if(row >= [self rows]) { row = [self rows] - 1; }
+	if(col < 0) { col = 0; }
+	if(col >= [self columns]) { col = [self columns] - 1; }
+	
+	return [self workspaceAtRow:row column:col];
+}
+
+- (void) setInitialWorkspace: (CGWorkspace*) ws forWindow: (CGWindow*) win
+{
+	NSString *key = [NSString stringWithFormat:@"initialWorkspaceForWindow%@", [win userDefaultsKey]];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	[win willChangeValueForKey:@"initialWorkspace"];
+	
+	[defaults removeObjectForKey:key];
+	
+	if(ws)
+	{
+		int r,c;
+		if(![self getWorkspace:ws row:&r column:&c])
+		{
+			NSLog(@"Could not find which workspace '%@' is on", [win windowTitle]);
+			return;
+		}
+				
+		[defaults setObject:[NSArray arrayWithObjects:
+			[NSNumber numberWithInt:r], [NSNumber numberWithInt:c],
+			nil] forKey:key];
+	}
+	
+	[defaults synchronize];
+	
+	[win didChangeValueForKey:@"initialWorkspace"];
+}
+
 @end
 
 @implementation DMAppController (Private)
@@ -972,6 +1019,11 @@ static DMAppController *_defaultDMAppController = nil;
 			if([winInfo objectForKey:@"sticky"])
 				[win setSticky:[[winInfo objectForKey:@"sticky"] boolValue]];
 		}
+		
+		/* Do we have an initial workspace? */
+		CGWorkspace *initWs = [win initialWorkspace];
+		if(initWs)
+			[win setWorkspace:initWs];
 	}
 }
 
@@ -1152,6 +1204,16 @@ enum {
 @end
 
 @implementation CGWindow (DMAppControllerAdditions)
+
+- (CGWorkspace*) initialWorkspace
+{
+	return [[DMAppController defaultController] initialWorkspaceForWindow: self];
+}
+
+- (void) setInitialWorkspace: (CGWorkspace*) ws
+{
+	[[DMAppController defaultController] setInitialWorkspace: ws forWindow: self];
+}
 
 - (NSString*) userDefaultsKey
 {
