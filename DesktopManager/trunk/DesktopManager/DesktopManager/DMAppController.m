@@ -468,7 +468,10 @@ static DMAppController *_defaultDMAppController = nil;
 	
 	if(_inspectorFadeTimer)
 		[_inspectorFadeTimer invalidate];
-	_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startInspectorFade:) userInfo:nil repeats:NO];
+	if([[[NSUserDefaults standardUserDefaults] objectForKey:@"FadeInspector"] boolValue])
+	{
+		_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startInspectorFade:) userInfo:nil repeats:NO];
+	}
 }
 
 - (IBAction) hideWindowInspector: (id) sender

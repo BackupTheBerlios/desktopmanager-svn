@@ -481,6 +481,12 @@
 			A491CDB20819CC9600F5E469 = A491CDB20819CC9600F5E469;
 			A491CDB30819CCAA00F5E469 = A491CDB30819CCAA00F5E469;
 			A491CDB40819CCAA00F5E469 = A491CDB40819CCAA00F5E469;
+			A491CDB50819CDA300F5E469 = A491CDB50819CDA300F5E469;
+			A491CDB60819CDBA00F5E469 = A491CDB60819CDBA00F5E469;
+			A491CDB70819CDBA00F5E469 = A491CDB70819CDBA00F5E469;
+			A491CDB80819D2D500F5E469 = A491CDB80819D2D500F5E469;
+			A491CDB90819D2D500F5E469 = A491CDB90819D2D500F5E469;
+			A491CDBA0819D2D500F5E469 = A491CDBA0819D2D500F5E469;
 			A4B4C95408146979004D91AF = A4B4C95408146979004D91AF;
 			A4B4C958081469EF004D91AF = A4B4C958081469EF004D91AF;
 			A4B4C959081469EF004D91AF = A4B4C959081469EF004D91AF;
@@ -1118,6 +1124,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {705, 965}}";
 			sepNavSelRange = "{1898, 0}";
 			sepNavVisRect = "{{0, 410}, {705, 443}}";
+			sepNavWindowFrame = "{{15, 439}, {750, 558}}";
 		};
 	};
 	A457008F080028710061B98C = {
@@ -1157,7 +1164,7 @@
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 327";
 		rLen = 0;
-		rLoc = 20487;
+		rLoc = 20490;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 11724;
@@ -2853,6 +2860,66 @@
 		vrLen = 403;
 		vrLoc = 1635;
 	};
+	A491CDB50819CDA300F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
+	A491CDB60819CDBA00F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 415";
+		rLen = 0;
+		rLoc = 14866;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 14441;
+	};
+	A491CDB70819CDBA00F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
+	A491CDB80819D2D500F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 415";
+		rLen = 0;
+		rLoc = 14866;
+		rType = 0;
+		vrLen = 755;
+		vrLoc = 14441;
+	};
+	A491CDB90819D2D500F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 474";
+		rLen = 0;
+		rLoc = 16677;
+		rType = 0;
+		vrLen = 1037;
+		vrLoc = 15813;
+	};
+	A491CDBA0819D2D500F5E469 = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: saveHotKeysToUserDefaults";
+		rLen = 0;
+		rLoc = 1921;
+		rType = 0;
+		vrLen = 403;
+		vrLoc = 1635;
+	};
 	A4B4C95408146979004D91AF = {
 		fRef = A457FE5F07FF5CC70061B98C;
 		isa = PBXTextBookmark;
@@ -2902,7 +2969,7 @@
 	};
 	A4EEA29C07FE18AB003AABB3 = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {583, 17261}}";
+			sepNavIntBoundsRect = "{{0, 0}, {583, 17303}}";
 			sepNavSelRange = "{1921, 0}";
 			sepNavVisRect = "{{0, 615}, {583, 212}}";
 		};

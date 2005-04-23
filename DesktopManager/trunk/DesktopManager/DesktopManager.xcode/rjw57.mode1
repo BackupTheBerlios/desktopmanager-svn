@@ -203,8 +203,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -259,14 +257,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
-									<integer>15</integer>
-									<integer>1</integer>
+									<integer>42</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {277, 677}}</string>
+							<string>{{0, 170}, {277, 677}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -307,7 +304,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A491CDB30819CCAA00F5E469</string>
+										<string>A491CDB90819D2D500F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -371,7 +368,7 @@
 											<string>A491CD990819CB2F00F5E469</string>
 											<string>A491CD9A0819CB2F00F5E469</string>
 											<string>A491CDA70819CBD900F5E469</string>
-											<string>A491CDA80819CBD900F5E469</string>
+											<string>A491CDB80819D2D500F5E469</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -545,11 +542,10 @@
 		<string>A4EEA6E707FEE8D7003AABB3</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>A491CD2A0819C0E300F5E469</string>
-		<string>A491CD400819C3DC00F5E469</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
 	</array>
 	<key>WindowString</key>
 	<string>139 227 983 737 0 0 1280 1002 </string>
@@ -581,7 +577,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A491CDB40819CCAA00F5E469</string>
+										<string>A491CDBA0819D2D500F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A491CD3B0819C3DC00F5E469</string>
@@ -765,7 +761,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
