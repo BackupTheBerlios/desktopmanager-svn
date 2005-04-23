@@ -222,6 +222,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[NSNumber numberWithFloat: 0.2], @"SwitchDuration",
 		[NSNumber numberWithInt: CGSNone], @"SwitchTransition",
 		[NSNumber numberWithBool:NO], @"WrapDesktops",
+		[NSNumber numberWithBool:YES], @"FadeInspector",
 		nil]];
 
 	_pagerWindow = nil;
@@ -401,15 +402,17 @@ static DMAppController *_defaultDMAppController = nil;
 
 - (void)mouseExited:(NSEvent *)theEvent
 {
+	if(!_windowInspector || 
+	   ![[[NSUserDefaults standardUserDefaults] objectForKey:@"FadeInspector"] boolValue]) 
+		return;
+
 	if(_inspectorFadeTimer)
 		[_inspectorFadeTimer invalidate];
 	_inspectorFadeTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startInspectorFade:) userInfo:nil repeats:NO];
-//	NSLog(@"Exit");
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent
 {
-//	NSLog(@"Enter");
 	if(!_windowInspector) 
 		return;
 	
