@@ -223,6 +223,7 @@ static DMAppController *_defaultDMAppController = nil;
 		[NSNumber numberWithInt: CGSNone], @"SwitchTransition",
 		[NSNumber numberWithBool:NO], @"WrapDesktops",
 		[NSNumber numberWithBool:YES], @"FadeInspector",
+		[NSNumber numberWithBool:YES], @"DisplayWindowInspectorAdvanced",
 		nil]];
 
 	_pagerWindow = nil;
@@ -315,6 +316,7 @@ static DMAppController *_defaultDMAppController = nil;
 	}
 	
 	_displaysWindowInfoAdvanced = showIt;
+	[[NSUserDefaults standardUserDefaults] setBool:_displaysWindowInfoAdvanced forKey: @"DisplayWindowInspectorAdvanced"];
 	[self didChangeValueForKey:@"showsWindowInspectorAdvanced"];
 }
 
@@ -458,10 +460,11 @@ static DMAppController *_defaultDMAppController = nil;
 		[_windowInspector setFloatingPanel:YES];
 		
 		_inspectorRectTag = [[_windowInspector contentView] addTrackingRect:[[_windowInspector contentView] bounds] owner:self userData:nil assumeInside:NO];
+		_displaysWindowInfoAdvanced = YES;
 	}
 
 	[_windowInspector setBecomesKeyOnlyIfNeeded:YES];
-	[self setShowsWindowInspectorAdvanced: NO];
+	[self setShowsWindowInspectorAdvanced: [[NSUserDefaults standardUserDefaults] boolForKey:@"DisplayWindowInspectorAdvanced"]];
 	[_windowInspector orderFront: nil];
 	[[_windowInspector cgWindow] setSticky:YES];
 	[_windowInspector setAlphaValue:1.0];
