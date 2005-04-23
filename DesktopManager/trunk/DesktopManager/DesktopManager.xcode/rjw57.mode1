@@ -258,7 +258,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -305,7 +306,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMHotKeyPreferences.m</string>
 										<key>bookmark</key>
-										<string>A491CD8A0819C92700F5E469</string>
+										<string>A491CD910819C97900F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -538,10 +539,10 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>A491CD2A0819C0E300F5E469</string>
 		<string>A491CD400819C3DC00F5E469</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
 	<string>139 227 983 737 0 0 1280 1002 </string>
@@ -573,7 +574,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A491CD8B0819C92700F5E469</string>
+										<string>A491CD920819C97900F5E469</string>
 										<key>history</key>
 										<array>
 											<string>A491CD3B0819C3DC00F5E469</string>
