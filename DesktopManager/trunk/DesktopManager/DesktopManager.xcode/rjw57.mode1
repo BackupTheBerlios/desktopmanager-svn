@@ -257,7 +257,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>41</integer>
+									<integer>42</integer>
 									<integer>32</integer>
 									<integer>0</integer>
 								</array>
@@ -294,7 +294,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DMAppController.h</string>
+								<string>DMAppController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -302,9 +302,9 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DMAppController.h</string>
+										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4B06560081ABAC3001BCF4F</string>
+										<string>A4B06565081ABBA9001BCF4F</string>
 										<key>history</key>
 										<array>
 											<string>A4EEA30B07FE27B9003AABB3</string>
@@ -367,8 +367,8 @@
 											<string>A491CD990819CB2F00F5E469</string>
 											<string>A491CD9A0819CB2F00F5E469</string>
 											<string>A491CDA70819CBD900F5E469</string>
-											<string>A4B06554081ABAAC001BCF4F</string>
-											<string>A4B06520081AB75B001BCF4F</string>
+											<string>A4B06562081ABBA9001BCF4F</string>
+											<string>A4B06563081ABBA9001BCF4F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -440,6 +440,7 @@
 											<string>A4B06526081AB75B001BCF4F</string>
 											<string>A4B06527081AB75B001BCF4F</string>
 											<string>A4B06555081ABAAC001BCF4F</string>
+											<string>A4B06564081ABBA9001BCF4F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -529,8 +530,8 @@
 	<array>
 		<string>A4B0655B081ABAAC001BCF4F</string>
 		<string>A48FA75D07FE14DD00C4EDC5</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/rjw57/Developer/DesktopManager/DesktopManager.xcode</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 	</array>
 	<key>WindowString</key>
 	<string>139 227 983 737 0 0 1280 1002 </string>
@@ -562,7 +563,7 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>DMAppController.m</string>
 										<key>bookmark</key>
-										<string>A4B06561081ABAC3001BCF4F</string>
+										<string>A4B06566081ABBA9001BCF4F</string>
 										<key>history</key>
 										<array>
 											<string>A491CD3B0819C3DC00F5E469</string>

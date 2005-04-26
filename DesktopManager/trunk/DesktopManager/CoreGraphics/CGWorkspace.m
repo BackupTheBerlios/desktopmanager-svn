@@ -120,6 +120,10 @@ CGSTransitionOption _defaultTransitionOption = CGSDown;
 
 - (void) makeCurrentWithTransition: (int) transition option: (int) option time: (float) seconds;
 {
+        /* No need to do this if we /are/ the current workspace */
+        if([self isCurrentWorkspace])
+                return;
+
 	CGSConnection cid = _CGSDefaultConnection();
 	int currentWorkspaceNumber = -1;
 	CGSGetWorkspace(cid, &currentWorkspaceNumber);
