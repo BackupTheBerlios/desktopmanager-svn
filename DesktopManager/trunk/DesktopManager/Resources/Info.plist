@@ -24,12 +24,12 @@
 	<string>DMApplication</string>
 	<key>LSUIElement</key>
 	<true/>
-	<key>LSBackgroundOnlt</key>
-	<true/>
+	<key>LSBackgroundOnly</key>
+	<false/>
 	<key>LSMultipleInstancesProhibited</key>
 	<true/>
 	<key>LSUIPresentationMode</key>
-	<string>3</string>
+	<integer>3</integer>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.3.0</string>
 </dict>

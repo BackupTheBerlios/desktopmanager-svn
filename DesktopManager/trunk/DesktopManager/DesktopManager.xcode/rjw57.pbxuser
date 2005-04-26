@@ -472,6 +472,19 @@
 			A4B06564081ABBA9001BCF4F = A4B06564081ABBA9001BCF4F;
 			A4B06565081ABBA9001BCF4F = A4B06565081ABBA9001BCF4F;
 			A4B06566081ABBA9001BCF4F = A4B06566081ABBA9001BCF4F;
+			A4B06567081EECAC001BCF4F = A4B06567081EECAC001BCF4F;
+			A4B06568081EECAC001BCF4F = A4B06568081EECAC001BCF4F;
+			A4B0656A081EECC4001BCF4F = A4B0656A081EECC4001BCF4F;
+			A4B0656B081EECC4001BCF4F = A4B0656B081EECC4001BCF4F;
+			A4B0656C081EECC4001BCF4F = A4B0656C081EECC4001BCF4F;
+			A4B0656D081EECC4001BCF4F = A4B0656D081EECC4001BCF4F;
+			A4B0656E081EECC4001BCF4F = A4B0656E081EECC4001BCF4F;
+			A4B0656F081EECF9001BCF4F = A4B0656F081EECF9001BCF4F;
+			A4B06570081EECF9001BCF4F = A4B06570081EECF9001BCF4F;
+			A4B06571081EED07001BCF4F = A4B06571081EED07001BCF4F;
+			A4B06572081EED07001BCF4F = A4B06572081EED07001BCF4F;
+			A4B06573081EED12001BCF4F = A4B06573081EED12001BCF4F;
+			A4B06574081EED12001BCF4F = A4B06574081EED12001BCF4F;
 			A4B4C95408146979004D91AF = A4B4C95408146979004D91AF;
 			A4B4C958081469EF004D91AF = A4B4C958081469EF004D91AF;
 			A4B4C959081469EF004D91AF = A4B4C959081469EF004D91AF;
@@ -509,8 +522,8 @@
 	8D1107310486CEB800E47090 = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {636, 531}}";
-			sepNavSelRange = "{461, 0}";
-			sepNavVisRect = "{{0, 60}, {636, 458}}";
+			sepNavSelRange = "{851, 0}";
+			sepNavVisRect = "{{0, 65}, {636, 458}}";
 		};
 	};
 	A401D0E6081148CB0063FEA1 = {
@@ -564,6 +577,7 @@
 	A444545F080A9529005FCD80 = {
 		children = (
 			A44455BF080B22D3005FCD80,
+			A4B06569081EECB6001BCF4F,
 		);
 		isa = PBXBookmarkGroup;
 		name = Root;
@@ -2743,6 +2757,140 @@
 		vrLoc = 31154;
 	};
 	A4B06566081ABBA9001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1211";
+		rLen = 0;
+		rLoc = 36825;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 3213;
+	};
+	A4B06567081EECAC001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1027";
+		rLen = 0;
+		rLoc = 31866;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 31154;
+	};
+	A4B06568081EECAC001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1211";
+		rLen = 0;
+		rLoc = 36825;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 3213;
+	};
+	A4B06569081EECB6001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXBookmark;
+	};
+	A4B0656A081EECC4001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1027";
+		rLen = 0;
+		rLoc = 31866;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 31154;
+	};
+	A4B0656B081EECC4001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 25";
+		rLen = 0;
+		rLoc = 797;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 180;
+	};
+	A4B0656C081EECC4001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1027";
+		rLen = 0;
+		rLoc = 31866;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 31154;
+	};
+	A4B0656D081EECC4001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 25";
+		rLen = 0;
+		rLoc = 797;
+		rType = 0;
+		vrLen = 863;
+		vrLoc = 173;
+	};
+	A4B0656E081EECC4001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1211";
+		rLen = 0;
+		rLoc = 36825;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 3213;
+	};
+	A4B0656F081EECF9001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 25";
+		rLen = 0;
+		rLoc = 797;
+		rType = 0;
+		vrLen = 863;
+		vrLoc = 173;
+	};
+	A4B06570081EECF9001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1211";
+		rLen = 0;
+		rLoc = 36825;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 3213;
+	};
+	A4B06571081EED07001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 28";
+		rLen = 0;
+		rLoc = 851;
+		rType = 0;
+		vrLen = 864;
+		vrLoc = 173;
+	};
+	A4B06572081EED07001BCF4F = {
+		fRef = A4EEA29C07FE18AB003AABB3;
+		isa = PBXTextBookmark;
+		name = "DMAppController.m: 1211";
+		rLen = 0;
+		rLoc = 36825;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 3213;
+	};
+	A4B06573081EED12001BCF4F = {
+		fRef = 8D1107310486CEB800E47090;
+		isa = PBXTextBookmark;
+		name = "Info.plist: 28";
+		rLen = 0;
+		rLoc = 851;
+		rType = 0;
+		vrLen = 864;
+		vrLoc = 173;
+	};
+	A4B06574081EED12001BCF4F = {
 		fRef = A4EEA29C07FE18AB003AABB3;
 		isa = PBXTextBookmark;
 		name = "DMAppController.m: 1211";
