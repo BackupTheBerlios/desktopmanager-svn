@@ -2,6 +2,8 @@
 global $newsItems;
 
 $newsItems = array(
+  array( 'date' => '2-May-05', 'title' => '0.5.3 released',
+          'contents' => '<p>0.5.3 has been released. This is identical to previous releases except that the <em>minimal</em> amount of work done to make it Tiger-compatible has been done. Please do not ask for more features to be added as I am no longer developing the 0.5 branch.</p>'),
   array( 'date' => '8-Apr-05', 'title' => 'Moved to BerliOS.de',
           'contents' => '<p>The Desktop Manager site and project has moved to <a href="http://developer.berlios.de/">BerliOS</a></p>'),
   array( 'date' => '16-Nov-04', 'title' => 'DM Review',
